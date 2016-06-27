@@ -1,0 +1,33 @@
+if(!settings.multipleView) settings.batchView=false;
+settings.tex="xelatex";
+defaultfilename="FT_chs-2";
+if(settings.render < 0) settings.render=4;
+settings.outformat="";
+settings.inlineimage=true;
+settings.embed=true;
+settings.toolbar=false;
+viewportmargin=(2,2);
+
+texpreamble("\usepackage{xeCJK}");
+texpreamble("\setCJKmainfont{SimSun}");
+usepackage("amsmath");
+import graph;
+size(250);
+//光锥与因果性
+real theta;
+theta = 70;
+draw(Label("$x$",EndPoint),1*dir(180)--1*dir(0),Arrow);
+draw(Label("$t$",EndPoint),2*dir(-90)--2*dir(90),Arrow);
+draw(2*dir(theta-180)--2*dir(theta),Arrow);
+draw(2*dir(-theta)--2*dir(-theta+180),Arrow);
+label("$O$",(0,0),SW);
+label("$a$",2*dir(-theta+180),N);
+label("$b$",2*dir(-theta),S);
+label("$c$",2*dir(theta),N);
+label("$d$",2*dir(theta-180),S);
+label("绝对未来",1.5*dir(90));
+label("绝对过去",1.5*dir(-90));
+label("绝对",0.5*dir(0),N);
+label("分割",0.5*dir(0),S);
+label("绝对",-0.5*dir(0),N);
+label("分割",-0.5*dir(0),S);

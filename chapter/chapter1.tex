@@ -1,0 +1,741 @@
+\chapter{相对性原理}
+
+\section{相互作用的传播速度}
+
+为了描述发生的事件，必须有一个所谓的{\bf 参考系}。与经典力学中的参考系不同的是，现在的参考系不仅需要一个坐标系，还需要一个固定在其中的钟。此处坐标系用来刻画其中物体的位置，而钟用来指示时间。
+
+经典力学中已经提到过所谓{\bf Galileo相对性原理}：力学定理在所有惯性系中形式相同。一切惯性系等价，无法通过力学实验区分哪个惯性系更基本。换句话说，表示力学定律的方程对于由一个惯性系到另一个惯性系的时间和坐目标各种变换来说是不变的。也就是说，描述力学定律的方程，用不同的惯性系的坐标与时间写出来，将具有相同的形式。而且，有理由认为：所有的自然定律在所有惯性系中都是相同的，即所谓的{\bf 相对性原理}。
+
+粒子间的相互作用在经典力学中是瞬时传播的，然而，实验表明，瞬时的相互作用在自然界中是不存在的。实际上，如果相互作用的物体中的一个发生任何变动，仅仅在过了一段时间之后才能影响到其他物体。用这两个物体之间的距离除以这段时间，就得到{\bf 相互作用的传播速度}。
+
+这个速度，严格地说，应该称为相互作用的最大传播速度。这个速度仅仅决定于某一物体的变动开始在第二个物体上表现出来所需要的时间。而相互作用的最大传播速度的存在，也就暗示着，自然界中物体运动的速度一般不可能大于这个速度。假如真的有这种运动存在，我们可以利用这种运动实现一个相互作用，使得此相互作用的传播速度大于前面的最大传播速度。从一个粒子向另一个粒子传播的相互作用往往叫做“信号”，它由第一个粒子发出，将第一个粒子所经历的变化“通知”第二个粒子。因此相互作用的传播速度也可以称为{\bf 信号速度}。根据相对性原理可以推断相互作用的传播速度在所有惯性系中都是相同的，即相互作用的传播速度是一个普适常数。
+
+后面将会证明，这个恒定速度就是光在真空中的速度。{\bf 光速}常用$c$来表示，其值等于
+\begin{equation*}
+	c = \SI{2.998e8}{\metre/\second}
+\end{equation*}
+这个速度很大，因此经典力学在大多数情况下都足够精确。
+
+把相对性原理和相互作用传播速度的有线性结合起来，就得到{\bf Einstein相对性原理}，它不同于Galileo相对性原理，Galileo的相对性原理基于无限大的相互作用传播速度。
+
+以Einstein相对性原理（简称为相对性原理）为基础的力学，称为{\bf 相对论力学}。在运动物体的速度远小于光速的极限情形下，可略去相互作用传播速度有限对于运动的影响，此时相对论力学就变成{\bf 经典力学}。在相对论力学的公式中，取$c \to \infty$的极限，就可由相对论力学在形式上过渡到经典力学。
+
+很容易说明，绝对时间的概念是与Einstein相对性原理完全冲突的。在以绝对时间为基础的经典力学中，速度合成的通用法则是有效的，即复合运动的速度等于这个运动的各个速度的矢量和。将此法则用于相互作用的传播即可得出，互相作用在不同的惯性系中的传播速度必然是不同的，这就与相对性原理冲突了。但是，实验则完全证实了相对性原理，1881年Michelson-Morley实验表明，光速与其传播方向并无关系；然而，按照经典力学，光速在与地球运动相同的方向上，应该比在与地球运动方向相反的方向上小。
+
+因此，相对性原理直接导出时间不是绝对的，即在不同的参考系中，时间的流逝也是不同的。所以，“两个不同的事件之间有一定的时间间隔”这样的陈述，仅在指定了参考系的情况下才有意义。特别地，在某一个参考系中同时发生的事件，对另一个参考系来说并不一定是同时的。
+
+设有两个惯性系$K$和$K'$，其坐标轴分别为$xyz$和$x'y'z'$，而$K'$则相对于$K$沿$x$和$x'$轴向右运动（如图\ref{chapter8:同时的相对性}所示）。
+
+\begin{figure}[htb]
+\centering
+\begin{asy}
+	texpreamble("\usepackage{xeCJK}");
+	texpreamble("\setCJKmainfont{SimSun}");
+	usepackage("amsmath");
+	import graph;
+	size(250);
+	//同时的相对性
+	pair O,OO,i,j,k;
+	O = (0,0);
+	OO = (1,0.5);
+	i = dir(0);
+	j = dir(45-180);
+	k = dir(90);
+	draw(Label("$x$",EndPoint),O--5*i,Arrow);
+	draw(Label("$y$",EndPoint),O--1*j,Arrow);
+	draw(Label("$z$",EndPoint),O--4*k,Arrow);
+	draw(Label("$x'$",EndPoint),OO--OO+4*i,Arrow);
+	draw(Label("$y'$",EndPoint),OO--OO+(1-0.5/Sin(degrees(j)))*j,Arrow);
+	draw(Label("$z'$",EndPoint),OO--OO+3.5*k,Arrow);
+	real l;
+	l = 0.2;
+	draw(Label("$B$",EndPoint),OO+i--OO+i+l*k);
+	draw(Label("$A$",EndPoint),OO+2*i--OO+2*i+l*k);
+	draw(Label("$C$",EndPoint),OO+3*i--OO+3*i+l*k);
+	draw(OO+1.8*i+0.5*l*k--OO+1.2*i+0.5*l*k,Arrow);
+	draw(OO+2.2*i+0.5*l*k--OO+2.8*i+0.5*l*k,Arrow);
+\end{asy}
+\caption{同时的相对性}
+\label{chapter8:同时的相对性}
+\end{figure}
+
+设信号从$x'$轴上某一点$A$向两个相反的方向发出，既然信号在$K'$系中的传播速度在所有的惯性系中都一样，在两个方向上都等于$c$，因此$K'$系中的观察者将观察到信号同时到达$B$点和$C$点。
+
+然而在$K$系的观察者看来，同样的两个事件（即信号到达$B$点和$C$点）并不是同时的。按照相对性原理，信号相对于$K$系的速度也是$c$，而且因为$B$点在$K$系中向着信号发出的位置移动，而$C$点则背离信号发出的位置，所以在$K$系中，信号到达$B$点要比到达$C$点早。
+
+\section{间隔}
+
+\subsection{事件的间隔}
+
+一个事件是由其发生的地点及其发生的时间来描述的，因此在某一实物粒子上所发生的事件可由粒子的三个坐标以及事件发生的时间来决定。
+
+为表述便利起见，建立一个假象的四维空间，在此四维空间的四个轴中，三个用来刻画位置坐标，一个用来标示时间。在这个空间内，事件可用点来表示，这个点称为{\bf 世界点}。在这个假象的四维空间内，每个粒子都对应于一条线，称为{\bf 世界线}。这条在线的各点决定了粒子在所有时刻的坐标。
+
+现在考虑用数学形式来表示光速不变原理。为此，我们考虑两个彼此以恒定速度作相对运动的参考系$K$和$K'$。其中两个坐标系取为$x$轴和$x'$轴重合，而$y$轴和$z$轴则分别与$y'$轴和$z'$轴平行，并以$t$和$t'$分别表示在$K$和$K'$参考系内的时间。
+
+设第一个事件是：在$K$系内的$t_1$时刻从具有坐标$x_1,y_1,z_1$（在同一参考系中）的点发出一个光速传播的信号。再设第二个事件是：信号在$t_2$时刻到达点$x_2,y_2,z_2$。由于信号传播的速度是$c$，因此可得两个事件坐目标关系
+\begin{equation}
+	(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2-c^2(t_2-t_1)^2 = 0
+	\label{chapter8:K系中两个事件坐目标关系}
+\end{equation}
+而同样的两个事件，也可以在$K'$系中观察。设第一个事件在$K'$内的坐标为$x'_1,y'_1,z'_1,t'_1$，而第二个事件的坐标则为$x'_2,y'_2,z'_2,t'_2$。根据光速不变原理，在$K'$系中信号传播的速度也是$c$，因此可有
+\begin{equation}
+	(x'_2-x'_1)^2+(y'_2-y'_1)^2+(z'_2-z'_1)^2-c^2(t'_2-t'_1)^2 = 0
+	\label{chapter8:K'系中两个事件坐目标关系}
+\end{equation}
+
+假如$x_1,y_1,z_1,t_1$和$x_2,y_2,z_2,t_2$是任意两个事件的坐标，则
+\begin{equation}
+	s_{12} = \sqrt{c^2(t_2-t_1)^2 - (x_2-x_1)^2 - (y_2-y_1)^2 - (z_2-z_1)^2}
+	\label{chapter8:间隔的定义}
+\end{equation}
+称为这两个事件的{\bf 间隔}。因此，由光速不变原理可得，如果两个事件的间隔在某一个坐标系中为零，那么它在所有其他坐标系中均为零。
+
+如果两个事件彼此无限接近，那么其间隔$\mathrm{d}s$将满足
+\begin{equation}
+	\mathrm{d} s^2 = c^2 \mathrm{d} t^2 - \mathrm{d} x^2 - \mathrm{d} y^2 - \mathrm{d} z^2
+	\label{chapter8:无限小间隔}
+\end{equation}
+从数学形式上来看，式\eqref{chapter8:间隔的定义}和\eqref{chapter8:无限小间隔}的形式可以设想为四维空间内两点之间的距离（该空间的四个轴分别为$x,y,z$和$ct$）。但是与普通几何的法则之间有一个根本区别，即间隔的平方和中沿不同轴的坐标差平方是以相异而非相同的运算符号求和的。\footnote{二次式\eqref{chapter8:无限小间隔}所描述的四维几何，是Minkowski为相对论而引入的。这种几何称为{\bf 伪Euclid几何}。有些文献中将四维空间的四个坐标轴记作$x,y,z$和$\mathrm{i}ct$，这样间隔将在形式上表示为平方和的形式。}
+
+前面已经证明，如果在某一惯性系中有$\mathrm{d}s=0$，则在任意其他惯性系中同样有$\mathrm{d}s'=0$。此外，$\mathrm{d}s$和$\mathrm{d}s'$为同阶的两个无穷小量。由此可知，$\mathrm{d}s^2$与$\mathrm{d}s'^2$必须成比例，即
+\begin{equation}
+	\mathrm{d}s^2 = a\mathrm{d}s'^2
+\end{equation}
+而且其中系数$a$仅与两个惯性系的相对速度大小有关。系数$a$不可能与坐标或时间有关系，否则就违背了空间和时间的均匀性。系数$a$也不可能与惯性系的相对速度方向有关，否则就违背了空间的各向同性。
+
+考虑三个参考系$K,K_1,K_2$，令$V_1,V_2$为$K_1,K_2$相对于$K$的速度，此时有
+\begin{equation*}
+	\mathrm{d}s^2 = a(V_1) \mathrm{d}s_1^2 ,\quad \mathrm{d}s^2 = a(V_2) \mathrm{d}s_2^2 
+\end{equation*}
+以及
+\begin{equation*}
+	\mathrm{d}s_1^2 = a(V_{12}) \mathrm{d}s_2^2
+\end{equation*}
+式中$V_{12}$是$K_2$相对于$K_1$速度的大小。比较这三组关系可得
+\begin{equation}
+	\frac{a(V_2)}{a(V_1)} = a(V_{12})
+	\label{chapter8:间隔之间的比例系数关系}
+\end{equation}
+而$V_{12}$不仅依赖于矢量$\mbf{V}_1$和$\mbf{V}_2$的大小，还依赖于它们之间的夹角。\footnote{虽然在相对论下，速度的合成公式于经典力学下不同，但两个速度的合成速度依然是依赖于两个速度的大小和它们的夹角。}但这个夹角在式\eqref{chapter8:间隔之间的比例系数关系}的左端并未出现，因此显然式\eqref{chapter8:间隔之间的比例系数关系}只有当函数$a(V)$为常数时才成立，而且该常数必然为$1$。因此，
+\begin{equation}
+	\mathrm{d} s^2 = \mathrm{d} s'^2
+	\label{chapter8:无限小间隔相等}
+\end{equation}
+再从无限小间隔相等可得有限间隔相等，即$s=s'$。
+
+因此，我们得到一个很重要的结论：任意两个事件的间隔在所有惯性系中都是相等的，即当由一个惯性系变换到另一个惯性系时，这两个事件的间隔是不变的。这个不变性就是光速不变的数学表示。
+
+\subsection{类时间隔、类空间隔和类光间隔}
+
+再次假设$x_1,y_1,z_1,t_1$和$x_2,y_2,z_2,t_2$是在某一个惯性系$K$内的两个事件的坐标，是否存在一个惯性系$K'$，使得这两个事件在同一位置发生？在$K$系中，两个事件之间的间隔为
+\begin{equation*}
+	s^2 = c^2(t_2-t_1)^2 - (x_2-x_1)^2 - (y_2-y_1)^2 - (z_2-z_1)^2 = c^2 t_{12}^2 - l_{12}^2
+\end{equation*}
+在$K'$系中，两个事件之间的间隔则为
+\begin{equation*}
+	s'^2 = c^2 t'^2_{12} - l'^2_{12}
+\end{equation*}
+根据间隔的不变性，可得
+\begin{equation*}
+	c^2 t_{12}^2 - l_{12}^2 = c^2 t'^2_{12} - l'^2_{12}
+\end{equation*}
+在$K'$系中两个事件在同一位置发生，即要求$l'^2_{12}=0$，此时即有
+\begin{equation*}
+	s^2 = c^2 t_{12}^2 - l_{12}^2 = c^2 t'^2_{12} > 0
+\end{equation*}
+由此可得，如果$s^2>0$，即如果两个事件的间隔是实数的话，则存在一个惯性系，使得两个事件在同一位置发生。实数间隔称为{\bf 类时间隔}\footnote{在一些其他文献上，间隔的符号与此处相反，因此间隔的类时性和类空性判定也是相反的。}。
+
+因此，若两个事件的间隔是类时的，那么就有这样一个参考系存在，在其中两个事件发生于同一位置。若任何两个事件在同一物体上发生，那么它们之间的间隔必然是类时的。
+
+依然假设$x_1,y_1,z_1,t_1$和$x_2,y_2,z_2,t_2$是在某一个惯性系$K$内的两个事件的坐标，是否存在一个惯性系$K'$，使得这两个事件在同一时刻发生？于之前的讨论相同，同样有
+\begin{equation*}
+	c^2 t_{12}^2 - l_{12}^2 = c^2 t'^2_{12} - l'^2_{12}
+\end{equation*}
+在$K'$系中两个事件在同一时刻发生，即要求$t'^2_{12}=0$，此时即有
+\begin{equation*}
+	s^2 = c^2 t_{12}^2 - l_{12}^2 = -l'^2_{12} < 0 
+\end{equation*}
+因此，仅当两个事件的间隔是虚数的情况下，才存在一个惯性系使得两个事件同时发生。虚数间隔称为{\bf 类空间隔}。
+
+因此，若两个事件的间隔是类空的，那么就有这样一个参考系存在，在其中两个事件同时发生。
+
+恒为零的间隔称为{\bf 类光间隔}。
+
+由于间隔的不变性，将间隔分为类时间隔、类空间隔和类光间隔具有绝对的意义，即间隔的类空性、类时性或类旋光性与参考系无关。
+
+取某一个事件$O$作为时间及空间坐目标原点，现在我们来研究所有其他事件对于本事件$O$的关系。首先只考虑一维空间的情况，如图\ref{chapter8:光锥}所示。一个当$t=0$时经过$x=0$点的粒子的匀速直线运动可以用一条直线来表示，这条直线过$O$点，对$t$轴的斜率等于粒子的速度。因为物体最大的速度为$c$，所以这条直线与$t$轴成角也有一个最大值。图\ref{chapter8:光锥}中有两条直线，代表两个信号经过事件$O$（即当$t=0$时经过$x=0$）以光速向相反的两个方向传播。所有代表粒子运动的直线只能在$aOc$和$dOb$两个区域内。显然，在直线$ab$及$cd$上有$x=\pm ct$。世界点位于区域$aOc$中的那些事件满足$c^2t^2-x^2 > 0$。即，这个区域内的任何事件与事件$O$之间的间隔都是类时的。在这个区域内$t>0$，即其中所有的事件都发生在事件$O$之“后”。但是两个事件若被类时间隔所分开，无论在哪一个参考系中都不可能同时发生。因此也不可能找到一个参考系使得$aOc$区域中的任何事件会在事件$O$之“前”发生，即在$t<0$时发生。因此，$aOc$区域内的所有事件对$O$来说在任何参考系中都是未来的事件。所以，这个区域对事件$O$来说可称为{\bf 绝对未来}。
+
+\begin{figure}[htb]
+\centering
+\begin{asy}
+	texpreamble("\usepackage{xeCJK}");
+	texpreamble("\setCJKmainfont{SimSun}");
+	usepackage("amsmath");
+	import graph;
+	size(250);
+	//光锥与因果性
+	real theta;
+	theta = 70;
+	draw(Label("$x$",EndPoint),1*dir(180)--1*dir(0),Arrow);
+	draw(Label("$t$",EndPoint),2*dir(-90)--2*dir(90),Arrow);
+	draw(2*dir(theta-180)--2*dir(theta),Arrow);
+	draw(2*dir(-theta)--2*dir(-theta+180),Arrow);
+	label("$O$",(0,0),SW);
+	label("$a$",2*dir(-theta+180),N);
+	label("$b$",2*dir(-theta),S);
+	label("$c$",2*dir(theta),N);
+	label("$d$",2*dir(theta-180),S);
+	label("绝对未来",1.5*dir(90));
+	label("绝对过去",1.5*dir(-90));
+	label("绝对",0.5*dir(0),N);
+	label("分割",0.5*dir(0),S);
+	label("绝对",-0.5*dir(0),N);
+	label("分割",-0.5*dir(0),S);
+\end{asy}
+\caption{光锥与因果性}
+\label{chapter8:光锥}
+\end{figure}
+
+完全类似地，所有在区域$bOd$内的事件对$O$来说都是{\bf 绝对过去}，即本区域内的事件，无论在何参考系中都在事件$O$之前发生。
+
+最后，再研究$dOa$及$cOb$两个区域。本区域内的任何事件与事件$O$的间隔都是类空的。这些事件在任何参考系中都发生在空间的不同位置。因此，这些区域对于$O$来说都可称为{\bf 绝对分割}。但是，关于这些事件的“同时”、“较早”和“较晚”等概念都是相对的。对这些区域中的任何事件来说，在一些参考系中，此事件在事件$O$之后发生；在另一些参考系中，此事件在事件$O$之前发生；也存在一个参考系，在其中此事件与事件$O$同时发生。
+
+如果考虑三个空间坐标轴，那么图\ref{chapter8:光锥}中两条相交的直线，在四维空间坐标系$x,y,z,t$中将称为一个“圆锥体”$x^2+y^2+z^2-c^2t^2 = 0$，圆锥体的轴与$t$轴重合，称为{\bf 光锥}。光锥内的区域即为事件$O$的绝对未来和绝对过去。
+
+两个事件仅仅在其间隔是类时间隔的情况下，彼此才能有因果关系；这可以由相互作用的传播速度不能大于光速这一事实直接推出来。也只有对这些事件来说，“较早”和“较晚”才具有绝对意义，而这一点又是使因果概念具有意义的必要条件。
+
+\section{固有时}
+
+假设我们在某一惯性参考系（不妨称之为静止系）中观察一只钟，这只钟相对于我们可作任意形式的运动。在各个不同的时刻，该钟的运动可以认为是匀速的。因此，在每一时刻，我们可以引入一个固连于运动钟上的坐标系，这个坐标系也是一个惯性系。
+
+在无限小的时间间隔$\mathrm{d}t$内，运动的钟前进的距离是$\sqrt{\mathrm{d}x^2 + \mathrm{d}y^2 + \mathrm{d}z^2}$。而在与运动钟固连的坐标系内，钟是静止的，即$\mathrm{d}x'= \mathrm{d}y' = \mathrm{d}z' = 0$，由间隔的不变性，可得
+\begin{equation*}
+	\mathrm{d}s^2 = c^2 \mathrm{d}t^2 - \mathrm{d}x^2 - \mathrm{d}y^2 - \mathrm{d}z^2 = c^2 \mathrm{d} t'^2
+\end{equation*}
+由此可得在与钟固连坐标系中的时间为
+\begin{equation*}
+	\mathrm{d}t' = \mathrm{d}t \sqrt{1-\frac{\mathrm{d}x^2 + \mathrm{d}y^2 + \mathrm{d}z^2}{c^2 \mathrm{d}t^2}}
+\end{equation*}
+再由
+\begin{equation*}
+	\frac{\mathrm{d}x^2 + \mathrm{d}y^2 + \mathrm{d}z^2}{\mathrm{d}t^2} = v^2
+\end{equation*}
+其中$v$为运动钟在静止系中的速度，所以有
+\begin{equation}
+	\mathrm{d}t' = \frac{\mathrm{d} s}{c} = \mathrm{d}t\sqrt{1-\frac{v^2}{c^2}}
+	\label{chapter8:无穷小固有时}
+\end{equation}
+将上式积分，我们可以得到，当静止的钟所行走的时间为$t_2-t_1$时，运动的钟所指示的时间为
+\begin{equation}
+	t'_2 - t'_1 = \int_{t_1}^{t_2} \mathrm{d}t\sqrt{1-\frac{v^2}{c^2}}
+	\label{chapter8:固有时}
+\end{equation}
+随着某一给定物体一同运动的钟所指示的时间，称为该物体的{\bf 固有时}。由式\eqref{chapter8:无穷小固有时}和\eqref{chapter8:固有时}可知，一个运动物体的固有时永远比在静止系内相对应的时间间隔小。换句话说，运动的钟比静止的钟走得慢些。
+
+假设有一只钟相对于某一惯性系$K$作匀速直线运动。同这只钟固连着的参考系$K'$也是惯性系。从$K$系的观察者来看，$K'$系的钟走得慢。反过来说，从$K'$系的观察者来看，$K$系的钟走得慢。为了是我们相信这是不矛盾的，可以注意下面的事实。为了确定$K'$系内的钟比$K$系内的钟慢，我们必须按下述方法来做。假设在某一时刻，$K'$内的那只钟经过$K$内的一只钟旁边，而在这一时刻，两只钟所指示的时间恰好一样。为了比较$K$及$K'$内钟的快慢，我们必须再次将$K'$内同一只动钟的读数与$K$内的钟的读数作比较。但是在新的时刻，$K'$内的钟将从$K$内的另一些钟旁边经过，现在我们就将运动的钟与那些钟比较。这时我们发现，$K'$内的钟比藉以比较的$K$内的钟走得慢。由此可见，为了比较两个参考系内的钟的快慢，我们需要在一个参考系内有几只钟，而在另一个参考系内只有一只钟。因此这种过程对这两个参考系来说，并不是对称的。与另一参考系内不同的一些钟比较的那一只钟总是走得慢的钟。
+
+假设我们有两只钟，其中之一描绘一闭合路径，又回到出发点（即静止的钟所在之点），显然，与静止的钟相比，运动的钟慢了。相反，若设想运动的钟静止（即以运动的钟为参考系），就不能做上面的推论了。因为那只钟既然描绘了一条闭合曲线，它的运动就不是匀速直线运动，因而与之相连的参考系就不再是惯性系。因为自然定律只有在惯性系内才是一样的，与静止的钟相连的系统（惯性系）及与运动的钟相连的系统（非惯性系）具有不同的特性，因而导致静止的钟应当变慢这个结论的论证就不对了。
+
+一只钟所只是的时间间隔，等于沿着钟的世界线而取的积分$\displaystyle \dfrac{1}{c}\int\mathrm{d}s$。假如钟是静止的，则它的世界线是一条与$t$轴平行的直线；假如钟在闭合路径上作非匀速运动而且又回到出发点，那么它的世界线是一条曲线，这条曲线经过静止钟的直的世界线的起点和终点。另一方面，可以看到，静止钟所指示的时间间隔永远比运动的钟所指示的大。因此，我们得到一个结论，在两个世界点之间所取的积分$\displaystyle \int\mathrm{d}s$，只有在连接这两点之间的直线上能取得其最大值。\footnote{当然，需假设$a$及$b$两点和连接它们的曲线满足该曲线上所有的线元$\mathrm{d}s$都是类时的。这个性质与四维几何的伪Euclid特性有关。在Euclid空间中，这个积分沿直线当然取得最小值，此处定义的Minkowski空间的间隔与Euclid空间的间隔（距离）相比，多了一个负号，因此积分在直的世界在线取得最大值而非最小值。}
+
+\section{Lorentz变换}
+
+在经典力学中，已知一个惯性系$K$中事件的坐标$x,y,z,t$，获得相对$K$系以速度$V$匀速运动的$K'$系中的坐标$x',y',z',t'$是很简单的，称为{\bf Galileo变换}。即
+\begin{equation}
+\begin{cases}
+	\mbf{r} = \mbf{r}'+\mbf{V}t \\
+	t = t'
+\end{cases}
+\end{equation}
+很容易证明，Galileo变换不能满足相对论的要求，即这个变换不能满足事件之间的间隔不变。
+
+两个事件之间的间隔，可以认为是四维Minkowski空间中两个世界点之间的距离。因此，满足相对论要求的变换（即在四维Minkowski空间中的平移和旋转），必须保持四维空间$x,y,z,ct$内的所有距离不变。对于平移，这是显然的。因此只需考虑四维空间中的旋转即可。
+
+四维空间内的一切转动可以分解为六个分别在六个平面$xy,yz,zx,tx,ty,tz$内的转动，其中前三个转动仅仅变换空间坐标，它们对应通常的空间转动，只需将$K$系和$K'$系的坐标轴取得相互平行即可避免。
+
+现在研究在$tx$平面内的转动，这时$y$和$z$坐标是不变的。具体地说，这个变换必须使差值$c^2t^2-x^2$，即点$(ct,x)$到原点的“距离”的平方保持不变。因此，新旧坐目标关系最一般的表达式为
+\begin{equation}
+\begin{cases}
+	x = x'\cosh \psi + ct' \sinh \psi \\
+	ct = x'\sinh \psi + ct' \cosh \psi
+\end{cases}
+\label{chapter8:四维空间中旋转的一般形式}
+\end{equation}
+式中$\psi$为转动角。式\eqref{chapter8:四维空间中旋转的一般形式}与坐标轴转动变换通常公式的不同之处在于，此处的旋转公式中为双曲函数而非三角函数。这就是Euclid几何与伪Euclid几何之间的差别。假设$K'$系以速度$V$沿$x$轴相对$K$系作匀速运动，则$x,t$与$x',t'$之间的变换关系式中转动角仅与相对速度$V$有关。
+
+研究$K'$系的原点在$K$系中的运动。这时$x'=0$，而式\eqref{chapter8:四维空间中旋转的一般形式}可写成
+\begin{equation*}
+	x = ct'\sinh \psi,\quad ct = ct'\cosh \psi
+\end{equation*}
+由此可得
+\begin{equation*}
+	\frac{x}{ct} = \tanh \psi
+\end{equation*}
+而$\dfrac{x}{t}$显然是$K'$相对$K$的速度$V$，因此有
+\begin{equation*}
+	\tanh \psi = \frac{V}{c}
+\end{equation*}
+由此可得
+\begin{equation}
+\begin{cases}
+	x = \dfrac{x'+Vt'}{\sqrt{1-\dfrac{V^2}{c^2}}} \\
+	y = y' \\
+	z = z' \\
+	t = \dfrac{t'+\dfrac{V}{c^2}x'}{\sqrt{1-\dfrac{V^2}{c^2}}}
+\end{cases}
+\label{chapter8:Lorentz变换}
+\end{equation}
+这组变换称为{\bf Lorentz变换}，是今后讨论的基础。其逆变换只需将$V$替换为$-V$即可得到\footnote{当然直接求解方程组\eqref{chapter8:Lorentz变换}也能得到相同的结果。}。
+
+由式\eqref{chapter8:Lorentz变换}可见，取$c\to\infty$的经典力学极限，Lorentz变换事实上就过渡到Galileo变换了。当$V>c$时，式\eqref{chapter8:Lorentz变换}中的$x,t$变成虚数，这与运动速度不可能大于光速的事实符合。此外我们也不可以用以光速运行的参考系，因为在这种情形下，式\eqref{chapter8:Lorentz变换}的分母为零。
+
+当$V$比光速小很多时，我们可以用下面的近似公式代替式\eqref{chapter8:Lorentz变换}
+\begin{equation}
+\begin{cases}
+	x = x'+Vt' \\
+	y = y' \\
+	z = z' \\
+	t = t'+\dfrac{V}{c^2}x'
+\end{cases}
+\label{chapter8:近似的Lorentz变换}
+\end{equation}
+
+假设在$K$系中有一根平行于$x$轴的静止杆，假定它在$K$系内测定的长度为$\Delta x=x_2-x_1$，在$t'$时刻杆两端的坐标$x'_1,x'_2$与$x_1,x_2$的关系可由Lorentz变换\eqref{chapter8:Lorentz变换}获得
+\begin{equation*}
+	x_1 = \frac{x'_1 + Vt'}{\sqrt{1-\dfrac{V^2}{c^2}}},\quad x_2 = \frac{x'_2 + Vt'}{\sqrt{1-\dfrac{V^2}{c^2}}}
+\end{equation*}
+记杆在$K'$中的长度为$\Delta x'= x'_2-x'_1$，则有
+\begin{equation*}
+	\Delta x = \frac{\Delta x'}{\sqrt{1-\dfrac{V^2}{c^2}}}
+\end{equation*}
+杆的{\bf 固有长度}是它在与其相对静止的惯性系中的长度。如果用$l_0 = \Delta x$表示这个固有长度，用$l$表示它在任何其他参考系$K'$中的长度，即有
+\begin{equation}
+	l = l_0\sqrt{1-\frac{V^2}{c^2}}
+	\label{chapter8:固有长度}
+\end{equation}
+因此，杆在与其相对静止的惯性系中最长，在相对于杆以速度$V$运动的惯性系中，它的长度就要减少一个因子$\sqrt{1-\dfrac{V^2}{c^2}}$。相对论的这个结果称为{\bf Lorentz收缩}。因为物体的横向尺度都不因运动而改变，所以它的体积$\mathscr{V}$也按照相似的公式收缩，即
+\begin{equation}
+	\mathscr{V} = \mathscr{V}_0\sqrt{1-\frac{V^2}{c^2}}
+	\label{chapter8:固有体积}
+\end{equation}
+
+Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可对易性，即连续两次Galileo变换（具有不同的速度$\mbf{V}_1$和$\mbf{V}_2$）的结果与施行变换的顺序无关。然而连续两次Lorentz变换的结果一般依赖于它们的顺序。可类比于刚体的有限转动，作为四维空间中的有限转动，同样具有不可对易性，除非$\mbf{V}_1$和$\mbf{V}_2$相互平行。
+
+\section{速度的变换}
+
+假设$K'$系相对于$K$系以速度$V$沿$x$轴运动，则根据Lorentz变换\eqref{chapter8:Lorentz变换}可有
+\begin{equation*}
+\begin{cases}
+	\mathrm{d} x = \dfrac{\mathrm{d}x'+V\mathrm{d}t'}{\sqrt{1-\dfrac{V^2}{c^2}}} \\
+	\mathrm{d} y = \mathrm{d} y' \\
+	\mathrm{d} z = \mathrm{d} z' \\
+	\mathrm{d} t = \dfrac{\mathrm{d}t'+\dfrac{V}{c^2} \mathrm{d}x'}{\sqrt{1-\dfrac{V^2}{c^2}}}
+\end{cases}
+\end{equation*}
+考虑到
+\begin{equation*}
+	\mbf{v} = \frac{\mathrm{d} \mbf{r}}{\mathrm{d} t},\quad \mbf{v}' = \frac{\mathrm{d} \mbf{r}'}{\mathrm{d} t}
+\end{equation*}
+则有
+\begin{equation}
+\begin{cases}
+	v_x = \dfrac{\mathrm{d}x}{\mathrm{d}t} = \dfrac{v'_x+V}{1+\dfrac{V}{c^2}v'_x} \\[1.5ex]
+	v_y = \dfrac{\mathrm{d}y}{\mathrm{d}t} = \dfrac{v'_y\sqrt{1-\dfrac{V^2}{c^2}}}{1+\dfrac{V}{c^2}v'_x} \\[1.5ex]
+	v_z = \dfrac{\mathrm{d}z}{\mathrm{d}t} = \dfrac{v'_z\sqrt{1-\dfrac{V^2}{c^2}}}{1+\dfrac{V}{c^2}v'_x}
+\end{cases}
+\label{chapter8:速度的变换关系}
+\end{equation}
+这些公式就决定了速度的变换，它们是相对论中的速度合成法则。在$c\to\infty$的极限情形下，它们就变为经典力学中的公式：
+\begin{equation*}
+	v_x = v'_x+V,\quad v_y = v'_y,\quad v_z = v'_z
+\end{equation*}
+
+在粒子沿$x$轴运动的特殊情况下，$v_x=v,\,v_y=v_z=0$。那么，$v'_x=v',\,v'_y=v'_z=0$，并且有
+\begin{equation}
+	v = \frac{v'+V}{1+v'\dfrac{V}{c^2}}
+\end{equation}
+
+很容易证明，如果两个速度各小于或等于光速，其合成速度根据这组公式也不会大于光速。
+
+假如速度$V$比光速$c$小很多（$v$可以是任意的），我们将近似地（精确到$\dfrac{V}{c}$的项）得到
+\begin{equation}
+\begin{cases}
+	\displaystyle v_x = v'_x+V\left(1-\frac{v'^2_x}{c^2}\right) \\[1.5ex]
+	\displaystyle v_y = v'_y-v'_xv'_y\frac{V}{c^2} \\[1.5ex]
+	\displaystyle v_z = v'_z-v'_xv'_z\frac{V}{c^2}
+\end{cases}
+\end{equation}
+这3个公式可以合写为一个矢量公式
+\begin{equation}
+	\mbf{v} = \mbf{v}' + \mbf{V} - \frac{1}{c^2}(\mbf{V}\cdot \mbf{v}') \mbf{v}'
+\end{equation}
+
+我们可以指出，在相对论的速度合成公式\eqref{chapter8:速度的变换关系}中，相加的两个速度$\mbf{v}'$和$\mbf{V}$是以不对称的方式引入的（如果它们都不沿$x$轴方向的话）。这个事实同Lorentz变换的非对易性有关，将在下节提到。
+
+让我们这样来选择坐标轴，使粒子的速度在给定时刻是在$xy$平面内。这时粒子在$K$系内的速度分量是$v_x=v\cos \theta,\,v_y=v\sin \theta$，而在$K'$系内则为$v'_x=v'\cos \theta',\,v'_y=v'\sin \theta'$，其中$v,v'$为速度在$K$和$K'$系中的大小，$\theta,\theta'$为速度与$x$轴和$x'$轴的夹角。利用速度合成公式\eqref{chapter8:速度的变换关系}，可得
+\begin{equation}
+	\tan \theta = \frac{v'\sqrt{1-\dfrac{V^2}{c^2}}\sin \theta'}{v'\cos \theta'+V}
+	\label{chapter8:速度的方向在参考系之间的变换}
+\end{equation}
+这个公式决定了速度的方向从一个参考系变换到另一个参考系时的改变。
+
+让我们来详尽地研究这个公式的另一个重要特例，即光由一个参考系变换到另一个参考系时的偏差，即所谓的{\bf 光行差}现象。在这种情形下$v=v'=c$，因而式\eqref{chapter8:速度的方向在参考系之间的变换}化为
+\begin{equation}
+	\tan \theta = \frac{\sqrt{1-\dfrac{V^2}{c^2}}}{\dfrac{V}{c}+\cos \theta'}\sin \theta'
+\end{equation}
+再由式\eqref{chapter8:速度的变换关系}可得
+\begin{equation}
+	\sin \theta = \frac{\sqrt{1-\dfrac{V^2}{c^2}}}{1+\dfrac{V}{c}\cos \theta'}\sin \theta',\quad \cos \theta = \frac{\dfrac{V}{c}+\cos \theta'}{1+\dfrac{V}{c}\cos \theta'}
+	\label{chapter8:光行差角度变化关系}
+\end{equation}
+如果$V \ll c$，由式\eqref{chapter8:光行差角度变化关系}可得精确到数量级为$\dfrac{V}{c}$项的公式如下：
+\begin{equation*}
+	\sin \theta - \sin \theta' = -\frac{V}{c}\sin \theta'\cos \theta'
+\end{equation*}
+若引入光行差角$\Delta \theta = \theta'-\theta$，我们就可得到同级的近似公式
+\begin{equation}
+	\Delta \theta = \frac{V}{c} \sin \theta'
+\end{equation}
+这就是著名的光行差的基本公式。
+
+\section{四维矢量和四维张量}
+
+\subsection{四维矢量}
+
+一个事件的坐标$(ct,x,y,z)$可以看成是四维空间中一个四维径向矢量的分量。我们将它的分量记为$x^i$，这里指标$i$取值为$0,1,2,3$，而且
+\begin{equation*}
+	x^0 = ct,\quad x^1 = x,\quad x^2 = y,\quad x^3 = z
+\end{equation*}
+该径向四维矢量“长度”的平方由下式给出
+\begin{equation*}
+	(x^0)^2-(x^1)^2-(x^2)^2-(x^3)^2
+\end{equation*}
+它在四维坐标系的任意转动下不变，特别是，它在Lorentz变换下不变。
+
+更一般地，如果4个量$A^0,A^1,A^2,A^3$，在四维坐标系的变换下像四维径向矢量的分量$x^i$那样变换，我们就将这4个量的集合称为{\bf 四维矢量}$A^i$。在Lorentz变换下，
+\begin{equation}
+\begin{cases}
+	\displaystyle A^0 = \frac{A'^0+\dfrac{V}{c}A'^1}{\sqrt{1-\dfrac{V^2}{c^2}}} \\[1.5ex]
+	\displaystyle A^1 = \frac{A'^1+\dfrac{V}{c}A'^0}{\sqrt{1-\dfrac{V^2}{c^2}}} \\[1.5ex]
+	A^2 = A'^2 \\[1.5ex]
+	A^3 = A'^3 
+\end{cases}
+\end{equation}
+与四维径向矢量的平方类似，任一四维矢量数值的平方定义为：
+\begin{equation*}
+	(A^0)^2-(A^1)^2-(A^2)^2-(A^3)^2
+\end{equation*}
+为表示方便起见，我们引入四维矢量分量的两种“类型”，用带上标和下目标符号$A^i$和$A_i$来标记它们。两者之间的关系是
+\begin{equation}
+	A_0 = A^0,\quad A_1 = -A^1,\quad A_2 = -A^2,\quad A_3 = -A^3
+\end{equation}
+量$A^i$称为四维矢量的{\bf 逆变分量}，$A_i$称为四维矢量的{\bf 协变分量}。四维矢量的平方则取为形式
+\begin{equation*}
+	\sum_{i=0}^3 A^iA_i = A^0A_0+A^1A_1+A^2A_2+A^3A_3
+\end{equation*}
+人们通常略去求和号，将这样的求和简单记作$A^iA_i$，也就是约定遍历所有重复指标求和，而把求和号省去\footnote{这个约定称为“Einstein求和约定”。}。每对指标中必须一个为上标，另一个为下标。这种遍历“傀”指标求和的约定非常方便，可大大简化公式的书写。我们将用拉丁字母$i,k,l,\cdots$表示四维指标，其取值为$0,1,2,3$。
+
+与四维矢量的平方类比，我们可以构造两个不同四维矢量的{\bf 标积}：
+\begin{equation*}
+	A^iB_i = A_iB^i = A^0B_0+A^1B_1+A^2B_2+A^3B_3
+\end{equation*}
+显然，这既可以写为$A^iB_i$，也可以写为$A_iB^i$，结果是相同的。一般来说，一对傀指标中的上标和下标总是可以交换的。
+
+积$A^iB_i$是一个{\bf 四维标量}——它在四维坐标系的转动下是不变的。验证这点首先需明确四维矢量协变分量需满足的变换法则，即
+\begin{align*}
+	A_0 = A^0 & = \frac{A'^0+\dfrac{V}{c}A'^1}{\sqrt{1-\dfrac{V^2}{c^2}}} = \frac{A'_0-\dfrac{V}{c}A'_1}{\sqrt{1-\dfrac{V^2}{c^2}}} \\
+	A_1 = -A^1 & = -\frac{A'^1+\dfrac{V}{c}A'^0}{\sqrt{1-\dfrac{V^2}{c^2}}} = \frac{A'_1-\dfrac{V}{c}A'_0}{\sqrt{1-\dfrac{V^2}{c^2}}} \\
+	A_2 = -A^2 & = -A'^2 = A'_2 \\
+	A_3 = -A^3 & = -A'^3 = A'_3
+\end{align*}
+由此可得协变分量在Lorentz变换下的变换法则
+\begin{equation}
+\begin{cases}
+	\displaystyle A_0 = \frac{A'_0-\dfrac{V}{c}A'_1}{\sqrt{1-\dfrac{V^2}{c^2}}} \\[1.5ex]
+	\displaystyle A_1 = \frac{A'_1-\dfrac{V}{c}A'_0}{\sqrt{1-\dfrac{V^2}{c^2}}} \\[1.5ex]
+	\displaystyle A_2 = A'_2 \\[1.5ex]
+	\displaystyle A_3 = A'_3
+\end{cases}
+\end{equation}
+据此，便可直接验证
+\begin{align*}
+	A^iB_i & = A^0B_0+A^1B_1+A^2B_2+A^3B_3 \\
+	& = \frac{A'^0+\dfrac{V}{c}A'^1}{\sqrt{1-\dfrac{V^2}{c^2}}} \frac{B'_0-\dfrac{V}{c}B'_1}{\sqrt{1-\dfrac{V^2}{c^2}}} + \frac{A'^1+\dfrac{V}{c}A'^0}{\sqrt{1-\dfrac{V^2}{c^2}}} \frac{B'_1-\dfrac{V}{c}B'_0}{\sqrt{1-\dfrac{V^2}{c^2}}} + A'^2B'_2 + A'_3B'_3 \\
+	& = A'^0B'_0+A'^1B'_1+A'^2B'_2+A'_3B'_3
+\end{align*}
+
+分量$A^0$称为四维矢量的{\bf 时间分量}，$A^1,A^2,A^3$称为四维矢量的{\bf 空间分量}（与四维径向矢量类比）。四维矢量的平方可以为正、负或零，相应的四维矢量分别称为{\bf 类时矢量}、{\bf 类空矢量}和{\bf 类光矢量}\footnote{类光矢量也称为各项同性矢量。}。
+
+在纯空间转动（即不影响时间轴的变换）下，四维矢量$A^i$的三个空间分量构成一个三维矢量$\mbf{A}$。该四维矢量的时间分量（在这些变换下）是一个三维标量。为了列举四维矢量的分量，我们常将其写为
+\begin{equation*}
+	A^i = (A^0,\mbf{A})
+\end{equation*}
+同一四维矢量的协变分量为$A_i=(A^0,-\mbf{A})$。该四维矢量的平方为
+\begin{equation*}
+	A^iA_i = (A^0)^2 - \mbf{A}^2
+\end{equation*}
+因此，对于四维径向矢量：
+\begin{equation*}
+	x^i = (ct,\mbf{r}),\quad x_i = (ct,-\mbf{r}),\quad x^ix_i = c^2t^2- \mbf{r}^2
+\end{equation*}
+对于三维矢量，没有必要区分逆变和协变分量。只要能够做到这一点而不至引起混淆，我们将用希腊字母作为下标把这些分量记为$A_\alpha\,(\alpha=x,y,z)$。对于重复的希腊字母指针我们将假设其遍历$x,y,z$求和，例如
+\begin{equation*}
+	\mbf{A} \cdot \mbf{B} = A_\alpha B_\alpha
+\end{equation*}
+
+\subsection{四维张量}
+
+二阶{\bf 四维张量}是16个量$A^{ik}$的集合，它在坐标变换下像两个四维矢量分量的积那样变换。类似地，可以定义更高阶的四维张量。一个二阶张量的分量可以写为三种形式：协变分量$A_{ik}$、逆变分量$A^{ik}$和混合分量$A^i{}_k$及$A_i{}^k$。不同类型分量之间的联系由一下通则决定：升或降一个空间指标（$1,2,3$）改变分量的正负号，而升或降时间指标（$0$）则不变号。因此有
+\begin{align*}
+	& A_{00} = A^{00},\quad A_{01} = -A^{01},\quad A_{11} = A^{11},\cdots \\
+	& A^0{}_0 = A^{00},\quad A_0{}^1 = A^{01},\quad A^0{}_1 = -A^{01},\quad A^1{}_1 = -A^{11},\quad 
+\end{align*}
+在纯空间变换下，9个量$A^{11},A^{12},\cdots$构成一个三维张量。三个分量$A^{01},A^{02},A^{03}$和三个分量$A^{10},A^{20},A^{30}$构成三维矢量，而分量$A^{00}$是一个三维标量。
+
+如果$A^{ik} = A^{ki}$，张量$A^{ik}$称为{\bf 对称的}；如果$A^{ik} = -A^{ki}$，张量$A^{ik}$称为{\bf 反对称的}。在反对称张量中，所有对角分量（即分量$A^{00},A^{11},A^{22},A^{33}$）都是零。对于一个对称张量$A^{ik}$，混合分量$A^i{}_k$和$A_k{}^i$相等，在这样的情形下，我们把一个指标置于另一个上方，简单地记为$A^i{}_k$。
+
+在每个张量方程中，等号两边所含的自由指标（区别于傀指针）必须字母相同且位置相同（即上或下）。张量方程中的自由指标可以上移或下移，但必须对方程中所有的项同时进行。让不同张量的协变和逆变分量相等是“非法的”，这样的方程即便碰巧在特定参考系中成立，在变换到另一个参考系时也会失效（即其不具有“协变性”）。
+
+通过对张量$A^{ik}$的分量求和可以形成一个标量
+\begin{equation*}
+	A^i{}_i = A^0{}_0 + A^1{}_1 + A^2{}_2 + A^3{}_3
+\end{equation*}
+这个和称为{\bf 张量的迹}，求得它的运算称为{\bf 缩并}。缩并任何一对指标会使张量的阶减去$2$。例如二阶张量$A^iB_k$缩并后$A^iB_i$为四维标量，而四阶张量$A^i{}_{klm}$的缩并$A^i{}_{kli}$是一个二阶张量，等等。
+
+单位四维张量$\delta^i_k$满足如下条件：对于任意四维矢量$A^i$，有
+\begin{equation}
+	\delta^i_k A^k = A^i
+\end{equation}
+因此，这个张量的分量显然是
+\begin{equation}
+	\delta^i_k = \begin{cases} 1,& \text{当}\,i=k \\ 0, &\text{当}\,i\neq k \end{cases}
+\end{equation}
+它的迹是$\delta^i_i = 4$。通过在$\delta^i_k$中升一个指标或者降一个指标，我们就得到逆变张量$g^{ik}$或协变张量$g_{ik}$，称之为{\bf 度规张量}。张量$g^{ik}$和$g_{ik}$具有相同的分量，可以用矩阵表示为
+\begin{equation}
+	\begin{pmatrix} g^{ik} \end{pmatrix} = \begin{pmatrix} g_{ik} \end{pmatrix} = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 & -1 & 0 \\ 0 & 0 & 0 & -1 \end{pmatrix}
+\end{equation}
+由此，显然有
+\begin{equation}
+	g_{ik} A^k = A_i,\quad g^{ik} A_k = A^i
+\end{equation}
+两个四维矢量的标积因而可以写成形式
+\begin{equation}
+	A^i A_i = g_{ik}A^iA^k = g^{ik}A_iA_k
+\end{equation}
+
+张量$\delta^i_k$、$g_{ik}$和$g^{ik}$的特别之处在于，它们的分量在所有坐标系中都相同。四阶的{\bf 全反对称单位张量}$e^{iklm}$具有同样的性质。这个张量的分量在交换任一对指标时变号，其非零分量为$\pm 1$。从反对称性可知，有两个指标相同的所有分量均为零，所以仅有的非零分量是那些所有4个指标都不同者。我们令
+\begin{equation}
+	e^{0123} = 1
+\end{equation}
+于是，所有其他的非零分量$e^{iklm}$等于$1$或$-1$，依$i,k,l,m$这几个数能经偶数还是奇数次换位排成$0,1,2,3$而定。由于
+\begin{equation*}
+	e_{0123} = (-1)^3e^{0123} = -1
+\end{equation*}
+以及$e^{iklm}$的非零分量数为$4!=24$，可得
+\begin{equation}
+	e^{iklm}e_{iklm} = 24(-1)^3(e^{iklm})^2 = -24
+\end{equation}
+
+对于坐标系的转动而言，$e^{iklm}$诸量的特性与张量分量的特性相同，但是如果我们改变1个或3个坐目标正负号，分量$e^{iklm}$并不改变，因为按定义，它们在所有坐标系中都相同，而张量的分量在这种情况下是应当变号的。所以，严格地说，$e^{iklm}$并不是张量，而是一个{\bf 赝张量}。任意阶的赝张量，特别是赝标量，在所有的坐标变换下都具有张量的性质，只有那些不能归结为转动的变换，即反射（不能归结为转动的坐标正负号改变）是例外。
+
+乘积$e^{iklm}e^{prst}$构成一个8阶四维张量，它是一个真正的张量，通过缩并其一对或多对指标可以得到6阶、4阶和2阶张量。所有这些张量在所有坐标系中具有相同的形式。所以，它们的分量必须表示为单位张量$\delta^i_k$（其分量在所有坐标系中都相同的唯一真张量）分量乘积的组合。%从指标排列所必须具有的对称性出发，这些组合是不难求得的。
+
+记$\sigma$为一个4阶{\bf 置换}，其作用在$0,1,2,3$中的某数将得到其重排之后所对应的数。由于$e^{iklm}$的值只有在其指标互不相同时才非零，因此有
+\begin{equation*}
+	i,k,l,m = \sigma(1),\sigma(2),\sigma(3),\sigma(4)
+\end{equation*}
+由此即有
+\begin{equation*}
+	e^{iklm}e_{prst} = e^{\sigma(1)\sigma(2)\sigma(3)\sigma(4)} e_{\gamma(1)\gamma(2)\gamma(3)\gamma(4)} = -\mathrm{sgn}\,\sigma \mathrm{sgn}\,\gamma
+\end{equation*}
+此处$\mathrm{sgn}\,\sigma$表示置换$\sigma$的{\bf 符号}，如果置换后的元素经过偶数次交换可以恢复原本顺序，则该置换符号值为$1$，否则为$-1$。根据全反对称单位张量的定义，即有$e^{\sigma(1)\sigma(2)\sigma(3)\sigma(4)} = \mathrm{sgn}\,\sigma$。考虑到指标排列所必须具有的对称性，可有
+\begin{align*}
+	e^{iklm}e_{prst} & = e^{\sigma(1)\sigma(2)\sigma(3)\sigma(4)} e_{\gamma(1)\gamma(2)\gamma(3)\gamma(4)} = -\mathrm{sgn}\,\sigma \mathrm{sgn}\,\gamma = -\mathrm{sgn}\,\sigma \mathrm{sgn}\,\gamma \begin{vmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{vmatrix} \\
+	& = -\mathrm{sgn}\,\sigma \mathrm{sgn}\,\gamma \begin{vmatrix} \delta^0_0 & \delta^0_1 & \delta^0_2 & \delta^0_3 \\ \delta^1_0 & \delta^1_1 & \delta^1_2 & \delta^1_3 \\ \delta^1_0 & \delta^2_1 & \delta^2_2 & \delta^2_3 \\ \delta^3_0 & \delta^3_1 & \delta^3_2 & \delta^3_3 \end{vmatrix} = - \begin{vmatrix} \delta^{\sigma(0)}_{\gamma(0)} & \delta^{\sigma(0)}_{\gamma(1)} & \delta^{\sigma(0)}_{\gamma(2)} & \delta^{\sigma(0)}_{\gamma(3)} \\ \delta^{\sigma(1)}_{\gamma(0)} & \delta^{\sigma(1)}_{\gamma(1)} & \delta^{\sigma(1)}_{\gamma(2)} & \delta^{\sigma(1)}_{\gamma(3)} \\ \delta^{\sigma(2)}_{\gamma(0)} & \delta^{\sigma(2)}_{\gamma(1)} & \delta^{\sigma(2)}_{\gamma(2)} & \delta^{\sigma(2)}_{\gamma(3)} \\ \delta^{\sigma(3)}_{\gamma(0)} & \delta^{\sigma(3)}_{\gamma(1)} & \delta^{\sigma(3)}_{\gamma(2)} & \delta^{\sigma(3)}_{\gamma(3)} \end{vmatrix} \\
+	& = -\begin{vmatrix} \delta^i_p & \delta^i_r & \delta^i_s & \delta^i_t \\ \delta^k_p & \delta^k_r & \delta^k_s & \delta^k_t \\ \delta^l_p & \delta^l_r & \delta^l_s & \delta^l_t \\ \delta^m_p & \delta^m_r & \delta^m_s & \delta^m_t \end{vmatrix}
+\end{align*}
+由此，可有
+\begin{align*}
+	e^{iklm}e_{prst} & = \delta^i_t \begin{vmatrix}\delta^k_p & \delta^k_r & \delta^k_s \\ \delta^l_p & \delta^l_r & \delta^l_s \\ \delta^m_p & \delta^m_r & \delta^m_s \end{vmatrix} - \delta^k_t \begin{vmatrix} \delta^i_p & \delta^i_r & \delta^i_s \\ \delta^l_p & \delta^l_r & \delta^l_s \\ \delta^m_p & \delta^m_r & \delta^m_s \end{vmatrix} + \delta^l_t \begin{vmatrix} \delta^i_p & \delta^i_r & \delta^i_s \\ \delta^k_p & \delta^k_r & \delta^k_s \\ \delta^m_p & \delta^m_r & \delta^m_s \end{vmatrix} - \delta^m_t \begin{vmatrix} \delta^i_p & \delta^i_r & \delta^i_s \\ \delta^k_p & \delta^k_r & \delta^k_s \\ \delta^l_p & \delta^l_r & \delta^l_s\end{vmatrix}
+\end{align*}
+缩并其中的$m$和$t$可得
+\begin{align*}
+	e^{iklm}e_{prsm} & = \begin{vmatrix}\delta^k_p & \delta^k_r & \delta^k_s \\ \delta^l_p & \delta^l_r & \delta^l_s \\ \delta^i_p & \delta^i_r & \delta^i_s \end{vmatrix} - \begin{vmatrix} \delta^i_p & \delta^i_r & \delta^i_s \\ \delta^l_p & \delta^l_r & \delta^l_s \\ \delta^k_p & \delta^k_r & \delta^k_s \end{vmatrix} + \begin{vmatrix} \delta^i_p & \delta^i_r & \delta^i_s \\ \delta^k_p & \delta^k_r & \delta^k_s \\ \delta^l_p & \delta^l_r & \delta^l_s \end{vmatrix} - 4\begin{vmatrix} \delta^i_p & \delta^i_r & \delta^i_s \\ \delta^k_p & \delta^k_r & \delta^k_s \\ \delta^l_p & \delta^l_r & \delta^l_s\end{vmatrix} \\ 
+	& = -\begin{vmatrix} \delta^i_p & \delta^i_r & \delta^i_s \\ \delta^k_p & \delta^k_r & \delta^k_s \\ \delta^l_p & \delta^l_r & \delta^l_s\end{vmatrix}
+\end{align*}
+由此，可有
+\begin{align*}
+	e^{iklm}e_{prsm} & = -\delta^i_s \begin{vmatrix} \delta^k_p & \delta^k_r \\ \delta^l_p & \delta^l_r \end{vmatrix} + \delta^k_s \begin{vmatrix} \delta^i_p & \delta^i_r \\ \delta^l_p & \delta^l_r \end{vmatrix} - \delta^l_s \begin{vmatrix} \delta^i_p & \delta^i_r \\ \delta^k_p & \delta^k_r \end{vmatrix}
+\end{align*}
+缩并其中的$l$和$s$可得
+\begin{align*}
+	e^{iklm}e_{prlm} & = -\begin{vmatrix} \delta^k_p & \delta^k_r \\ \delta^i_p & \delta^i_r \end{vmatrix} + \begin{vmatrix} \delta^i_p & \delta^i_r \\ \delta^k_p & \delta^k_r \end{vmatrix} - 4 \begin{vmatrix} \delta^i_p & \delta^i_r \\ \delta^k_p & \delta^k_r \end{vmatrix} = -2 \begin{vmatrix} \delta^i_p & \delta^i_r \\ \delta^k_p & \delta^k_r \end{vmatrix} = -2(\delta^i_p\delta^k_r - \delta^i_r\delta^k_p)
+\end{align*}
+再缩并其中的$k$和$r$可得
+\begin{equation*}
+	e^{iklm}e_{pklm} = -2(4\delta^i_p - \delta^i_p) = -6\delta^i_p
+\end{equation*}
+综上，可有如下关系式
+\begin{align}
+	e^{iklm}e_{prst} & = -\begin{vmatrix} \delta^i_p & \delta^i_r & \delta^i_s & \delta^i_t \\ \delta^k_p & \delta^k_r & \delta^k_s & \delta^k_t \\ \delta^l_p & \delta^l_r & \delta^l_s & \delta^l_t \\ \delta^m_p & \delta^m_r & \delta^m_s & \delta^m_t \end{vmatrix} \\
+	e^{iklm}e_{prsm} & = -\begin{vmatrix} \delta^i_p & \delta^i_r & \delta^i_s \\ \delta^k_p & \delta^k_r & \delta^k_s \\ \delta^l_p & \delta^l_r & \delta^l_s \end{vmatrix} \\
+	e^{iklm}e_{prlm} & = -2(\delta^i_p\delta^k_r - \delta^i_r\delta^k_p) \\
+	e^{iklm}e_{pklm} & = -6\delta^i_p
+\end{align}
+
+如果$A^{ik}$是一个反对称张量，则张量$A^{ik}$和赝张量$A^{*ik} = \dfrac12 e^{iklm}A_{lm}$称为彼此{\bf 对偶}。类似地，$e^{iklm}A_m$是一个与矢量$A^i$对偶的三阶反对称赝张量。对偶张量的乘积$A^{ik}A^*_{ik}$显然是一个赝标量。
+
+联系这里的讨论，三阶全反对称单位赝张量$e_{\alpha\beta\gamma}$是这样一些量的几何，它们在任何一对指标换位时变号。因此在$e_{\alpha\beta\gamma}$的分量中，只有那些具有3个不同指标者才非零。我们令$e_{123}$，于是其他分量等于$1$或$-1$则根据$\alpha,\beta,\gamma$这个序列能经偶数还是奇数次换位排成$x,y,z$的顺序而定（即等于该置换的符号）。乘积$e_{\alpha\beta\gamma}e_{\lambda\mu\nu}$构成一个6阶真三维张量，因而可以表示为单位三维张量$\delta_{\alpha\beta}$分量乘积的组合。对于三阶全反对称单位赝张量也有类似的如下关系式：
+\begin{align}
+	e_{\alpha\beta\gamma}e_{\lambda\mu\nu} & = \begin{vmatrix} \delta_{\alpha\lambda} & \delta_{\alpha\mu} & \delta_{\alpha\nu} \\ \delta_{\beta\lambda} & \delta_{\beta\mu} & \delta_{\beta\nu} \\ \delta_{\gamma\lambda} & \delta_{\gamma\mu} & \delta_{\gamma\nu} \end{vmatrix} \\
+	e_{\alpha\beta\gamma}e_{\lambda\mu\gamma} & = \delta_{\alpha\lambda}\delta_{\beta\mu} - \delta_{\alpha\mu}\delta_{\beta\lambda} \\
+	e_{\alpha\beta\gamma}e_{\lambda\beta\gamma} & = 2\delta_{\alpha\lambda} \\
+	e_{\alpha\beta\gamma}e_{\alpha\beta\gamma} & = 6
+\end{align}
+
+在坐标系的反射（即所有坐标变号）下，一个普通矢量也变号。这样的矢量称为{\bf 极矢量}。一个矢量若能写成两个极矢量的矢积，则其分量在反演下不变号，这样的矢量称为{\bf 轴矢量}。一个极矢量和一个轴矢量的标积并不是一个真标量，而是一个赝标量，它在坐标反演下变号。轴矢量是赝矢量，对偶于某反对称张量。因此，如果$\mbf{C} = \mbf{A} \times \mbf{B}$，那么
+\begin{equation*}
+	C_\alpha = \frac12 e_{\alpha\beta\gamma}C_{\beta\gamma},\quad \text{其中}\,C_{\beta\gamma} = A_\beta B_\gamma - A_\gamma B_\beta
+\end{equation*}
+
+现在回到四维张量上来。反对称张量$A^{ik}$的空间分量（$i,k=1,2,3$）对于纯空间变换构成一个三维反对称张量。根据上面的论述，其分量可以用一个三维轴矢量的分量来表示。对于同样的变换，分量$A^{01},A^{02},A^{03}$构成一个三维极矢量。因此一个反对称四维张量可以写成矩阵
+\begin{equation}
+	\begin{pmatrix} A^{ik} \end{pmatrix} = \begin{pmatrix} 0 & p_x & p_y & p_z \\ -p_x & 0 & -a_z & a_y \\ -p_y & a_z & 0 & -a_x \\ -p_z & -a_y & a_x & 0 \end{pmatrix}
+\end{equation}
+这里对于空间变换，$\mbf{p}$和$\mbf{a}$分别为极矢量和轴矢量。在列出反对称四维张量的分量时，可以将它们写成形式
+\begin{equation*}
+	A^{ik} = (\mbf{p},\mbf{a})
+\end{equation*}
+其协变分量则为
+\begin{equation*}
+	A_{ik} = (-\mbf{p},\mbf{a})
+\end{equation*}
+
+\subsection{四维张量分析}
+
+标量$\phi$的四维梯度是四维矢量
+\begin{equation*}
+	\frac{\pl \phi}{\pl x^i} = \left(\frac{1}{c}\frac{\pl \phi}{\pl t},\bnb \phi\right)
+\end{equation*}
+这个导数是该四维梯度的协变分量，此标量的微分
+\begin{equation*}
+	\mathrm{d}\phi = \frac{\pl \phi}{\pl x^i} \mathrm{d}x^i
+\end{equation*}
+也是一个标量，其具有两个四维矢量标积的形式，由此也可看出$\dfrac{\pl \phi}{\pl x^i}$是该四维矢量的协变分量。
+
+一般说来，对于坐标$x^i$微分的算符$\dfrac{\pl}{\pl x^i}$应当看成是该算符四维矢量的协变分量。如果我们对于“协变坐标”$x_i$进行微分，则导数
+\begin{equation*}
+	\frac{\pl \phi}{\pl x_i} = g^{ik} \frac{\pl \phi}{\pl x^k} = \left(\frac{1}{c}\frac{\pl \phi}{\pl t},-\bnb \phi\right)
+\end{equation*}
+构成一个四维矢量的逆变分量。对于坐目标偏导数可以采用缩写
+\begin{equation*}
+	\pl_i = \frac{\pl}{\pl x^i},\quad \pl^i = \frac{\pl}{\pl x_i}
+\end{equation*}
+以这种形式书写微分算符时，由它们构成的量协变或逆变性质是一目了然的。
+
+在三维空间中，可以沿体积、曲面或曲线进行积分。在四维空间中积分有四种类型：
+\begin{enumerate}
+\item 沿四维空间中的一条曲线的积分。积分元就是线元，即四维矢量$\mathrm{d}x^i$。
+
+\item 沿四维空间中的一个（二维）曲面的积分。在三维空间中，由两个矢量$\mathrm{d}\mbf{r}$和$\mathrm{d}\mbf{r}'$构成的平行四边形的面积在坐标平面$x_\alpha x_\beta$上的投影是$\mathrm{d}x_\alpha \mathrm{d}x'_\beta - \mathrm{d}x_\beta \mathrm{d}x'_\alpha$。类似地，在四维空间中，无限小面元由二阶反对称张量$\mathrm{d}f^{ik}=\mathrm{d}x^i\mathrm{d}x'^k - \mathrm{d}x^k\mathrm{d}x'^i$给定，其分量为该面元在坐标平面上的投影。在三维空间中，我们不用张量$\mathrm{d}f_{\alpha\beta}$而用与之对偶的矢量$\mathrm{d}f_\alpha$来表示该面元$\mathrm{d}f_\alpha = \dfrac12 e_{\alpha\beta\gamma} \mathrm{d}f_{\beta\gamma}$。在几何上，这是一个与面元垂直的矢量，其绝对值等于面元的面积。在四维空间中无法构造这样的矢量，但可以构造与张量$\mathrm{d}f^{ik}$对偶的张量$\mathrm{d}f^{*ik}$，满足
+\begin{equation}
+	\mathrm{d}f^{*ik} = \frac12 e^{iklm}\mathrm{d}f_{lm}
+\end{equation}
+在几何上，它描述了一个“垂直”于面元$\mathrm{d}f_{ik}$而且与之大小相等的面元，即有$\mathrm{d}f^{*ik}\mathrm{d}f_{ik} = 0$。
+
+\item 沿一个超曲面，即沿一个三维流形的积分。在三维空间中，由3个矢量张成的平行六面体的体积等于由这些矢量的分量构成的3阶行列式。类似地，可以得到由3个四维矢量$\mathrm{d}x^i,\mathrm{d}x'^i,\mathrm{d}x”^i$张成的平行六面体体积（即该超曲面的“面积”），它们由如下行列式给出
+\begin{equation*}
+	\mathrm{d}S^{ikl} = \begin{vmatrix} \mathrm{d}x^i & \mathrm{d}x'^i & \mathrm{d}x”^i \\ \mathrm{d}x^k & \mathrm{d}x'^k & \mathrm{d}x”^k \\ \mathrm{d}x^l & \mathrm{d}x'^l & \mathrm{d}x”^l \end{vmatrix}
+\end{equation*}
+这构成一个三阶张量，对所有3个指标都是反对称的，在此情形下，使用与张量$\mathrm{d}S^{ikl}$对偶的四维矢量$\mathrm{d}S^i$更方便：
+\begin{equation}
+	\mathrm{d}S^i = -\frac16 e^{iklm} \mathrm{d}S_{klm},\quad \mathrm{d}S_{klm} = e_{nklm}\mathrm{d}S^n
+\end{equation}
+这里
+\begin{equation*}
+	\mathrm{d}S^0 = \mathrm{d}S^{123},\quad \mathrm{d}S^1 = \mathrm{d}S^{023},\quad \mathrm{d}S^2 = -\mathrm{d}S^{013},\quad \mathrm{d}S^3 = \mathrm{d}S^{012}
+\end{equation*}
+在几何上，$\mathrm{d}S^i$是一个四维矢量，数值上等于超曲面元的“面积”，并与该面元垂直。特别是，$\mathrm{d}S^0 = \mathrm{d}x\mathrm{d}y\mathrm{d}z$，这就是三维体积元$\mathrm{d}V$，即超曲面在超平面$x^0=\text{const}$上的投影。
+
+\item 沿一个四维体积的积分，积分元是标量
+\begin{equation}
+	\mathrm{d}\varOmega = \mathrm{d}x^0\mathrm{d}x^1\mathrm{d}x^2\mathrm{d}x^3 = ct\mathrm{d}t\mathrm{d}V
+\end{equation}
+\end{enumerate}
+
+类似三维矢量分析中的Gauss定理和Stokes定理，有些定理使我们能做四维积分的变换。
+
+沿一闭合超曲面的积分可以变换到沿其包含的四维体积的积分，用算符
+\begin{equation}
+	\mathrm{d}S_i \to \mathrm{d}\varOmega \frac{\pl}{\pl x^i} = \mathrm{d}\varOmega \pl_i
+\end{equation}
+代替积分元$\mathrm{d}S_i$。例如，对于矢量$A_i$的积分，可有
+\begin{equation}
+	\oint A^i \mathrm{d}S_i = \int \pl_iA^i \mathrm{d}\varOmega
+\end{equation}
+这个公式是Gauss定理的推广。
+
+沿一个二维曲面的积分可以变换为“包含”它的超曲面的积分，用算符
+\begin{equation}
+	\mathrm{d}f^*_{ik} \to \mathrm{d}S_i \frac{\pl}{\pl x^k} - \mathrm{d}S_k \frac{\pl}{\pl x^i} = \mathrm{d}S_i \pl_k - \mathrm{d}S_k \pl_i
+\end{equation}
+代替积分元$\mathrm{d}f^*_{ik}$。例如，对于反对称张量$A^{ik}$的积分，可有
+\begin{equation}
+	\frac12 \oint A^{ik}\mathrm{d}f^*_{ik} = \frac12 \int \left(\mathrm{d}S_i \pl_kA^{ik} - \mathrm{d}S_k \pl_iA^{ik}\right) = \int \mathrm{d}S_i \pl_kA^{ik}
+\end{equation}
+
+沿一条四维闭合曲线的积分可以通过代换
+\begin{equation}
+	\mathrm{d}x^i \to \mathrm{d}f^{ki}\frac{\pl}{\pl x^k} = \mathrm{d}f^{ki} \pl_k
+\end{equation}
+变换为“包含”它的曲面的积分。因此，对于一个矢量的积分，可有
+\begin{equation}
+	\oint A_i \mathrm{d}x^i = \int \mathrm{d}f^{ki}\pl_kA_i = \frac12 \int \mathrm{d}f^{ki} \left(\pl_iA_k - \pl_kA_i\right)
+\end{equation}
+这是Stokes定理的推广。
+
+\section{四维速度}
+
+由普通的三维速度矢量，我们可以构造一个四维矢量。一个粒子的{\bf 四维速度}（四速度）是矢量
+\begin{equation}
+	u^i = \frac{\mathrm{d} x^i}{\mathrm{d} s}
+\end{equation}
+为了求出它的分量，根据式\eqref{chapter8:无穷小固有时}可有
+\begin{equation}
+	\mathrm{d}s = c\mathrm{d}t\sqrt{1-\frac{v^2}{c^2}}
+\end{equation}
+其中$v$为粒子的普通三维速度。因此
+\begin{equation*}
+	u^1 = \frac{\mathrm{d}x^1}{\mathrm{d}s} = \frac{\mathrm{d}x}{c\mathrm{d}t\sqrt{1-\dfrac{v^2}{c^2}}} = \frac{v_x}{c \sqrt{1-\dfrac{v^2}{c^2}}}
+\end{equation*}
+由此可得
+\begin{equation}
+	u^i = \left(\frac{1}{\sqrt{1-\dfrac{v^2}{c^2}}},\frac{\mbf{v}}{c\sqrt{1-\dfrac{v^2}{c^2}}}\right)
+\end{equation}
+注意到，四维速度是一个无量纲量。
+
+四维速度的分量之间并不彼此独立，由于$\mathrm{d}x^i\mathrm{d}x_i = \mathrm{d}s^2$，因此有
+\begin{equation}
+	u^iu_i = 1
+	\label{chapter8:四维速度分量之间的关系}
+\end{equation}
+因此，四维速度的几何意义是与粒子世界线相切的一个四维单位矢量。
+
+与四维速度的定义类似，二阶导数
+\begin{equation*}
+	w^i = \frac{\mathrm{d}^2 x^i}{\mathrm{d} s^2} = \frac{\mathrm{d} u^i}{\mathrm{d} s}
+\end{equation*}
+可以称为{\bf 四维加速度}。微分式\eqref{chapter8:四维速度分量之间的关系}可得
+\begin{equation}
+	u_i w^i = 0
+\end{equation}
+即四维速度矢量与四维加速度矢量是相互正交的。
+
+% \begin{example}
+% 确定相对论的匀加速运动，即在固有参考系中（每个时刻）加速度$w$保持不变的直线运动。
+% \end{example}
+% \begin{solution}
+
+% \end{solution}
+
