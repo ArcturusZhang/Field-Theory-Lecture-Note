@@ -569,15 +569,15 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 
 记$\sigma$为一个4阶{\bf 置换}，其作用在$0,1,2,3$中的某数将得到其重排之后所对应的数。由于$e^{iklm}$的值只有在其指标互不相同时才非零，因此有
 \begin{equation*}
-	i,k,l,m = \sigma(1),\sigma(2),\sigma(3),\sigma(4)
+	i,k,l,m = \sigma(0),\sigma(1),\sigma(2),\sigma(3)
 \end{equation*}
-用$\mathrm{sgn}\,\sigma$表示置换$\sigma$的{\bf 符号}，如果置换后的元素经过偶数次交换可以恢复原本顺序，则该置换符号值为$1$，否则为$-1$。根据全反对称单位张量的定义，即有$e^{\sigma(1)\sigma(2)\sigma(3)\sigma(4)} = \mathrm{sgn}\,\sigma$，由此即有
+用$\mathrm{sgn}\,\sigma$表示置换$\sigma$的{\bf 符号}，如果置换后的元素经过偶数次交换可以恢复原本顺序，则该置换符号值为$1$，否则为$-1$。根据全反对称单位张量的定义，即有$e^{\sigma(0)\sigma(1)\sigma(2)\sigma(3)} = \mathrm{sgn}\,\sigma$，由此即有
 \begin{equation*}
-	e^{iklm}e_{prst} = e^{\sigma(1)\sigma(2)\sigma(3)\sigma(4)} e_{\gamma(1)\gamma(2)\gamma(3)\gamma(4)} = -\mathrm{sgn}\,\sigma \mathrm{sgn}\,\gamma
+	e^{iklm}e_{prst} = e^{\sigma(0)\sigma(1)\sigma(2)\sigma(3)} e_{\gamma(0)\gamma(1)\gamma(2)\gamma(3)} = -\mathrm{sgn}\,\sigma \mathrm{sgn}\,\gamma
 \end{equation*}
 考虑到指标排列所必须具有的对称性，可有
 \begin{align*}
-	e^{iklm}e_{prst} & = e^{\sigma(1)\sigma(2)\sigma(3)\sigma(4)} e_{\gamma(1)\gamma(2)\gamma(3)\gamma(4)} = -\mathrm{sgn}\,\sigma \mathrm{sgn}\,\gamma = -\mathrm{sgn}\,\sigma \mathrm{sgn}\,\gamma \begin{vmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{vmatrix} \\
+	e^{iklm}e_{prst} & = e^{\sigma(0)\sigma(1)\sigma(2)\sigma(3)} e_{\gamma(0)\gamma(1)\gamma(2)\gamma(3)} = -\mathrm{sgn}\,\sigma \mathrm{sgn}\,\gamma = -\mathrm{sgn}\,\sigma \mathrm{sgn}\,\gamma \begin{vmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{vmatrix} \\
 	& = -\mathrm{sgn}\,\sigma \mathrm{sgn}\,\gamma \begin{vmatrix} \delta^0_0 & \delta^0_1 & \delta^0_2 & \delta^0_3 \\ \delta^1_0 & \delta^1_1 & \delta^1_2 & \delta^1_3 \\ \delta^1_0 & \delta^2_1 & \delta^2_2 & \delta^2_3 \\ \delta^3_0 & \delta^3_1 & \delta^3_2 & \delta^3_3 \end{vmatrix} = - \begin{vmatrix} \delta^{\sigma(0)}_{\gamma(0)} & \delta^{\sigma(0)}_{\gamma(1)} & \delta^{\sigma(0)}_{\gamma(2)} & \delta^{\sigma(0)}_{\gamma(3)} \\ \delta^{\sigma(1)}_{\gamma(0)} & \delta^{\sigma(1)}_{\gamma(1)} & \delta^{\sigma(1)}_{\gamma(2)} & \delta^{\sigma(1)}_{\gamma(3)} \\ \delta^{\sigma(2)}_{\gamma(0)} & \delta^{\sigma(2)}_{\gamma(1)} & \delta^{\sigma(2)}_{\gamma(2)} & \delta^{\sigma(2)}_{\gamma(3)} \\ \delta^{\sigma(3)}_{\gamma(0)} & \delta^{\sigma(3)}_{\gamma(1)} & \delta^{\sigma(3)}_{\gamma(2)} & \delta^{\sigma(3)}_{\gamma(3)} \end{vmatrix} \\
 	& = -\begin{vmatrix} \delta^i_p & \delta^i_r & \delta^i_s & \delta^i_t \\ \delta^k_p & \delta^k_r & \delta^k_s & \delta^k_t \\ \delta^l_p & \delta^l_r & \delta^l_s & \delta^l_t \\ \delta^m_p & \delta^m_r & \delta^m_s & \delta^m_t \end{vmatrix}
 \end{align*}
@@ -692,17 +692,38 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 \end{equation}
 \end{enumerate}
 
-类似三维矢量分析中的Gauss定理和Stokes定理，有些定理使我们能做四维积分的变换。
+类似三维矢量分析中的Gauss定理和Stokes定理，利用微分几何中的广义Stokes公式
+\begin{equation}
+	\oint_{\pl \varOmega} \omega = \int_\varOmega \mathd \omega
+	\label{chapter1:广义Stokes公式}
+\end{equation}
+可以得到四维积分的变换，其中的算符$\mathd$表示{\bf 外微分}，设有外形式为
+\begin{equation*}
+	\omega = f\mathd x^{i_1} \wedge \mathd x^{i_2} \wedge \cdots \wedge \mathd x^{i_p}
+\end{equation*}
+其运算规则为
+\begin{equation*}
+	\mathd \omega = \pl_j f \mathd x^j \wedge \mathd x^{i_1} \wedge \mathd x^{i_2} \wedge \cdots \wedge \mathd x^{i_p}
+\end{equation*}
 
-沿一闭合超曲面的积分可以变换到沿其包含的四维体积的积分，用算符
+沿一闭合超曲面的积分可以变换到沿其包含的四维体积的积分，即
+\begin{align*}
+	\oint A^i \mathd S^*_i & = \oint A^i\left(-\frac16 e_{ijkl} \mathd S^{jkl}\right) = -\frac16 \oint A^ie_{ijkl} \mathd x^j \wedge \mathd x^k \wedge \mathd x^l \\
+	& = -\frac16 \int \mathd (A^ie_{ijkl} \mathd x^j \wedge \mathd x^k \wedge \mathd x^l) = -\frac16 \int \pl_n A^ie_{ijkl} \mathd x^n \wedge \mathd x^j \wedge \mathd x^k \wedge \mathd x^l
+\end{align*}
+根据微分形式的反对称性和四阶全反对称张量$e^{njkl}$的定义可有
+\begin{equation*}
+	\mathd x^n \wedge \mathd x^j \wedge \mathd x^k \wedge \mathd x^l = e^{njkl} \mathd x^0\wedge \mathd x^1\wedge \mathd x^2\wedge \mathd x^3 = e^{njkl} \mathd \varOmega
+\end{equation*}
+所以有
+\begin{align*}
+	\oint A^i \mathd S^*_i & = -\frac16 \int \pl_n A^ie_{ijkl}e^{njkl} \mathd \varOmega = -\frac16 \int\pl_n A^i (-6\delta^n_i) \mathd \varOmega = \int \pl_iA^i \mathd \varOmega
+\end{align*}
+更一般地，任意阶张量沿一闭合超曲面的积分都可以变换到沿其包含的四维体积的积分，只需在积分式中用算符
 \begin{equation}
-	\mathrm{d}S_i \to \mathrm{d}\varOmega \frac{\pl}{\pl x^i} = \mathrm{d}\varOmega \pl_i
+	\mathrm{d}S^*_i \to \mathrm{d}\varOmega \frac{\pl}{\pl x^i} = \mathrm{d}\varOmega \pl_i
 \end{equation}
-代替积分元$\mathrm{d}S_i$。例如，对于矢量$A_i$的积分，可有
-\begin{equation}
-	\oint A^i \mathrm{d}S_i = \int \pl_iA^i \mathrm{d}\varOmega
-\end{equation}
-这个公式是Gauss定理的推广。
+代替积分元$\mathrm{d}S^*_i$即可。这个公式是三维空间中Gauss定理的推广。
 
 沿一个二维曲面的积分可以变换为“包含”它的超曲面的积分，用算符
 \begin{equation}
