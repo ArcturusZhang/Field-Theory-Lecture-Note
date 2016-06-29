@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9) (preloaded format=xelatex 2016.5.12)  29 JUN 2016 12:09
+=======
+This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9) (preloaded format=xelatex 2016.6.27)  27 JUN 2016 15:42
+>>>>>>> 19d8a378c828143e1def479b83f0a9a304d002ef
 entering extended mode
 **./FT_chs.tex
 (FT_chs.tex
@@ -850,6 +854,7 @@ Package: xeCJKfntef 2016/02/10 v3.3.4 xeCJK font effect
 \UL@box=\box45
 \UL@hyphenbox=\box46
 \UL@skip=\skip54
+<<<<<<< HEAD
 \UL@hook=\toks17
 \UL@height=\dimen164
 \UL@pe=\count132
@@ -2463,3 +2468,6 @@ Here is how much of TeX's memory you used:
  65i,15n,89p,10440b,881s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on FT_chs.pdf (29 pages).
+=======
+\UL@hoo
+>>>>>>> 19d8a378c828143e1def479b83f0a9a304d002ef
