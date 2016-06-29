@@ -1,4 +1,4 @@
-\documentclass[UTF8,a4paper,openany]{ctexbook}
+\documentclass[hyperref,UTF8,a4paper,openany]{ctexbook}
 %\usepackage{ctex}
 \usepackage{zhnumber}
 \usepackage{graphicx}
@@ -29,7 +29,7 @@
         filecolor=black,
         urlcolor=blue,
         citecolor=black,
-        pdftitle={《场论》学习记录},
+        pdftitle={《场论》},
         pdfauthor={张大鹏},
         pdfsubject={相对论力学, 电动力学, 广义相对论},
         pdfkeywords={相对论力学, 电动力学, 广义相对论},
@@ -41,10 +41,15 @@
 \usepackage{fancyhdr}	%页眉页脚
 
 \usepackage{enumitem}
-\setlist[description,1]{leftmargin=0pt,itemindent=2em}
-\setlist[enumerate,1]{leftmargin=0pt,itemindent=2em}
-\setlist[enumerate,2]{leftmargin=1em,itemindent=2em}
-\setlist[enumerate,3]{leftmargin=1em,itemindent=2em}
+\setlist[enumerate,1]{leftmargin=0pt,itemindent=2em,itemsep=0ex,listparindent=2em,parsep = 0ex,topsep = 1ex}
+\setlist[enumerate,2]{leftmargin=0pt,itemsep=0ex,listparindent=2em,parsep = 0ex,topsep = 1ex}
+\setlist[enumerate,3]{leftmargin=0pt,itemsep=0ex,listparindent=2em,parsep = 0ex,topsep = 1ex}
+\setlist[itemize,1]{itemsep = 0ex, parsep = 0ex, topsep = 1ex}
+\setlist[description]{listparindent=2em, itemsep=0ex, parsep = 0ex,topsep = 1ex}
+% \setlist[description,1]{leftmargin=0pt,itemindent=2em}
+% \setlist[enumerate,1]{leftmargin=0pt,itemindent=2em}
+% \setlist[enumerate,2]{leftmargin=1em,itemindent=2em}
+% \setlist[enumerate,3]{leftmargin=1em,itemindent=2em}
 
 \ctexset{figurename={\kaishu 图},
 	tablename={表},
@@ -208,8 +213,6 @@
 \arrayrulewidth=0.4pt
 \vspace{-0.5cm}
 }
- 
-\definecolor{titlecolor}{rgb}{0.503906,0.503906,0.734375}
 
 \begin{document}
 

@@ -401,6 +401,8 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 
 \section{四维矢量和四维张量}
 
+方便起见，本节在直角坐标系下进行讨论，大部分结论都仅在直角坐标系中成立，在曲线坐标系中，本节中的很多形式将失去协变性。
+
 \subsection{四维矢量}
 
 一个事件的坐标$(ct,x,y,z)$可以看成是四维空间中一个四维径向矢量的分量。我们将它的分量记为$x^i$，这里指标$i$取值为$0,1,2,3$，而且
@@ -431,31 +433,46 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 来表示。在这个坐标变换下，协变坐标的微分为
 \begin{equation}
 	\mathd x^i = \frac{\pl x^i}{\pl x'^j} \mathd x'^j
+	\label{chapter1:协变坐标微分的变换式}
+\end{equation}
+而一个标量函数$\phi(x^0,x^1,x^2,x^3)$的梯度则满足关系
+\begin{equation}
+	\frac{\pl \phi}{\pl x^i} = \frac{\pl x'^j}{\pl x^i} \frac{\pl \phi}{\pl x'^j}
+	\label{chapter1:标量函数梯度的变换式}
 \end{equation}
 
+更一般地，如果4个量$A^0,A^1,A^2,A^3$，在四维坐标系的变换下像四维协变坐标的微分$\mathd x^i$那样变换（即式\eqref{chapter1:协变坐标微分的变换式}），即
+\begin{equation}
+	A^i = \frac{\pl x^i}{\pl x'^j} A'^j
+	\label{chapter1:四维矢量协变分量的变换关系式}
+\end{equation}
+我们就将这4个量的集合称为{\bf 四维矢量}$A^i$，而每个$A^i$则称为该四维矢量的{\bf 协变分量}。而如果4个量$A_0,A_1,A_2,A_3$，在四维坐标系的变换下像标量函数的梯度$\dfrac{\pl \phi}{\pl x^i}$那样变换（即式\eqref{chapter1:标量函数梯度的变换式}），即
+\begin{equation}
+	A_i = \frac{\pl x'^j}{\pl x^i} A'_j
+	\label{chapter1:四维矢量逆变分量的变换关系式}
+\end{equation}
+则这4个量的集合称为四维矢量$A_i$，而每个$A_i$则称为该四维矢量的{\bf 逆变分量}。同一个四维矢量可以用协变分量来表示，也可以用逆变分量来表示。
 
-更一般地，如果4个量$A^0,A^1,A^2,A^3$，在四维坐标系的变换下像四维径向矢量的分量$x^i$那样变换，我们就将这4个量的集合称为{\bf 四维矢量}$A^i$。在Lorentz变换下，
+特别地，在Lorentz变换下，有
 \begin{equation}
 \begin{cases}
 	\displaystyle A^0 = \frac{A'^0+\dfrac{V}{c}A'^1}{\sqrt{1-\dfrac{V^2}{c^2}}} \\[1.5ex]
 	\displaystyle A^1 = \frac{A'^1+\dfrac{V}{c}A'^0}{\sqrt{1-\dfrac{V^2}{c^2}}} \\[1.5ex]
 	A^2 = A'^2 \\[1.5ex]
 	A^3 = A'^3 
+\end{cases},\quad \text{以及}\quad
+\begin{cases}
+	\displaystyle A_0 = \frac{A'_0-\dfrac{V}{c}A'_1}{\sqrt{1-\dfrac{V^2}{c^2}}} \\[1.5ex]
+	\displaystyle A_1 = \frac{A'_1-\dfrac{V}{c}A'_0}{\sqrt{1-\dfrac{V^2}{c^2}}} \\[1.5ex]
+	A_2 = A'_2 \\[1.5ex]
+	A_3 = A'_3 
 \end{cases}
 \end{equation}
-与四维径向矢量的平方类似，任一四维矢量数值的平方定义为：
+
+与四维径向矢量的平方类似，任一四维矢量的平方定义为：
 \begin{equation*}
-	(A^0)^2-(A^1)^2-(A^2)^2-(A^3)^2
+	A^iA_i = A^0A_0 + A^1A_1 + A^2A_2 + A^3A_3 = (A^0)^2-(A^1)^2-(A^2)^2-(A^3)^2
 \end{equation*}
-为表示方便起见，我们引入四维矢量分量的两种“类型”，用带上标和下目标符号$A^i$和$A_i$来标记它们。两者之间的关系是
-\begin{equation}
-	A_0 = A^0,\quad A_1 = -A^1,\quad A_2 = -A^2,\quad A_3 = -A^3
-\end{equation}
-量$A^i$称为四维矢量的{\bf 逆变分量}，$A_i$称为四维矢量的{\bf 协变分量}。四维矢量的平方则取为形式
-\begin{equation*}
-	\sum_{i=0}^3 A^iA_i = A^0A_0+A^1A_1+A^2A_2+A^3A_3
-\end{equation*}
-人们通常略去求和号，将这样的求和简单记作$A^iA_i$，也就是约定遍历所有重复指标求和，而把求和号省去\footnote{这个约定称为“Einstein求和约定”。}。每对指标中必须一个为上标，另一个为下标。这种遍历“傀”指标求和的约定非常方便，可大大简化公式的书写。我们将用拉丁字母$i,k,l,\cdots$表示四维指标，其取值为$0,1,2,3$。
 
 与四维矢量的平方类比，我们可以构造两个不同四维矢量的{\bf 标积}：
 \begin{equation*}
@@ -463,30 +480,13 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 \end{equation*}
 显然，这既可以写为$A^iB_i$，也可以写为$A_iB^i$，结果是相同的。一般来说，一对傀指标中的上标和下标总是可以交换的。
 
-积$A^iB_i$是一个{\bf 四维标量}——它在四维坐标系的转动下是不变的。验证这点首先需明确四维矢量协变分量需满足的变换法则，即
-\begin{align*}
-	A_0 = A^0 & = \frac{A'^0+\dfrac{V}{c}A'^1}{\sqrt{1-\dfrac{V^2}{c^2}}} = \frac{A'_0-\dfrac{V}{c}A'_1}{\sqrt{1-\dfrac{V^2}{c^2}}} \\
-	A_1 = -A^1 & = -\frac{A'^1+\dfrac{V}{c}A'^0}{\sqrt{1-\dfrac{V^2}{c^2}}} = \frac{A'_1-\dfrac{V}{c}A'_0}{\sqrt{1-\dfrac{V^2}{c^2}}} \\
-	A_2 = -A^2 & = -A'^2 = A'_2 \\
-	A_3 = -A^3 & = -A'^3 = A'_3
-\end{align*}
-由此可得协变分量在Lorentz变换下的变换法则
-\begin{equation}
-\begin{cases}
-	\displaystyle A_0 = \frac{A'_0-\dfrac{V}{c}A'_1}{\sqrt{1-\dfrac{V^2}{c^2}}} \\[1.5ex]
-	\displaystyle A_1 = \frac{A'_1-\dfrac{V}{c}A'_0}{\sqrt{1-\dfrac{V^2}{c^2}}} \\[1.5ex]
-	\displaystyle A_2 = A'_2 \\[1.5ex]
-	\displaystyle A_3 = A'_3
-\end{cases}
-\end{equation}
-据此，便可直接验证
-\begin{align*}
-	A^iB_i & = A^0B_0+A^1B_1+A^2B_2+A^3B_3 \\
-	& = \frac{A'^0+\dfrac{V}{c}A'^1}{\sqrt{1-\dfrac{V^2}{c^2}}} \frac{B'_0-\dfrac{V}{c}B'_1}{\sqrt{1-\dfrac{V^2}{c^2}}} + \frac{A'^1+\dfrac{V}{c}A'^0}{\sqrt{1-\dfrac{V^2}{c^2}}} \frac{B'_1-\dfrac{V}{c}B'_0}{\sqrt{1-\dfrac{V^2}{c^2}}} + A'^2B'_2 + A'_3B'_3 \\
-	& = A'^0B'_0+A'^1B'_1+A'^2B'_2+A'_3B'_3
-\end{align*}
+积$A^iB_i$是一个{\bf 四维标量}——它在四维坐标系的变换下是不变的。这点根据四维矢量协变分量的变换关系\eqref{chapter1:四维矢量协变分量的变换关系式}和逆变分量的变换关系\eqref{chapter1:四维矢量逆变分量的变换关系式}可得
+\begin{equation*}
+	A^iB_i = \frac{\pl x^i}{\pl x'^j} A'^j \frac{\pl x'^k}{\pl x^i} B'_k = \frac{\pl x'^k}{\pl x^i} \frac{\pl x^i}{\pl x'^j} A'^j B'_k = \frac{\pl x'^k}{\pl x'^j} A'^jB'_k
+\end{equation*}
+其中显然有$\dfrac{\pl x'^k}{\pl x'^j} = \begin{cases} 1, & k=j \\ 0, & k\neq j \end{cases}$，因此有$A^iB_i = A'^jB'_j$，由此便说明了四维矢量的平方与四维坐标系的变换无关。
 
-分量$A^0$称为四维矢量的{\bf 时间分量}，$A^1,A^2,A^3$称为四维矢量的{\bf 空间分量}（与四维径向矢量类比）。四维矢量的平方可以为正、负或零，相应的四维矢量分别称为{\bf 类时矢量}、{\bf 类空矢量}和{\bf 类光矢量}\footnote{类光矢量也称为各项同性矢量。}。
+分量$A^0$称为四维矢量的{\bf 时间分量}，$A^1,A^2,A^3$称为四维矢量的{\bf 空间分量}（与四维径向矢量类比）。四维矢量的平方可以为正、负或零，相应的四维矢量分别称为{\bf 类时矢量}、{\bf 类空矢量}和{\bf 类光矢量}\footnote{类光矢量也称为{\bf 各向同性矢量}。}。
 
 在纯空间转动（即不影响时间轴的变换）下，四维矢量$A^i$的三个空间分量构成一个三维矢量$\mbf{A}$。该四维矢量的时间分量（在这些变换下）是一个三维标量。为了列举四维矢量的分量，我们常将其写为
 \begin{equation*}
@@ -500,14 +500,19 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 \begin{equation*}
 	x^i = (ct,\mbf{r}),\quad x_i = (ct,-\mbf{r}),\quad x^ix_i = c^2t^2- \mbf{r}^2
 \end{equation*}
-对于三维矢量，没有必要区分逆变和协变分量。只要能够做到这一点而不至引起混淆，我们将用希腊字母作为下标把这些分量记为$A_\alpha\,(\alpha=x,y,z)$。对于重复的希腊字母指针我们将假设其遍历$x,y,z$求和，例如
+
+对于三维矢量，在直角坐标系中没有必要区分逆变和协变分量。只要能够做到这一点而不至引起混淆，我们将用希腊字母作为下标把这些分量记为$A_\alpha\,(\alpha=x,y,z)$。对于重复的希腊字母指针我们将假设其遍历$x,y,z$求和，例如
 \begin{equation*}
 	\mbf{A} \cdot \mbf{B} = A_\alpha B_\alpha
 \end{equation*}
 
 \subsection{四维张量}
 
-二阶{\bf 四维张量}是16个量$A^{ik}$的集合，它在坐标变换下像两个四维矢量分量的积那样变换。类似地，可以定义更高阶的四维张量。一个二阶张量的分量可以写为三种形式：协变分量$A_{ik}$、逆变分量$A^{ik}$和混合分量$A^i{}_k$及$A_i{}^k$。不同类型分量之间的联系由一下通则决定：升或降一个空间指标（$1,2,3$）改变分量的正负号，而升或降时间指标（$0$）则不变号。因此有
+二阶{\bf 四维张量}是16个量$A^{ij}$的集合，它在坐标变换下像两个四维矢量分量的积那样变换，即
+\begin{equation}
+	A^{ij} = \frac{\pl x^i}{\pl x'^k} \frac{\pl x^j}{\pl x'^l} A'^{kl}
+\end{equation}
+类似地，可以定义更高阶的四维张量。一个二阶张量的分量可以写为三种形式：协变分量$A_{ik}$、逆变分量$A^{ik}$和混合分量$A^i{}_k$及$A_i{}^k$。不同类型分量之间的联系由一下通则决定：升或降一个空间指标（$1,2,3$）改变分量的正负号，而升或降时间指标（$0$）则不变号。因此有
 \begin{align*}
 	& A_{00} = A^{00},\quad A_{01} = -A^{01},\quad A_{11} = A^{11},\cdots \\
 	& A^0{}_0 = A^{00},\quad A_0{}^1 = A^{01},\quad A^0{}_1 = -A^{01},\quad A^1{}_1 = -A^{11},\quad 
@@ -516,7 +521,7 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 
 如果$A^{ik} = A^{ki}$，张量$A^{ik}$称为{\bf 对称的}；如果$A^{ik} = -A^{ki}$，张量$A^{ik}$称为{\bf 反对称的}。在反对称张量中，所有对角分量（即分量$A^{00},A^{11},A^{22},A^{33}$）都是零。对于一个对称张量$A^{ik}$，混合分量$A^i{}_k$和$A_k{}^i$相等，在这样的情形下，我们把一个指标置于另一个上方，简单地记为$A^i{}_k$。
 
-在每个张量方程中，等号两边所含的自由指标（区别于傀指针）必须字母相同且位置相同（即上或下）。张量方程中的自由指标可以上移或下移，但必须对方程中所有的项同时进行。让不同张量的协变和逆变分量相等是“非法的”，这样的方程即便碰巧在特定参考系中成立，在变换到另一个参考系时也会失效（即其不具有“协变性”）。
+在每个张量方程中，等号两边所含的自由指标（区别于傀指标）必须字母相同且位置相同（即上或下）。张量方程中的自由指标可以上移或下移，但必须对方程中所有的项同时进行。让不同张量的协变和逆变分量相等是“非法的”，这样的方程即便碰巧在特定参考系中成立，在变换到另一个参考系时也会失效（即其不具有“协变性”）。
 
 通过对张量$A^{ik}$的分量求和可以形成一个标量
 \begin{equation*}
@@ -532,33 +537,33 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 \begin{equation}
 	\delta^i_k = \begin{cases} 1,& \text{当}\,i=k \\ 0, &\text{当}\,i\neq k \end{cases}
 \end{equation}
-它的迹是$\delta^i_i = 4$。通过在$\delta^i_k$中升一个指标或者降一个指标，我们就得到逆变张量$g^{ik}$或协变张量$g_{ik}$，称之为{\bf 度规张量}。张量$g^{ik}$和$g_{ik}$具有相同的分量，可以用矩阵表示为
+它的迹是$\delta^i_i = 4$。通过在$\delta^i_k$中升一个指标或者降一个指标，我们就得到逆变张量$\eta^{ik}$或协变张量$\eta_{ik}$，称之为{\bf Minkowski空间度规张量}。张量$\eta^{ik}$和$\eta_{ik}$具有相同的分量，可以用矩阵表示为
 \begin{equation}
-	\begin{pmatrix} g^{ik} \end{pmatrix} = \begin{pmatrix} g_{ik} \end{pmatrix} = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 & -1 & 0 \\ 0 & 0 & 0 & -1 \end{pmatrix}
+	\begin{pmatrix} \eta^{ik} \end{pmatrix} = \begin{pmatrix} \eta_{ik} \end{pmatrix} = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 & -1 & 0 \\ 0 & 0 & 0 & -1 \end{pmatrix}
 \end{equation}
 由此，显然有
 \begin{equation}
-	g_{ik} A^k = A_i,\quad g^{ik} A_k = A^i
+	\eta_{ik} A^k = A_i,\quad \eta^{ik} A_k = A^i
 \end{equation}
 两个四维矢量的标积因而可以写成形式
 \begin{equation}
-	A^i A_i = g_{ik}A^iA^k = g^{ik}A_iA_k
+	A^i A_i = \eta_{ik}A^iA^k = \eta^{ik}A_iA_k
 \end{equation}
 
-张量$\delta^i_k$、$g_{ik}$和$g^{ik}$的特别之处在于，它们的分量在所有坐标系中都相同。四阶的{\bf 全反对称单位张量}$e^{iklm}$具有同样的性质。这个张量的分量在交换任一对指标时变号，其非零分量为$\pm 1$。从反对称性可知，有两个指标相同的所有分量均为零，所以仅有的非零分量是那些所有4个指标都不同者。我们令
+张量$\delta^i_k$、$\eta_{ik}$和$\eta^{ik}$的特别之处在于，它们的分量在所有坐标系中都相同。四阶的{\bf 全反对称单位张量}$e^{iklm}$具有同样的性质。这个张量的分量在交换任意一对指标时变号，其非零分量为$\pm 1$。从反对称性可知，有两个指标相同的所有分量均为零，所以仅有的非零分量是那些所有4个指标都不同者。我们令
 \begin{equation}
 	e^{0123} = 1
 \end{equation}
 于是，所有其他的非零分量$e^{iklm}$等于$1$或$-1$，依$i,k,l,m$这几个数能经偶数还是奇数次换位排成$0,1,2,3$而定。由于
 \begin{equation*}
-	e_{0123} = (-1)^3e^{0123} = -1
+	e_{0123} = \eta_{0i}\eta_{1j}\eta_{2k}\eta_{3l} e^{ijkl} = (-1)^3e^{0123} = -1
 \end{equation*}
 以及$e^{iklm}$的非零分量数为$4!=24$，可得
 \begin{equation}
 	e^{iklm}e_{iklm} = 24(-1)^3(e^{iklm})^2 = -24
 \end{equation}
 
-对于坐标系的转动而言，$e^{iklm}$诸量的特性与张量分量的特性相同，但是如果我们改变1个或3个坐目标正负号，分量$e^{iklm}$并不改变，因为按定义，它们在所有坐标系中都相同，而张量的分量在这种情况下是应当变号的。所以，严格地说，$e^{iklm}$并不是张量，而是一个{\bf 赝张量}。任意阶的赝张量，特别是赝标量，在所有的坐标变换下都具有张量的性质，只有那些不能归结为转动的变换，即反射（不能归结为转动的坐标正负号改变）是例外。
+对于坐标系的转动而言，$e^{iklm}$诸量的特性与张量分量的特性相同，但是如果我们改变1个或3个坐标的正负号，分量$e^{iklm}$并不改变，因为根据定义，它们在所有坐标系中都相同，而张量的分量在这种情况下是应当变号的。所以，严格地说，$e^{iklm}$并不是张量，而是一个{\bf 赝张量}。任意阶的赝张量，特别是赝标量，在所有的坐标变换下都具有张量的性质，只有那些不能归结为转动的变换，即反射（不能归结为转动的坐标正负号改变）是例外。
 
 乘积$e^{iklm}e^{prst}$构成一个8阶四维张量，它是一个真正的张量，通过缩并其一对或多对指标可以得到6阶、4阶和2阶张量。所有这些张量在所有坐标系中具有相同的形式。所以，它们的分量必须表示为单位张量$\delta^i_k$（其分量在所有坐标系中都相同的唯一真张量）分量乘积的组合。%从指标排列所必须具有的对称性出发，这些组合是不难求得的。
 
@@ -566,11 +571,11 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 \begin{equation*}
 	i,k,l,m = \sigma(1),\sigma(2),\sigma(3),\sigma(4)
 \end{equation*}
-由此即有
+用$\mathrm{sgn}\,\sigma$表示置换$\sigma$的{\bf 符号}，如果置换后的元素经过偶数次交换可以恢复原本顺序，则该置换符号值为$1$，否则为$-1$。根据全反对称单位张量的定义，即有$e^{\sigma(1)\sigma(2)\sigma(3)\sigma(4)} = \mathrm{sgn}\,\sigma$，由此即有
 \begin{equation*}
 	e^{iklm}e_{prst} = e^{\sigma(1)\sigma(2)\sigma(3)\sigma(4)} e_{\gamma(1)\gamma(2)\gamma(3)\gamma(4)} = -\mathrm{sgn}\,\sigma \mathrm{sgn}\,\gamma
 \end{equation*}
-此处$\mathrm{sgn}\,\sigma$表示置换$\sigma$的{\bf 符号}，如果置换后的元素经过偶数次交换可以恢复原本顺序，则该置换符号值为$1$，否则为$-1$。根据全反对称单位张量的定义，即有$e^{\sigma(1)\sigma(2)\sigma(3)\sigma(4)} = \mathrm{sgn}\,\sigma$。考虑到指标排列所必须具有的对称性，可有
+考虑到指标排列所必须具有的对称性，可有
 \begin{align*}
 	e^{iklm}e_{prst} & = e^{\sigma(1)\sigma(2)\sigma(3)\sigma(4)} e_{\gamma(1)\gamma(2)\gamma(3)\gamma(4)} = -\mathrm{sgn}\,\sigma \mathrm{sgn}\,\gamma = -\mathrm{sgn}\,\sigma \mathrm{sgn}\,\gamma \begin{vmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{vmatrix} \\
 	& = -\mathrm{sgn}\,\sigma \mathrm{sgn}\,\gamma \begin{vmatrix} \delta^0_0 & \delta^0_1 & \delta^0_2 & \delta^0_3 \\ \delta^1_0 & \delta^1_1 & \delta^1_2 & \delta^1_3 \\ \delta^1_0 & \delta^2_1 & \delta^2_2 & \delta^2_3 \\ \delta^3_0 & \delta^3_1 & \delta^3_2 & \delta^3_3 \end{vmatrix} = - \begin{vmatrix} \delta^{\sigma(0)}_{\gamma(0)} & \delta^{\sigma(0)}_{\gamma(1)} & \delta^{\sigma(0)}_{\gamma(2)} & \delta^{\sigma(0)}_{\gamma(3)} \\ \delta^{\sigma(1)}_{\gamma(0)} & \delta^{\sigma(1)}_{\gamma(1)} & \delta^{\sigma(1)}_{\gamma(2)} & \delta^{\sigma(1)}_{\gamma(3)} \\ \delta^{\sigma(2)}_{\gamma(0)} & \delta^{\sigma(2)}_{\gamma(1)} & \delta^{\sigma(2)}_{\gamma(2)} & \delta^{\sigma(2)}_{\gamma(3)} \\ \delta^{\sigma(3)}_{\gamma(0)} & \delta^{\sigma(3)}_{\gamma(1)} & \delta^{\sigma(3)}_{\gamma(2)} & \delta^{\sigma(3)}_{\gamma(3)} \end{vmatrix} \\
@@ -607,7 +612,7 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 
 如果$A^{ik}$是一个反对称张量，则张量$A^{ik}$和赝张量$A^{*ik} = \dfrac12 e^{iklm}A_{lm}$称为彼此{\bf 对偶}。类似地，$e^{iklm}A_m$是一个与矢量$A^i$对偶的三阶反对称赝张量。对偶张量的乘积$A^{ik}A^*_{ik}$显然是一个赝标量。
 
-联系这里的讨论，三阶全反对称单位赝张量$e_{\alpha\beta\gamma}$是这样一些量的几何，它们在任何一对指标换位时变号。因此在$e_{\alpha\beta\gamma}$的分量中，只有那些具有3个不同指标者才非零。我们令$e_{123}$，于是其他分量等于$1$或$-1$则根据$\alpha,\beta,\gamma$这个序列能经偶数还是奇数次换位排成$x,y,z$的顺序而定（即等于该置换的符号）。乘积$e_{\alpha\beta\gamma}e_{\lambda\mu\nu}$构成一个6阶真三维张量，因而可以表示为单位三维张量$\delta_{\alpha\beta}$分量乘积的组合。对于三阶全反对称单位赝张量也有类似的如下关系式：
+联系这里的讨论，三阶全反对称单位赝张量$e_{\alpha\beta\gamma}$是这样一些量的集合，它们在任何一对指标换位时变号。因此在$e_{\alpha\beta\gamma}$的分量中，只有那些具有3个不同指标者才非零。我们令$e_{123}$，于是其他分量等于$1$或$-1$则根据$\alpha,\beta,\gamma$这个序列能经偶数还是奇数次换位排成$x,y,z$的顺序而定（即等于该置换的符号）。乘积$e_{\alpha\beta\gamma}e_{\lambda\mu\nu}$构成一个6阶真三维张量，因而可以表示为单位三维张量$\delta_{\alpha\beta}$分量乘积的组合。对于三阶全反对称单位赝张量也有类似的如下关系式：
 \begin{align}
 	e_{\alpha\beta\gamma}e_{\lambda\mu\nu} & = \begin{vmatrix} \delta_{\alpha\lambda} & \delta_{\alpha\mu} & \delta_{\alpha\nu} \\ \delta_{\beta\lambda} & \delta_{\beta\mu} & \delta_{\beta\nu} \\ \delta_{\gamma\lambda} & \delta_{\gamma\mu} & \delta_{\gamma\nu} \end{vmatrix} \\
 	e_{\alpha\beta\gamma}e_{\lambda\mu\gamma} & = \delta_{\alpha\lambda}\delta_{\beta\mu} - \delta_{\alpha\mu}\delta_{\beta\lambda} \\
@@ -635,19 +640,19 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 
 \subsection{四维张量分析}
 
-标量$\phi$的四维梯度是四维矢量
-\begin{equation*}
+前面已经提到，标量$\phi$的四维梯度是四维矢量$\dfrac{\pl \phi}{\pl x^i}$，它可以展开写为
+\begin{equation}
 	\frac{\pl \phi}{\pl x^i} = \left(\frac{1}{c}\frac{\pl \phi}{\pl t},\bnb \phi\right)
-\end{equation*}
-这个导数是该四维梯度的协变分量，此标量的微分
+\end{equation}
+而坐标的微分$\mathd x^i$与四维梯度的缩并即为该标量的微分
 \begin{equation*}
 	\mathrm{d}\phi = \frac{\pl \phi}{\pl x^i} \mathrm{d}x^i
 \end{equation*}
-也是一个标量，其具有两个四维矢量标积的形式，由此也可看出$\dfrac{\pl \phi}{\pl x^i}$是该四维矢量的协变分量。
+由此可以看出，它具有两个四维矢量标积的形式，也是一个标量。
 
 一般说来，对于坐标$x^i$微分的算符$\dfrac{\pl}{\pl x^i}$应当看成是该算符四维矢量的协变分量。如果我们对于“协变坐标”$x_i$进行微分，则导数
 \begin{equation*}
-	\frac{\pl \phi}{\pl x_i} = g^{ik} \frac{\pl \phi}{\pl x^k} = \left(\frac{1}{c}\frac{\pl \phi}{\pl t},-\bnb \phi\right)
+	\frac{\pl \phi}{\pl x_i} = \eta^{ik} \frac{\pl \phi}{\pl x^k} = \left(\frac{1}{c}\frac{\pl \phi}{\pl t},-\bnb \phi\right)
 \end{equation*}
 构成一个四维矢量的逆变分量。对于坐目标偏导数可以采用缩写
 \begin{equation*}
@@ -659,29 +664,31 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 \begin{enumerate}
 \item 沿四维空间中的一条曲线的积分。积分元就是线元，即四维矢量$\mathrm{d}x^i$。
 
-\item 沿四维空间中的一个（二维）曲面的积分。在三维空间中，由两个矢量$\mathrm{d}\mbf{r}$和$\mathrm{d}\mbf{r}'$构成的平行四边形的面积在坐标平面$x_\alpha x_\beta$上的投影是$\mathrm{d}x_\alpha \mathrm{d}x'_\beta - \mathrm{d}x_\beta \mathrm{d}x'_\alpha$。类似地，在四维空间中，无限小面元由二阶反对称张量$\mathrm{d}f^{ik}=\mathrm{d}x^i\mathrm{d}x'^k - \mathrm{d}x^k\mathrm{d}x'^i$给定，其分量为该面元在坐标平面上的投影。在三维空间中，我们不用张量$\mathrm{d}f_{\alpha\beta}$而用与之对偶的矢量$\mathrm{d}f_\alpha$来表示该面元$\mathrm{d}f_\alpha = \dfrac12 e_{\alpha\beta\gamma} \mathrm{d}f_{\beta\gamma}$。在几何上，这是一个与面元垂直的矢量，其绝对值等于面元的面积。在四维空间中无法构造这样的矢量，但可以构造与张量$\mathrm{d}f^{ik}$对偶的张量$\mathrm{d}f^{*ik}$，满足
+\item 沿四维空间中的一个（二维）曲面的积分。在三维空间中，无穷小有向面积元素在坐标平面$x_\alpha x_\beta$上的投影为微分$2-$形式$\mathd x_\alpha \wedge \mathd x_\beta$。类似地，在四维空间中，无限小面元由二阶反对称张量$\mathrm{d}f^{ij}=\mathrm{d} x^i \wedge \mathrm{d}x^j$给定，其分量为该面元在坐标平面上的投影。在三维空间中，我们不用张量$\mathrm{d}f_{\alpha\beta}$而用与之对偶的矢量$\mathrm{d}f_\gamma$来表示该面元$\mathrm{d}f_\gamma = \dfrac12 e_{\alpha\beta\gamma} \mathrm{d}f_{\alpha\beta}$。在几何上，这是一个与面元垂直的矢量，其绝对值等于面元的面积。在四维空间中无法构造这样的矢量，但可以构造与张量$\mathrm{d}f^{ij}$对偶的张量$\mathrm{d}f^{*ij}$，满足
 \begin{equation}
-	\mathrm{d}f^{*ik} = \frac12 e^{iklm}\mathrm{d}f_{lm}
+	\mathrm{d}f^{*ij} = \frac12 e^{ijkl}\mathrm{d}f_{kl}
 \end{equation}
-在几何上，它描述了一个“垂直”于面元$\mathrm{d}f_{ik}$而且与之大小相等的面元，即有$\mathrm{d}f^{*ik}\mathrm{d}f_{ik} = 0$。
+它们之间满足关系$\mathrm{d}f^{*ij}\mathrm{d}f_{ij} = 0$，这是由于%\footnote{这里并没有搞懂}已搞懂！
+\begin{align*}
+	\mathrm{d}f^{*ij}\mathrm{d}f_{ij} & = \frac12 e^{ijkl}\mathrm{d}f_{kl} \mathd f_{ij} = -\frac12 e^{ljki} \mathd f_{ij}\mathrm{d}f_{kl} = -\frac12 e^{jkil} \mathd f_{ij}\mathrm{d}f_{kl} = \frac12 e^{jikl} \mathd f_{ij}\mathrm{d}f_{kl} \\
+	& = -\frac12 e^{ijkl} \mathd f_{ij}\mathrm{d} f_{kl} = -\mathrm{d}f^{*ij}\mathrm{d}f_{ij}
+\end{align*}
+由此即有$\mathrm{d}f^{*ij}\mathrm{d}f_{ij} = 0$。在几何上，它描述了一个正交于面元$\mathrm{d}f_{ij}$而且与之大小相等的面元。
 
-\item 沿一个超曲面，即沿一个三维流形的积分。在三维空间中，由3个矢量张成的平行六面体的体积等于由这些矢量的分量构成的3阶行列式。类似地，可以得到由3个四维矢量$\mathrm{d}x^i,\mathrm{d}x'^i,\mathrm{d}x”^i$张成的平行六面体体积（即该超曲面的“面积”），它们由如下行列式给出
-\begin{equation*}
-	\mathrm{d}S^{ikl} = \begin{vmatrix} \mathrm{d}x^i & \mathrm{d}x'^i & \mathrm{d}x”^i \\ \mathrm{d}x^k & \mathrm{d}x'^k & \mathrm{d}x”^k \\ \mathrm{d}x^l & \mathrm{d}x'^l & \mathrm{d}x”^l \end{vmatrix}
-\end{equation*}
-这构成一个三阶张量，对所有3个指标都是反对称的，在此情形下，使用与张量$\mathrm{d}S^{ikl}$对偶的四维矢量$\mathrm{d}S^i$更方便：
+\item 沿一个超曲面，即沿一个三维流形的积分。在三维空间中，无穷小有向体积元素可以表示为微分$3-$形式$\mathd x\wedge \mathd y\wedge \mathd z$。类似地，在四维空间中，一个无穷小三维超曲面的有向面积元素可以表示为$\mathd S^{ijk} = \mathd x^i\wedge \mathd x^j \wedge \mathd x^k$。
+这构成一个三阶张量，对所有3个指标都是反对称的，在此情形下，使用与张量$\mathrm{d}S^{ijk}$对偶的四维矢量$\mathrm{d}S^{*i}$更方便：
 \begin{equation}
-	\mathrm{d}S^i = -\frac16 e^{iklm} \mathrm{d}S_{klm},\quad \mathrm{d}S_{klm} = e_{nklm}\mathrm{d}S^n
+	\mathrm{d}S^{*i} = -\frac16 e^{ijkl} \mathrm{d}S_{jkl},\quad \mathrm{d}S_{jkl} = e_{njkl}\mathrm{d}S^{*n}
 \end{equation}
 这里
 \begin{equation*}
-	\mathrm{d}S^0 = \mathrm{d}S^{123},\quad \mathrm{d}S^1 = \mathrm{d}S^{023},\quad \mathrm{d}S^2 = -\mathrm{d}S^{013},\quad \mathrm{d}S^3 = \mathrm{d}S^{012}
+	\mathrm{d}S^{*0} = \mathrm{d}S^{123},\quad \mathrm{d}S^{*1} = \mathrm{d}S^{023},\quad \mathrm{d}S^{*2} = \mathrm{d}S^{013},\quad \mathrm{d}S^{*3} = \mathrm{d}S^{012}
 \end{equation*}
-在几何上，$\mathrm{d}S^i$是一个四维矢量，数值上等于超曲面元的“面积”，并与该面元垂直。特别是，$\mathrm{d}S^0 = \mathrm{d}x\mathrm{d}y\mathrm{d}z$，这就是三维体积元$\mathrm{d}V$，即超曲面在超平面$x^0=\text{const}$上的投影。
+在几何上，$\mathrm{d}S^{*i}$是一个四维矢量，数值上等于超曲面元的“面积”，并与该面元垂直。特别是，$\mathrm{d}S^{*0} = \mathrm{d}x\wedge \mathrm{d}y \wedge \mathrm{d}z$，这就是三维体积元$\mathrm{d}V$，即超曲面在超平面$x^0=\text{const}$上的投影。
 
 \item 沿一个四维体积的积分，积分元是标量
 \begin{equation}
-	\mathrm{d}\varOmega = \mathrm{d}x^0\mathrm{d}x^1\mathrm{d}x^2\mathrm{d}x^3 = ct\mathrm{d}t\mathrm{d}V
+	\mathrm{d}\varOmega = \mathrm{d}x^0 \wedge \mathrm{d}x^1 \wedge \mathrm{d}x^2 \wedge \mathrm{d}x^3 = c\mathrm{d}t \wedge \mathrm{d}V
 \end{equation}
 \end{enumerate}
 

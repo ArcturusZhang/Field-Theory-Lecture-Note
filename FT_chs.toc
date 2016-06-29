@@ -6,11 +6,11 @@
 \contentsline {section}{\numberline {1.3}固有时}{6}{section.1.3}
 \contentsline {section}{\numberline {1.4}Lorentz变换}{7}{section.1.4}
 \contentsline {section}{\numberline {1.5}速度的变换}{9}{section.1.5}
-\contentsline {section}{\numberline {1.6}四维矢量和四维张量}{11}{section.1.6}
+\contentsline {section}{\numberline {1.6}四维矢量和四维张量}{10}{section.1.6}
 \contentsline {subsection}{\numberline {1.6.1}四维矢量}{11}{subsection.1.6.1}
 \contentsline {subsection}{\numberline {1.6.2}四维张量}{13}{subsection.1.6.2}
-\contentsline {subsection}{\numberline {1.6.3}四维张量分析}{17}{subsection.1.6.3}
-\contentsline {section}{\numberline {1.7}四维速度}{19}{section.1.7}
+\contentsline {subsection}{\numberline {1.6.3}四维张量分析}{16}{subsection.1.6.3}
+\contentsline {section}{\numberline {1.7}四维速度}{18}{section.1.7}
 \contentsline {chapter}{\numberline {第二章\hspace {0.3em}}相对论力学}{20}{chapter.2}
 \contentsline {section}{\numberline {2.1}Hamilton原理}{20}{section.2.1}
 \contentsline {section}{\numberline {2.2}能量与动量}{20}{section.2.2}
