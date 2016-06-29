@@ -24,7 +24,7 @@
 
 因此，相对性原理直接导出时间不是绝对的，即在不同的参考系中，时间的流逝也是不同的。所以，“两个不同的事件之间有一定的时间间隔”这样的陈述，仅在指定了参考系的情况下才有意义。特别地，在某一个参考系中同时发生的事件，对另一个参考系来说并不一定是同时的。
 
-设有两个惯性系$K$和$K'$，其坐标轴分别为$xyz$和$x'y'z'$，而$K'$则相对于$K$沿$x$和$x'$轴向右运动（如图\ref{chapter8:同时的相对性}所示）。
+设有两个惯性系$K$和$K'$，其坐标轴分别为$xyz$和$x'y'z'$，而$K'$则相对于$K$沿$x$和$x'$轴向右运动（如图\ref{chapter1:同时的相对性}所示）。
 
 \begin{figure}[htb]
 \centering
@@ -56,7 +56,7 @@
 	draw(OO+2.2*i+0.5*l*k--OO+2.8*i+0.5*l*k,Arrow);
 \end{asy}
 \caption{同时的相对性}
-\label{chapter8:同时的相对性}
+\label{chapter1:同时的相对性}
 \end{figure}
 
 设信号从$x'$轴上某一点$A$向两个相反的方向发出，既然信号在$K'$系中的传播速度在所有的惯性系中都一样，在两个方向上都等于$c$，因此$K'$系中的观察者将观察到信号同时到达$B$点和$C$点。
@@ -76,27 +76,27 @@
 设第一个事件是：在$K$系内的$t_1$时刻从具有坐标$x_1,y_1,z_1$（在同一参考系中）的点发出一个光速传播的信号。再设第二个事件是：信号在$t_2$时刻到达点$x_2,y_2,z_2$。由于信号传播的速度是$c$，因此可得两个事件坐目标关系
 \begin{equation}
 	(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2-c^2(t_2-t_1)^2 = 0
-	\label{chapter8:K系中两个事件坐目标关系}
+	\label{chapter1:K系中两个事件坐目标关系}
 \end{equation}
 而同样的两个事件，也可以在$K'$系中观察。设第一个事件在$K'$内的坐标为$x'_1,y'_1,z'_1,t'_1$，而第二个事件的坐标则为$x'_2,y'_2,z'_2,t'_2$。根据光速不变原理，在$K'$系中信号传播的速度也是$c$，因此可有
 \begin{equation}
 	(x'_2-x'_1)^2+(y'_2-y'_1)^2+(z'_2-z'_1)^2-c^2(t'_2-t'_1)^2 = 0
-	\label{chapter8:K'系中两个事件坐目标关系}
+	\label{chapter1:K'系中两个事件坐目标关系}
 \end{equation}
 
 假如$x_1,y_1,z_1,t_1$和$x_2,y_2,z_2,t_2$是任意两个事件的坐标，则
 \begin{equation}
 	s_{12} = \sqrt{c^2(t_2-t_1)^2 - (x_2-x_1)^2 - (y_2-y_1)^2 - (z_2-z_1)^2}
-	\label{chapter8:间隔的定义}
+	\label{chapter1:间隔的定义}
 \end{equation}
 称为这两个事件的{\bf 间隔}。因此，由光速不变原理可得，如果两个事件的间隔在某一个坐标系中为零，那么它在所有其他坐标系中均为零。
 
 如果两个事件彼此无限接近，那么其间隔$\mathrm{d}s$将满足
 \begin{equation}
 	\mathrm{d} s^2 = c^2 \mathrm{d} t^2 - \mathrm{d} x^2 - \mathrm{d} y^2 - \mathrm{d} z^2
-	\label{chapter8:无限小间隔}
+	\label{chapter1:无限小间隔}
 \end{equation}
-从数学形式上来看，式\eqref{chapter8:间隔的定义}和\eqref{chapter8:无限小间隔}的形式可以设想为四维空间内两点之间的距离（该空间的四个轴分别为$x,y,z$和$ct$）。但是与普通几何的法则之间有一个根本区别，即间隔的平方和中沿不同轴的坐标差平方是以相异而非相同的运算符号求和的。\footnote{二次式\eqref{chapter8:无限小间隔}所描述的四维几何，是Minkowski为相对论而引入的。这种几何称为{\bf 伪Euclid几何}。有些文献中将四维空间的四个坐标轴记作$x,y,z$和$\mathrm{i}ct$，这样间隔将在形式上表示为平方和的形式。}
+从数学形式上来看，式\eqref{chapter1:间隔的定义}和\eqref{chapter1:无限小间隔}的形式可以设想为四维空间内两点之间的距离（该空间的四个轴分别为$x,y,z$和$ct$）。但是与普通几何的法则之间有一个根本区别，即间隔的平方和中沿不同轴的坐标差平方是以相异而非相同的运算符号求和的。\footnote{二次式\eqref{chapter1:无限小间隔}所描述的四维几何，是Minkowski为相对论而引入的。这种几何称为{\bf 伪Euclid几何}。有些文献中将四维空间的四个坐标轴记作$x,y,z$和$\mathrm{i}ct$，这样间隔将在形式上表示为平方和的形式。}
 
 前面已经证明，如果在某一惯性系中有$\mathrm{d}s=0$，则在任意其他惯性系中同样有$\mathrm{d}s'=0$。此外，$\mathrm{d}s$和$\mathrm{d}s'$为同阶的两个无穷小量。由此可知，$\mathrm{d}s^2$与$\mathrm{d}s'^2$必须成比例，即
 \begin{equation}
@@ -115,12 +115,12 @@
 式中$V_{12}$是$K_2$相对于$K_1$速度的大小。比较这三组关系可得
 \begin{equation}
 	\frac{a(V_2)}{a(V_1)} = a(V_{12})
-	\label{chapter8:间隔之间的比例系数关系}
+	\label{chapter1:间隔之间的比例系数关系}
 \end{equation}
-而$V_{12}$不仅依赖于矢量$\mbf{V}_1$和$\mbf{V}_2$的大小，还依赖于它们之间的夹角。\footnote{虽然在相对论下，速度的合成公式于经典力学下不同，但两个速度的合成速度依然是依赖于两个速度的大小和它们的夹角。}但这个夹角在式\eqref{chapter8:间隔之间的比例系数关系}的左端并未出现，因此显然式\eqref{chapter8:间隔之间的比例系数关系}只有当函数$a(V)$为常数时才成立，而且该常数必然为$1$。因此，
+而$V_{12}$不仅依赖于矢量$\mbf{V}_1$和$\mbf{V}_2$的大小，还依赖于它们之间的夹角。\footnote{虽然在相对论下，速度的合成公式于经典力学下不同，但两个速度的合成速度依然是依赖于两个速度的大小和它们的夹角。}但这个夹角在式\eqref{chapter1:间隔之间的比例系数关系}的左端并未出现，因此显然式\eqref{chapter1:间隔之间的比例系数关系}只有当函数$a(V)$为常数时才成立，而且该常数必然为$1$。因此，
 \begin{equation}
 	\mathrm{d} s^2 = \mathrm{d} s'^2
-	\label{chapter8:无限小间隔相等}
+	\label{chapter1:无限小间隔相等}
 \end{equation}
 再从无限小间隔相等可得有限间隔相等，即$s=s'$。
 
@@ -164,7 +164,7 @@
 
 由于间隔的不变性，将间隔分为类时间隔、类空间隔和类光间隔具有绝对的意义，即间隔的类空性、类时性或类旋光性与参考系无关。
 
-取某一个事件$O$作为时间及空间坐目标原点，现在我们来研究所有其他事件对于本事件$O$的关系。首先只考虑一维空间的情况，如图\ref{chapter8:光锥}所示。一个当$t=0$时经过$x=0$点的粒子的匀速直线运动可以用一条直线来表示，这条直线过$O$点，对$t$轴的斜率等于粒子的速度。因为物体最大的速度为$c$，所以这条直线与$t$轴成角也有一个最大值。图\ref{chapter8:光锥}中有两条直线，代表两个信号经过事件$O$（即当$t=0$时经过$x=0$）以光速向相反的两个方向传播。所有代表粒子运动的直线只能在$aOc$和$dOb$两个区域内。显然，在直线$ab$及$cd$上有$x=\pm ct$。世界点位于区域$aOc$中的那些事件满足$c^2t^2-x^2 > 0$。即，这个区域内的任何事件与事件$O$之间的间隔都是类时的。在这个区域内$t>0$，即其中所有的事件都发生在事件$O$之“后”。但是两个事件若被类时间隔所分开，无论在哪一个参考系中都不可能同时发生。因此也不可能找到一个参考系使得$aOc$区域中的任何事件会在事件$O$之“前”发生，即在$t<0$时发生。因此，$aOc$区域内的所有事件对$O$来说在任何参考系中都是未来的事件。所以，这个区域对事件$O$来说可称为{\bf 绝对未来}。
+取某一个事件$O$作为时间及空间坐目标原点，现在我们来研究所有其他事件对于本事件$O$的关系。首先只考虑一维空间的情况，如图\ref{chapter1:光锥}所示。一个当$t=0$时经过$x=0$点的粒子的匀速直线运动可以用一条直线来表示，这条直线过$O$点，对$t$轴的斜率等于粒子的速度。因为物体最大的速度为$c$，所以这条直线与$t$轴成角也有一个最大值。图\ref{chapter1:光锥}中有两条直线，代表两个信号经过事件$O$（即当$t=0$时经过$x=0$）以光速向相反的两个方向传播。所有代表粒子运动的直线只能在$aOc$和$dOb$两个区域内。显然，在直线$ab$及$cd$上有$x=\pm ct$。世界点位于区域$aOc$中的那些事件满足$c^2t^2-x^2 > 0$。即，这个区域内的任何事件与事件$O$之间的间隔都是类时的。在这个区域内$t>0$，即其中所有的事件都发生在事件$O$之“后”。但是两个事件若被类时间隔所分开，无论在哪一个参考系中都不可能同时发生。因此也不可能找到一个参考系使得$aOc$区域中的任何事件会在事件$O$之“前”发生，即在$t<0$时发生。因此，$aOc$区域内的所有事件对$O$来说在任何参考系中都是未来的事件。所以，这个区域对事件$O$来说可称为{\bf 绝对未来}。
 
 \begin{figure}[htb]
 \centering
@@ -194,14 +194,14 @@
 	label("分割",-0.5*dir(0),S);
 \end{asy}
 \caption{光锥与因果性}
-\label{chapter8:光锥}
+\label{chapter1:光锥}
 \end{figure}
 
 完全类似地，所有在区域$bOd$内的事件对$O$来说都是{\bf 绝对过去}，即本区域内的事件，无论在何参考系中都在事件$O$之前发生。
 
 最后，再研究$dOa$及$cOb$两个区域。本区域内的任何事件与事件$O$的间隔都是类空的。这些事件在任何参考系中都发生在空间的不同位置。因此，这些区域对于$O$来说都可称为{\bf 绝对分割}。但是，关于这些事件的“同时”、“较早”和“较晚”等概念都是相对的。对这些区域中的任何事件来说，在一些参考系中，此事件在事件$O$之后发生；在另一些参考系中，此事件在事件$O$之前发生；也存在一个参考系，在其中此事件与事件$O$同时发生。
 
-如果考虑三个空间坐标轴，那么图\ref{chapter8:光锥}中两条相交的直线，在四维空间坐标系$x,y,z,t$中将称为一个“圆锥体”$x^2+y^2+z^2-c^2t^2 = 0$，圆锥体的轴与$t$轴重合，称为{\bf 光锥}。光锥内的区域即为事件$O$的绝对未来和绝对过去。
+如果考虑三个空间坐标轴，那么图\ref{chapter1:光锥}中两条相交的直线，在四维空间坐标系$x,y,z,t$中将称为一个“圆锥体”$x^2+y^2+z^2-c^2t^2 = 0$，圆锥体的轴与$t$轴重合，称为{\bf 光锥}。光锥内的区域即为事件$O$的绝对未来和绝对过去。
 
 两个事件仅仅在其间隔是类时间隔的情况下，彼此才能有因果关系；这可以由相互作用的传播速度不能大于光速这一事实直接推出来。也只有对这些事件来说，“较早”和“较晚”才具有绝对意义，而这一点又是使因果概念具有意义的必要条件。
 
@@ -215,7 +215,7 @@
 \end{equation*}
 由此可得在与钟固连坐标系中的时间为
 \begin{equation*}
-	\mathrm{d}t' = \mathrm{d}t \sqrt{1-\frac{\mathrm{d}x^2 + \mathrm{d}y^2 + \mathrm{d}z^2}{c^2 \mathrm{d}t^2}}
+	\mathrm{d}\tau = \mathrm{d}t \sqrt{1-\frac{\mathrm{d}x^2 + \mathrm{d}y^2 + \mathrm{d}z^2}{c^2 \mathrm{d}t^2}}
 \end{equation*}
 再由
 \begin{equation*}
@@ -223,15 +223,15 @@
 \end{equation*}
 其中$v$为运动钟在静止系中的速度，所以有
 \begin{equation}
-	\mathrm{d}t' = \frac{\mathrm{d} s}{c} = \mathrm{d}t\sqrt{1-\frac{v^2}{c^2}}
-	\label{chapter8:无穷小固有时}
+	\mathrm{d}\tau = \frac{\mathrm{d} s}{c} = \mathrm{d}t\sqrt{1-\frac{v^2}{c^2}}
+	\label{chapter1:无穷小固有时}
 \end{equation}
 将上式积分，我们可以得到，当静止的钟所行走的时间为$t_2-t_1$时，运动的钟所指示的时间为
 \begin{equation}
-	t'_2 - t'_1 = \int_{t_1}^{t_2} \mathrm{d}t\sqrt{1-\frac{v^2}{c^2}}
-	\label{chapter8:固有时}
+	\tau_2 - \tau_1 = \int_{t_1}^{t_2} \mathrm{d}t\sqrt{1-\frac{v^2}{c^2}}
+	\label{chapter1:固有时}
 \end{equation}
-随着某一给定物体一同运动的钟所指示的时间，称为该物体的{\bf 固有时}。由式\eqref{chapter8:无穷小固有时}和\eqref{chapter8:固有时}可知，一个运动物体的固有时永远比在静止系内相对应的时间间隔小。换句话说，运动的钟比静止的钟走得慢些。
+随着某一给定物体一同运动的钟所指示的时间，称为该物体的{\bf 固有时}。由式\eqref{chapter1:无穷小固有时}和\eqref{chapter1:固有时}可知，一个运动物体的固有时永远比在静止系内相对应的时间间隔小。换句话说，运动的钟比静止的钟走得慢些。
 
 假设有一只钟相对于某一惯性系$K$作匀速直线运动。同这只钟固连着的参考系$K'$也是惯性系。从$K$系的观察者来看，$K'$系的钟走得慢。反过来说，从$K'$系的观察者来看，$K$系的钟走得慢。为了是我们相信这是不矛盾的，可以注意下面的事实。为了确定$K'$系内的钟比$K$系内的钟慢，我们必须按下述方法来做。假设在某一时刻，$K'$内的那只钟经过$K$内的一只钟旁边，而在这一时刻，两只钟所指示的时间恰好一样。为了比较$K$及$K'$内钟的快慢，我们必须再次将$K'$内同一只动钟的读数与$K$内的钟的读数作比较。但是在新的时刻，$K'$内的钟将从$K$内的另一些钟旁边经过，现在我们就将运动的钟与那些钟比较。这时我们发现，$K'$内的钟比藉以比较的$K$内的钟走得慢。由此可见，为了比较两个参考系内的钟的快慢，我们需要在一个参考系内有几只钟，而在另一个参考系内只有一只钟。因此这种过程对这两个参考系来说，并不是对称的。与另一参考系内不同的一些钟比较的那一只钟总是走得慢的钟。
 
@@ -260,11 +260,11 @@
 	x = x'\cosh \psi + ct' \sinh \psi \\
 	ct = x'\sinh \psi + ct' \cosh \psi
 \end{cases}
-\label{chapter8:四维空间中旋转的一般形式}
+\label{chapter1:四维空间中旋转的一般形式}
 \end{equation}
-式中$\psi$为转动角。式\eqref{chapter8:四维空间中旋转的一般形式}与坐标轴转动变换通常公式的不同之处在于，此处的旋转公式中为双曲函数而非三角函数。这就是Euclid几何与伪Euclid几何之间的差别。假设$K'$系以速度$V$沿$x$轴相对$K$系作匀速运动，则$x,t$与$x',t'$之间的变换关系式中转动角仅与相对速度$V$有关。
+式中$\psi$为转动角。式\eqref{chapter1:四维空间中旋转的一般形式}与坐标轴转动变换通常公式的不同之处在于，此处的旋转公式中为双曲函数而非三角函数。这就是Euclid几何与伪Euclid几何之间的差别。假设$K'$系以速度$V$沿$x$轴相对$K$系作匀速运动，则$x,t$与$x',t'$之间的变换关系式中转动角仅与相对速度$V$有关。
 
-研究$K'$系的原点在$K$系中的运动。这时$x'=0$，而式\eqref{chapter8:四维空间中旋转的一般形式}可写成
+研究$K'$系的原点在$K$系中的运动。这时$x'=0$，而式\eqref{chapter1:四维空间中旋转的一般形式}可写成
 \begin{equation*}
 	x = ct'\sinh \psi,\quad ct = ct'\cosh \psi
 \end{equation*}
@@ -284,13 +284,13 @@
 	z = z' \\
 	t = \dfrac{t'+\dfrac{V}{c^2}x'}{\sqrt{1-\dfrac{V^2}{c^2}}}
 \end{cases}
-\label{chapter8:Lorentz变换}
+\label{chapter1:Lorentz变换}
 \end{equation}
-这组变换称为{\bf Lorentz变换}，是今后讨论的基础。其逆变换只需将$V$替换为$-V$即可得到\footnote{当然直接求解方程组\eqref{chapter8:Lorentz变换}也能得到相同的结果。}。
+这组变换称为{\bf Lorentz变换}，是今后讨论的基础。其逆变换只需将$V$替换为$-V$即可得到\footnote{当然直接求解方程组\eqref{chapter1:Lorentz变换}也能得到相同的结果。}。
 
-由式\eqref{chapter8:Lorentz变换}可见，取$c\to\infty$的经典力学极限，Lorentz变换事实上就过渡到Galileo变换了。当$V>c$时，式\eqref{chapter8:Lorentz变换}中的$x,t$变成虚数，这与运动速度不可能大于光速的事实符合。此外我们也不可以用以光速运行的参考系，因为在这种情形下，式\eqref{chapter8:Lorentz变换}的分母为零。
+由式\eqref{chapter1:Lorentz变换}可见，取$c\to\infty$的经典力学极限，Lorentz变换事实上就过渡到Galileo变换了。当$V>c$时，式\eqref{chapter1:Lorentz变换}中的$x,t$变成虚数，这与运动速度不可能大于光速的事实符合。此外我们也不可以用以光速运行的参考系，因为在这种情形下，式\eqref{chapter1:Lorentz变换}的分母为零。
 
-当$V$比光速小很多时，我们可以用下面的近似公式代替式\eqref{chapter8:Lorentz变换}
+当$V$比光速小很多时，我们可以用下面的近似公式代替式\eqref{chapter1:Lorentz变换}
 \begin{equation}
 \begin{cases}
 	x = x'+Vt' \\
@@ -298,10 +298,10 @@
 	z = z' \\
 	t = t'+\dfrac{V}{c^2}x'
 \end{cases}
-\label{chapter8:近似的Lorentz变换}
+\label{chapter1:近似的Lorentz变换}
 \end{equation}
 
-假设在$K$系中有一根平行于$x$轴的静止杆，假定它在$K$系内测定的长度为$\Delta x=x_2-x_1$，在$t'$时刻杆两端的坐标$x'_1,x'_2$与$x_1,x_2$的关系可由Lorentz变换\eqref{chapter8:Lorentz变换}获得
+假设在$K$系中有一根平行于$x$轴的静止杆，假定它在$K$系内测定的长度为$\Delta x=x_2-x_1$，在$t'$时刻杆两端的坐标$x'_1,x'_2$与$x_1,x_2$的关系可由Lorentz变换\eqref{chapter1:Lorentz变换}获得
 \begin{equation*}
 	x_1 = \frac{x'_1 + Vt'}{\sqrt{1-\dfrac{V^2}{c^2}}},\quad x_2 = \frac{x'_2 + Vt'}{\sqrt{1-\dfrac{V^2}{c^2}}}
 \end{equation*}
@@ -312,19 +312,19 @@
 杆的{\bf 固有长度}是它在与其相对静止的惯性系中的长度。如果用$l_0 = \Delta x$表示这个固有长度，用$l$表示它在任何其他参考系$K'$中的长度，即有
 \begin{equation}
 	l = l_0\sqrt{1-\frac{V^2}{c^2}}
-	\label{chapter8:固有长度}
+	\label{chapter1:固有长度}
 \end{equation}
 因此，杆在与其相对静止的惯性系中最长，在相对于杆以速度$V$运动的惯性系中，它的长度就要减少一个因子$\sqrt{1-\dfrac{V^2}{c^2}}$。相对论的这个结果称为{\bf Lorentz收缩}。因为物体的横向尺度都不因运动而改变，所以它的体积$\mathscr{V}$也按照相似的公式收缩，即
 \begin{equation}
 	\mathscr{V} = \mathscr{V}_0\sqrt{1-\frac{V^2}{c^2}}
-	\label{chapter8:固有体积}
+	\label{chapter1:固有体积}
 \end{equation}
 
 Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可对易性，即连续两次Galileo变换（具有不同的速度$\mbf{V}_1$和$\mbf{V}_2$）的结果与施行变换的顺序无关。然而连续两次Lorentz变换的结果一般依赖于它们的顺序。可类比于刚体的有限转动，作为四维空间中的有限转动，同样具有不可对易性，除非$\mbf{V}_1$和$\mbf{V}_2$相互平行。
 
 \section{速度的变换}
 
-假设$K'$系相对于$K$系以速度$V$沿$x$轴运动，则根据Lorentz变换\eqref{chapter8:Lorentz变换}可有
+假设$K'$系相对于$K$系以速度$V$沿$x$轴运动，则根据Lorentz变换\eqref{chapter1:Lorentz变换}可有
 \begin{equation*}
 \begin{cases}
 	\mathrm{d} x = \dfrac{\mathrm{d}x'+V\mathrm{d}t'}{\sqrt{1-\dfrac{V^2}{c^2}}} \\
@@ -344,7 +344,7 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 	v_y = \dfrac{\mathrm{d}y}{\mathrm{d}t} = \dfrac{v'_y\sqrt{1-\dfrac{V^2}{c^2}}}{1+\dfrac{V}{c^2}v'_x} \\[1.5ex]
 	v_z = \dfrac{\mathrm{d}z}{\mathrm{d}t} = \dfrac{v'_z\sqrt{1-\dfrac{V^2}{c^2}}}{1+\dfrac{V}{c^2}v'_x}
 \end{cases}
-\label{chapter8:速度的变换关系}
+\label{chapter1:速度的变换关系}
 \end{equation}
 这些公式就决定了速度的变换，它们是相对论中的速度合成法则。在$c\to\infty$的极限情形下，它们就变为经典力学中的公式：
 \begin{equation*}
@@ -371,25 +371,25 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 	\mbf{v} = \mbf{v}' + \mbf{V} - \frac{1}{c^2}(\mbf{V}\cdot \mbf{v}') \mbf{v}'
 \end{equation}
 
-我们可以指出，在相对论的速度合成公式\eqref{chapter8:速度的变换关系}中，相加的两个速度$\mbf{v}'$和$\mbf{V}$是以不对称的方式引入的（如果它们都不沿$x$轴方向的话）。这个事实同Lorentz变换的非对易性有关，将在下节提到。
+我们可以指出，在相对论的速度合成公式\eqref{chapter1:速度的变换关系}中，相加的两个速度$\mbf{v}'$和$\mbf{V}$是以不对称的方式引入的（如果它们都不沿$x$轴方向的话）。这个事实同Lorentz变换的非对易性有关，将在下节提到。
 
-让我们这样来选择坐标轴，使粒子的速度在给定时刻是在$xy$平面内。这时粒子在$K$系内的速度分量是$v_x=v\cos \theta,\,v_y=v\sin \theta$，而在$K'$系内则为$v'_x=v'\cos \theta',\,v'_y=v'\sin \theta'$，其中$v,v'$为速度在$K$和$K'$系中的大小，$\theta,\theta'$为速度与$x$轴和$x'$轴的夹角。利用速度合成公式\eqref{chapter8:速度的变换关系}，可得
+让我们这样来选择坐标轴，使粒子的速度在给定时刻是在$xy$平面内。这时粒子在$K$系内的速度分量是$v_x=v\cos \theta,\,v_y=v\sin \theta$，而在$K'$系内则为$v'_x=v'\cos \theta',\,v'_y=v'\sin \theta'$，其中$v,v'$为速度在$K$和$K'$系中的大小，$\theta,\theta'$为速度与$x$轴和$x'$轴的夹角。利用速度合成公式\eqref{chapter1:速度的变换关系}，可得
 \begin{equation}
 	\tan \theta = \frac{v'\sqrt{1-\dfrac{V^2}{c^2}}\sin \theta'}{v'\cos \theta'+V}
-	\label{chapter8:速度的方向在参考系之间的变换}
+	\label{chapter1:速度的方向在参考系之间的变换}
 \end{equation}
 这个公式决定了速度的方向从一个参考系变换到另一个参考系时的改变。
 
-让我们来详尽地研究这个公式的另一个重要特例，即光由一个参考系变换到另一个参考系时的偏差，即所谓的{\bf 光行差}现象。在这种情形下$v=v'=c$，因而式\eqref{chapter8:速度的方向在参考系之间的变换}化为
+让我们来详尽地研究这个公式的另一个重要特例，即光由一个参考系变换到另一个参考系时的偏差，即所谓的{\bf 光行差}现象。在这种情形下$v=v'=c$，因而式\eqref{chapter1:速度的方向在参考系之间的变换}化为
 \begin{equation}
 	\tan \theta = \frac{\sqrt{1-\dfrac{V^2}{c^2}}}{\dfrac{V}{c}+\cos \theta'}\sin \theta'
 \end{equation}
-再由式\eqref{chapter8:速度的变换关系}可得
+再由式\eqref{chapter1:速度的变换关系}可得
 \begin{equation}
 	\sin \theta = \frac{\sqrt{1-\dfrac{V^2}{c^2}}}{1+\dfrac{V}{c}\cos \theta'}\sin \theta',\quad \cos \theta = \frac{\dfrac{V}{c}+\cos \theta'}{1+\dfrac{V}{c}\cos \theta'}
-	\label{chapter8:光行差角度变化关系}
+	\label{chapter1:光行差角度变化关系}
 \end{equation}
-如果$V \ll c$，由式\eqref{chapter8:光行差角度变化关系}可得精确到数量级为$\dfrac{V}{c}$项的公式如下：
+如果$V \ll c$，由式\eqref{chapter1:光行差角度变化关系}可得精确到数量级为$\dfrac{V}{c}$项的公式如下：
 \begin{equation*}
 	\sin \theta - \sin \theta' = -\frac{V}{c}\sin \theta'\cos \theta'
 \end{equation*}
@@ -412,6 +412,27 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 	(x^0)^2-(x^1)^2-(x^2)^2-(x^3)^2
 \end{equation*}
 它在四维坐标系的任意转动下不变，特别是，它在Lorentz变换下不变。
+
+为了表示方便起见，我们引入四维坐标的两种“类型”，用带上标和下标的符号$x^i$和$x_i$来标记它们，它们之间满足如下关系
+\begin{equation}
+	x_0 = x^0,\quad x_1 = -x^1,\quad x_2 = -x^2,\quad x_3 = -x^3
+	\label{chapter1:四维逆变坐标}
+\end{equation}
+量$x^i$称为四维坐标的{\bf 协变分量}，$x_i$称为四维坐标的{\bf 逆变分量}。而四维径向矢量的平方则记为
+\begin{equation*}
+	\sum_{i=0}^3 x^ix_i = x^0x_0+x^1x_1+x^2x_2+x^3x_3
+\end{equation*}
+一般经常略去求和号，将这样的求和简单记作$x^ix_i$，也就是约定遍历所有重复指标求和，而把求和号省去\footnote{这个约定称为“Einstein求和约定”。}。每对指标中必须一个为上标，另一个为下标。这种遍历“傀”指标求和的约定非常方便，可大大简化公式的书写。我们将用拉丁字母$i,j,k,l,\cdots$表示四维指标，其取值为$0,1,2,3$。
+
+四维坐标系的任意坐标变换可以用
+\begin{equation}
+	x^i = f^i(x'^0,x'^1,x'^2,x'^3)
+\end{equation}
+来表示。在这个坐标变换下，协变坐标的微分为
+\begin{equation}
+	\mathd x^i = \frac{\pl x^i}{\pl x'^j} \mathd x'^j
+\end{equation}
+
 
 更一般地，如果4个量$A^0,A^1,A^2,A^3$，在四维坐标系的变换下像四维径向矢量的分量$x^i$那样变换，我们就将这4个量的集合称为{\bf 四维矢量}$A^i$。在Lorentz变换下，
 \begin{equation}
@@ -701,7 +722,7 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 \begin{equation}
 	u^i = \frac{\mathrm{d} x^i}{\mathrm{d} s}
 \end{equation}
-为了求出它的分量，根据式\eqref{chapter8:无穷小固有时}可有
+为了求出它的分量，根据式\eqref{chapter1:无穷小固有时}可有
 \begin{equation}
 	\mathrm{d}s = c\mathrm{d}t\sqrt{1-\frac{v^2}{c^2}}
 \end{equation}
@@ -718,7 +739,7 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 四维速度的分量之间并不彼此独立，由于$\mathrm{d}x^i\mathrm{d}x_i = \mathrm{d}s^2$，因此有
 \begin{equation}
 	u^iu_i = 1
-	\label{chapter8:四维速度分量之间的关系}
+	\label{chapter1:四维速度分量之间的关系}
 \end{equation}
 因此，四维速度的几何意义是与粒子世界线相切的一个四维单位矢量。
 
@@ -726,7 +747,7 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 \begin{equation*}
 	w^i = \frac{\mathrm{d}^2 x^i}{\mathrm{d} s^2} = \frac{\mathrm{d} u^i}{\mathrm{d} s}
 \end{equation*}
-可以称为{\bf 四维加速度}。微分式\eqref{chapter8:四维速度分量之间的关系}可得
+可以称为{\bf 四维加速度}。微分式\eqref{chapter1:四维速度分量之间的关系}可得
 \begin{equation}
 	u_i w^i = 0
 \end{equation}
