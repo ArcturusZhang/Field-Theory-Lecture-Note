@@ -2,7 +2,43 @@
 
 \section{Hamilton原理}%对应Landau的最小作用量原理
 
+现在我们从Hamilton原理开始，研究实物粒子的运动规律。Hamilton原理指出：对于每一个力学体系，有一个叫做{\bf 作用量}的积分$S$存在，这个积分对于实际运动有最小值\footnote{严格的讲，应该是驻值。}，即它的变分$\delta S$为零。
+
+一个自由实物粒子的作用量积分必然与参考系的选择无关，即，它必须对于Lorenz变换保持不变。因此，它必须为一个标量函数。另外显然其被积函数必须是一个微分$1-$形式。对于一个自由粒子，所能构造出的唯一的这种标量，仅仅是间隔$\mathd s$，或者固有时$\mathd \tau$，或者它们乘以一个常数$\alpha\mathd s$。这样一来，对于一个自由粒子，作用量的积分必须取下面的形式：
+\begin{equation*}
+	S = -\alpha \int_{\tau_1}^{\tau_2} \mathd s
+\end{equation*}
+其中$\ds \int_a^b$表示沿着粒子在两个特定事件间的世界线的积分，这两个事件就是粒子在$t_1$时刻到达初位置和在$t_2$时刻到达末位置，也就是说$\ds \int_a^b$是沿着两个世界点之间的世界线的积分；而$\alpha$为表征该粒子的一个常数。在第\ref{chapter1:section固有时}节中，积分$\ds\int_a^b \mathd s$沿着一条直的世界线的值最大；沿着一条弯曲的世界线，可以使得积分值为任意小\footnote{因为这些积分的值都是负值。}
+
+作用量可以表示为对时间的积分$\ds S = \int_{t_1}^{t_2} L\mathd t$，其中$L$即为这个力学体系的{\bf Lagrange函数}。利用式\eqref{chapter1:无穷小固有时}，可得
+\begin{equation*}
+	S = -\int_{t_1}^{t_2} \alpha c\sqrt{1-\frac{v^2}{c^2}} \mathd t
+\end{equation*}
+其中$v$为实物粒子的速度，即实物粒子的Lagrange函数为
+\begin{equation}
+	L = -\alpha c\sqrt{1-\frac{v^2}{c^2}} 
+\end{equation}
+
+上面已经提到，$\alpha$是表征该粒子的一个量。在经典力学中，这个量就是该粒子的质量$m$。当我们取$c\to +\infty$的极限时，$L$的表达式应该过渡到它的经典表达式$L=\dfrac12 mv^2$。将$L$按$\dfrac{v}{c}$展开至$\dfrac{v^2}{c^2}$项可得
+\begin{equation*}
+	L = -\alpha c\sqrt{1-\dfrac{v^2}{c^2}} = -\alpha c+\frac{\alpha v^2}{2c}
+\end{equation*}
+Lagrange函数中的常数项对运动方程没有影响，可以略去。略去常数项$-\alpha c$之后，与经典力学中自由粒子的Lagrange函数$L=\dfrac12 mv^2$比较，可得$\alpha=mc$。
+
+所以，自由实物粒子的作用量是
+\begin{equation}
+	S = -mc\int_a^b \mathd s
+	\label{chapter2:自由实物粒子的作用量}
+\end{equation}
+而Lagrange函数是
+\begin{equation}
+	L = -mc^2\sqrt{1-\dfrac{v^2}{c^2}}
+	\label{chapter2:自由实物粒子的Lagrange函数}
+\end{equation}
+
 \section{能量与动量}
+
+类似于经典Hamilton力学中的做法，将矢量$\mbf{p} = \dfrac{\pl L}{\pl \mbf{v}}$称为该粒子的{\bf 动量}。
 
 \section{分布函数的变换}
 

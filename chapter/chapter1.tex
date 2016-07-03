@@ -205,7 +205,7 @@
 
 两个事件仅仅在其间隔是类时间隔的情况下，彼此才能有因果关系；这可以由相互作用的传播速度不能大于光速这一事实直接推出来。也只有对这些事件来说，“较早”和“较晚”才具有绝对意义，而这一点又是使因果概念具有意义的必要条件。
 
-\section{固有时}
+\section{固有时}\label{chapter1:section固有时}
 
 假设我们在某一惯性参考系（不妨称之为静止系）中观察一只钟，这只钟相对于我们可作任意形式的运动。在各个不同的时刻，该钟的运动可以认为是匀速的。因此，在每一时刻，我们可以引入一个固连于运动钟上的坐标系，这个坐标系也是一个惯性系。
 
@@ -214,9 +214,10 @@
 	\mathrm{d}s^2 = c^2 \mathrm{d}t^2 - \mathrm{d}x^2 - \mathrm{d}y^2 - \mathrm{d}z^2 = c^2 \mathrm{d} t'^2
 \end{equation*}
 由此可得在与钟固连坐标系中的时间为
-\begin{equation*}
+\begin{equation}
 	\mathrm{d}\tau = \mathrm{d}t \sqrt{1-\frac{\mathrm{d}x^2 + \mathrm{d}y^2 + \mathrm{d}z^2}{c^2 \mathrm{d}t^2}}
-\end{equation*}
+	\label{chapter1:无穷小固有时}
+\end{equation}
 再由
 \begin{equation*}
 	\frac{\mathrm{d}x^2 + \mathrm{d}y^2 + \mathrm{d}z^2}{\mathrm{d}t^2} = v^2
@@ -237,7 +238,7 @@
 
 假设我们有两只钟，其中之一描绘一闭合路径，又回到出发点（即静止的钟所在之点），显然，与静止的钟相比，运动的钟慢了。相反，若设想运动的钟静止（即以运动的钟为参考系），就不能做上面的推论了。因为那只钟既然描绘了一条闭合曲线，它的运动就不是匀速直线运动，因而与之相连的参考系就不再是惯性系。因为自然定律只有在惯性系内才是一样的，与静止的钟相连的系统（惯性系）及与运动的钟相连的系统（非惯性系）具有不同的特性，因而导致静止的钟应当变慢这个结论的论证就不对了。
 
-一只钟所只是的时间间隔，等于沿着钟的世界线而取的积分$\displaystyle \dfrac{1}{c}\int\mathrm{d}s$。假如钟是静止的，则它的世界线是一条与$t$轴平行的直线；假如钟在闭合路径上作非匀速运动而且又回到出发点，那么它的世界线是一条曲线，这条曲线经过静止钟的直的世界线的起点和终点。另一方面，可以看到，静止钟所指示的时间间隔永远比运动的钟所指示的大。因此，我们得到一个结论，在两个世界点之间所取的积分$\displaystyle \int\mathrm{d}s$，只有在连接这两点之间的直线上能取得其最大值。\footnote{当然，需假设$a$及$b$两点和连接它们的曲线满足该曲线上所有的线元$\mathrm{d}s$都是类时的。这个性质与四维几何的伪Euclid特性有关。在Euclid空间中，这个积分沿直线当然取得最小值，此处定义的Minkowski空间的间隔与Euclid空间的间隔（距离）相比，多了一个负号，因此积分在直的世界在线取得最大值而非最小值。}
+一只钟所指示的时间间隔，等于沿着钟的世界线而取的积分$\displaystyle \dfrac{1}{c}\int\mathrm{d}s = \int \mathd \tau$。假如钟是静止的，则它的世界线是一条与$t$轴平行的直线；假如钟在闭合路径上作非匀速运动而且又回到出发点，那么它的世界线是一条曲线，这条曲线经过静止钟的直的世界线的起点和终点。另一方面，可以看到，静止钟所指示的时间间隔永远比运动的钟所指示的大。因此，我们得到一个结论，在两个世界点之间所取的积分$\displaystyle \int\mathrm{d}s$，只有在连接这两点之间的直线上能取得其最大值。\footnote{当然，需假设$a$及$b$两点和连接它们的曲线满足该曲线上所有的线元$\mathrm{d}s$都是类时的。这个性质与四维几何的伪Euclid特性有关。在Euclid空间中，这个积分沿直线当然取得最小值，此处定义的Minkowski空间的间隔与Euclid空间的间隔（距离）相比，多了一个负号，因此积分在直的世界在线取得最大值而非最小值。}
 
 \section{Lorentz变换}
 
@@ -748,43 +749,35 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 
 由普通的三维速度矢量，我们可以构造一个四维矢量。一个粒子的{\bf 四维速度}（四速度）是矢量
 \begin{equation}
-	u^i = \frac{\mathrm{d} x^i}{\mathrm{d} s}
+	u^i = \frac{\mathrm{d} x^i}{\mathrm{d} \tau}
 \end{equation}
 为了求出它的分量，根据式\eqref{chapter1:无穷小固有时}可有
 \begin{equation}
-	\mathrm{d}s = c\mathrm{d}t\sqrt{1-\frac{v^2}{c^2}}
+	\mathrm{d}\tau = \mathrm{d}t\sqrt{1-\frac{v^2}{c^2}}
 \end{equation}
 其中$v$为粒子的普通三维速度。因此
 \begin{equation*}
-	u^1 = \frac{\mathrm{d}x^1}{\mathrm{d}s} = \frac{\mathrm{d}x}{c\mathrm{d}t\sqrt{1-\dfrac{v^2}{c^2}}} = \frac{v_x}{c \sqrt{1-\dfrac{v^2}{c^2}}}
+	u^1 = \frac{\mathrm{d}x^1}{\mathrm{d}\tau} = \frac{\mathrm{d}x}{\mathrm{d}t\sqrt{1-\dfrac{v^2}{c^2}}} = \frac{v_x}{\sqrt{1-\dfrac{v^2}{c^2}}}
 \end{equation*}
 由此可得
 \begin{equation}
-	u^i = \left(\frac{1}{\sqrt{1-\dfrac{v^2}{c^2}}},\frac{\mbf{v}}{c\sqrt{1-\dfrac{v^2}{c^2}}}\right)
+	u^i = \Bigg(\frac{c}{\sqrt{1-\dfrac{v^2}{c^2}}},\frac{\mbf{v}}{\sqrt{1-\dfrac{v^2}{c^2}}}\Bigg)
 \end{equation}
-注意到，四维速度是一个无量纲量。
+注意到，四维速度是一个具有速度的量纲。
 
-四维速度的分量之间并不彼此独立，由于$\mathrm{d}x^i\mathrm{d}x_i = \mathrm{d}s^2$，因此有
+四维速度的分量之间并不彼此独立，由于$\mathrm{d}x^i\mathrm{d}x_i = \mathrm{d}s^2=c^2 \mathd \tau^2$，因此有
 \begin{equation}
-	u^iu_i = 1
+	u^iu_i = c^2
 	\label{chapter1:四维速度分量之间的关系}
 \end{equation}
-因此，四维速度的几何意义是与粒子世界线相切的一个四维单位矢量。
+因此，四维速度的几何意义是粒子世界线的一个四维切矢量，其大小为$c$。
 
 与四维速度的定义类似，二阶导数
 \begin{equation*}
-	w^i = \frac{\mathrm{d}^2 x^i}{\mathrm{d} s^2} = \frac{\mathrm{d} u^i}{\mathrm{d} s}
+	w^i = \frac{\mathrm{d}^2 x^i}{\mathrm{d} \tau^2} = \frac{\mathrm{d} u^i}{\mathrm{d} \tau}
 \end{equation*}
 可以称为{\bf 四维加速度}。微分式\eqref{chapter1:四维速度分量之间的关系}可得
 \begin{equation}
 	u_i w^i = 0
 \end{equation}
 即四维速度矢量与四维加速度矢量是相互正交的。
-
-% \begin{example}
-% 确定相对论的匀加速运动，即在固有参考系中（每个时刻）加速度$w$保持不变的直线运动。
-% \end{example}
-% \begin{solution}
-
-% \end{solution}
-
