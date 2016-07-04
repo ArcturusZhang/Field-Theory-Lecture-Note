@@ -38,7 +38,143 @@ Lagrange函数中的常数项对运动方程没有影响，可以略去。略去
 
 \section{能量与动量}
 
-类似于经典Hamilton力学中的做法，将矢量$\mbf{p} = \dfrac{\pl L}{\pl \mbf{v}}$称为该粒子的{\bf 动量}。
+类似于经典Hamilton力学中的做法，将矢量$\mbf{p} = \dfrac{\pl L}{\pl \mbf{v}}$\footnote{$\mbf{p} = \dfrac{\pl L}{\pl \mbf{v}}$表示$\ds p^i = \frac{\pl L}{\pl v^i}$。}称为该粒子的{\bf 动量}。利用式\eqref{chapter2:自由实物粒子的Lagrange函数}可得
+\begin{equation}
+	\mbf{p} = \frac{m\mbf{v}}{\sqrt{1-\dfrac{v^2}{c^2}}}
+	\label{chapter2:自由实物粒子的动量}
+\end{equation}
+对于很小的速度（$v\ll c$），或者$c\to +\infty$的极限情形下，式\eqref{chapter2:自由实物粒子的动量}就变为经典的动量公式$\mbf{p} = m\mbf{v}$。而当$v=c$时，实物粒子的动量就变为无穷大。
+
+动量对时间的导数就是作用于粒子的力。将速度矢量记作$\mbf{v}=v\mbf{e}$，其中$\mbf{e}$是与$\mbf{v}$通向的方向矢量，则有
+\begin{equation}
+	\frac{\mathd \mbf{p}}{\mathd t} = \frac{mv}{\sqrt{1-\dfrac{v^2}{c^2}}} \frac{\mathd \mbf{e}}{\mathd t} + \frac{m\mbf{e}}{\left(1-\dfrac{v^2}{c^2}\right)^{\frac32}} \frac{\mathd v}{\mathd t}
+\end{equation}
+当粒子的速度大小不变仅有方向改变时，即力与速度方向垂直时，有
+\begin{equation*}
+	\frac{\mathd \mbf{p}}{\mathd t} = \frac{mv}{\sqrt{1-\dfrac{v^2}{c^2}}} \frac{\mathd \mbf{e}}{\mathd t}
+\end{equation*}
+当粒子的速度方向不变仅有大小改变时，即力与速度方向平行时，有
+\begin{equation*}
+	\frac{\mathd \mbf{p}}{\mathd t} = \frac{m\mbf{e}}{\left(1-\dfrac{v^2}{c^2}\right)^{\frac32}} \frac{\mathd v}{\mathd t}
+\end{equation*}
+即力与加速度之比已经不再是常数，Newton第二定律失效。
+
+粒子的{\bf 能量}$\E$\footnote{此处用$\E$而不用$E$来表示能量是为了避免与后面涉及的电场强度$\mbf{E}$相混淆。}可以定义为
+\begin{equation}
+	\E = \mbf{p}\cdot \mbf{v} - L
+	\label{chapter2:粒子能量的定义}
+\end{equation}
+将式\eqref{chapter2:自由实物粒子的动量}和式\eqref{chapter2:自由实物粒子的Lagrange函数}代入可得
+\begin{equation}
+	\E = \frac{mc^2}{\sqrt{1-\dfrac{v^2}{c^2}}}
+	\label{chapter2:自由实物粒子的能量}
+\end{equation}
+相对论力学与经典力学的一个重要差别即为，粒子的能量在$v=0$时并不为零，而是有一个有限值
+\begin{equation}
+	\E_0 = mc^2
+	\label{chapter2:粒子的静能}
+\end{equation}
+这个量称为粒子的{\bf 静能}。当速度远小于光速时，将式\eqref{chapter2:自由实物粒子的能量}展开为$\dfrac{v^2}{c^2}$的幂级数，可以得到
+\begin{equation*}
+	\E \approx mc^2 + \frac12mv^2
+\end{equation*}
+即，扣除静能后，能量表达式\eqref{chapter2:自由实物粒子的能量}退化为经典结果。
+
+虽然我们考虑的是一个自由粒子的情形，但是这些公式同样可以适用于许多粒子构成的复合物体。此时$m$即为该物体的总质量，$\mbf{v}$是指它整体的运动速度。在相对论力学中，任何封闭系统的能量都是一个完全确定的量，它总是正的并与该系统的质量直接相关。而在经典力学中，封闭系统的能量可以有一个任意常数的差别，而且既可以为正值，也可以为负值。
+
+一个静止系统的能量，除了其组成粒子的静能外，还包括它们的动能和它们之间的相互作用能。因此，$mc^2$并不等于$\ds \sum m_\alpha c^2$（其中$m_\alpha$为各个粒子单独存在时的质量），也就是说$m$并不等于$\ds \sum m_\alpha$。在相对论力学中，质量守恒定律不再成立，复合物体的质量不再等于其各部分质量之和，而只有包含了粒子静能在内的能量守恒定律是成立的。
+
+利用式\eqref{chapter2:自由实物粒子的动量}和式\eqref{chapter2:自由实物粒子的能量}消去粒子的速度，可得自由实物粒子能量与动量之间的关系
+\begin{equation}
+	\frac{\E^2}{c^2} = p^2+m^2c^2
+	\label{chapter2:自由实物粒子能量与动量之间的关系}
+\end{equation}
+进而可获得粒子的Hamilton函数$\mathscr{H}$\footnote{此处用$\mathscr{H}$而不用$H$来表示Hamilton函数是为了避免与后面涉及的磁场强度$\mbf{H}$相混淆。}：
+\begin{equation}
+	\mathscr{H} = c\sqrt{p^2+m^2c^2}
+	\label{chapter2:自由实物粒子的Hamilton函数}
+\end{equation}
+对于低速情况$\dfrac{p}{mc}\ll 1$，近似地有
+\begin{equation*}
+	\mathscr{H} \approx mc^2 + \frac{p^2}{2m}
+\end{equation*}
+扣除静能后，Hamilton函数也退化为经典结果。
+
+利用式\eqref{chapter2:自由实物粒子的动量}和式\eqref{chapter2:自由实物粒子的能量}我们可以得到一个自有例子的能量、动量和速度之间的关系为
+\begin{equation}
+	\mbf{p} = \frac{\E \mbf{v}}{c^2}
+	\label{chapter2:自由实物粒子能量、动量和速度之间的关系}
+\end{equation}
+
+当$v=c$时，粒子的动量和能量都变为无穷大，因此，一个粒子如果其质量不为零，就不可能以光速运动。在相对论力学中，可以存在质量为零同时以光速运动的粒子（例如光子和中微子）。根据式\eqref{chapter2:自由实物粒子能量、动量和速度之间的关系}，我们有
+\begin{equation}
+	p = \frac{\E}{c}
+\end{equation}
+同样的公式对于非零质量的粒子在{\bf 极端相对论}情况下{\bf 近似成立}，此时粒子的能量将远远大于其静能$mc^2$。
+
+下面来推导上面所得到所有关系式的四维形式。根据最小作用量原理
+\begin{equation*}
+	\delta S = -mc\delta\int_a^b \mathd s
+\end{equation*}
+由于$\mathd s = \sqrt{\mathd x^i\mathd x_i}$，故有
+\begin{align*}
+	\delta S & = -mc\int_a^b \frac{\mathd x_i\delta \mathd x^i}{\mathd s} = -m\int_a^b u_i\mathd \delta x^i = -mu_i\delta x^i\bigg|_a^b + m\int_a^b \delta x^i \frac{\mathd u_i}{\mathd s}\mathd s \\
+	& = -mu_i\delta x^i\bigg|_a^b + \frac{m}{c}\int_a^b \delta x^i \frac{\mathd u_i}{\mathd \tau}\mathd s
+\end{align*}
+由$\delta S = 0$和固定边界条件可得自由实物粒子的运动方程即为$\dfrac{\mathd u_i}{\mathd \tau} = 0$。
+
+但现在我们需要将作用量的变分表示为坐标的函数，此时需将$a$点当做固定的，令粒子按照实际的轨道运动，考察$\delta S$与$(\delta x^i)_b$之间的关系。根据$b$点所取的任意性，将$(\delta x^i)_b$记作$\delta x^i$，则有
+\begin{equation}
+	\delta S = -mu_i\delta x^i
+\end{equation}
+由此，称四维矢量
+\begin{equation}
+	p_i = -\frac{\pl S}{\pl x^i} = mu_i
+	\label{chapter2:四维动量矢量}
+\end{equation}
+为{\bf 四维动量矢量}。在经典力学中，导数$\dfrac{\pl S}{\pl x}, \dfrac{\pl S}{\pl y}, \dfrac{\pl S}{\pl z}$是粒子动量矢量$\mbf{p}$的三个分量，而导数$-\dfrac{\pl S}{\pl t}$是粒子的能量$\E$。因此，即有四维动量的协变分量为
+\begin{equation}
+	p_i = \left(\frac{\E}{c},-\mbf{p}\right)
+	\label{chapter2:四维动量矢量的协变分量}
+\end{equation}
+而逆变分量则为
+\begin{equation}
+	p^i = \left(\frac{E}{c},\mbf{p}\right)
+	\label{chapter2:四维动量矢量的逆变分量}
+\end{equation}
+
+因此，在相对论力学中，能量与动量是同一个四维矢量的分量。故可直接由此获得能量与动量由一个惯性系变换到另一个惯性系时的变换公式，即
+\begin{equation}
+\begin{cases}
+	\ds p_x = \frac{p'_x+\dfrac{V}{c^2}\E'}{\sqrt{1-\dfrac{V^2}{c^2}}} \\
+	p_y = p'_y \\
+	p_z = p'_z \\
+	\ds \E = \frac{\E'+Vp'_x}{\sqrt{1-\dfrac{V^2}{c^2}}}
+\end{cases}
+\label{chapter2:惯性系能量动量变换关系式}
+\end{equation}
+式中$p_x, p_y, p_z$是三维矢量$\mbf{p}$的分量（即四维矢量$p^i$的逆变分量$p^1, p^2$和$p^3$）。
+
+四维动量满足
+\begin{equation}
+	p^ip_i = m^2u^iu_i = m^2c^2
+\end{equation}
+将式\eqref{chapter2:四维动量矢量的协变分量}和式\eqref{chapter2:四维动量矢量的逆变分量}代入，即可得到关系式\eqref{chapter2:自由实物粒子能量与动量之间的关系}。
+
+而类比于力的通常定义，四维力矢量可以定义为
+\begin{equation}
+	f^i = \frac{\mathd p^i}{\mathd \tau} = m\frac{\mathd u^i}{\mathd \tau}
+	\label{chapter2:四维力矢量}
+\end{equation}
+其满足恒等式
+\begin{equation}
+	f^i u_i = 0
+\end{equation}
+这个四维矢量可以用通常的三维力矢量$\mbf{F} = \dfrac{\mathd \mbf{p}}{\mathd t}$表示为
+\begin{equation}
+	f^i = \Bigg(\frac{\mbf{f}\cdot\mbf{v}}{c\sqrt{1-\dfrac{v^2}{c^2}}}, \frac{\mbf{f}}{\sqrt{1-\dfrac{v^2}{c^2}}}\Bigg)
+\end{equation}
+其时间分量与外力对该粒子的功率相关。
 
 \section{分布函数的变换}
 
