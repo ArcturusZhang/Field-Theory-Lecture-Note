@@ -4,7 +4,7 @@
 
 现在我们从Hamilton原理开始，研究实物粒子的运动规律。Hamilton原理指出：对于每一个力学体系，有一个叫做{\bf 作用量}的积分$S$存在，这个积分对于实际运动有最小值\footnote{严格的讲，应该是驻值。}，即它的变分$\delta S$为零。
 
-一个自由实物粒子的作用量积分必然与参考系的选择无关，即，它必须对于Lorenz变换保持不变。因此，它必须为一个标量函数。另外显然其被积函数必须是一个微分$1-$形式。对于一个自由粒子，所能构造出的唯一的这种标量，仅仅是间隔$\mathd s$，或者固有时$\mathd \tau$，或者它们乘以一个常数$\alpha\mathd s$。这样一来，对于一个自由粒子，作用量的积分必须取下面的形式：
+一个自由实物粒子的作用量积分必然与参考系的选择无关，即，它必须对于Lorentz变换保持不变。因此，它必须为一个标量函数。另外显然其被积函数必须是一个微分$1-$形式。对于一个自由粒子，所能构造出的唯一的这种标量，仅仅是间隔$\mathd s$，或者固有时$\mathd \tau$，或者它们乘以一个常数$\alpha\mathd s$。这样一来，对于一个自由粒子，作用量的积分必须取下面的形式：
 \begin{equation*}
 	S = -\alpha \int_{\tau_1}^{\tau_2} \mathd s
 \end{equation*}
@@ -158,6 +158,7 @@ Lagrange函数中的常数项对运动方程没有影响，可以略去。略去
 四维动量满足
 \begin{equation}
 	p^ip_i = m^2u^iu_i = m^2c^2
+	\label{chapter2:四维动量的平方}
 \end{equation}
 将式\eqref{chapter2:四维动量矢量的协变分量}和式\eqref{chapter2:四维动量矢量的逆变分量}代入，即可得到关系式\eqref{chapter2:自由实物粒子能量与动量之间的关系}。
 
@@ -176,9 +177,72 @@ Lagrange函数中的常数项对运动方程没有影响，可以略去。略去
 \end{equation}
 其时间分量与外力对该粒子的功率相关。
 
+将式\eqref{chapter2:四维动量矢量}代入式\eqref{chapter2:四维动量的平方}就得到相对论的Hamilton-Jacobi方程
+\begin{equation}
+	\frac{\pl S}{\pl x^i} \frac{\pl S}{\pl x_i} = \eta^{ij} \frac{\pl S}{\pl x^i}\frac{\pl S}{\pl x^j} = m^2c^2
+	\label{chapter2:相对论力学的Hamilton-Jacobi方程}
+\end{equation}
+或者将其展开为
+\begin{equation}
+	\frac{1}{c^2}\left(\frac{\pl S}{\pl t}\right)^2 - \left(\frac{\pl S}{\pl x}\right)^2 - \left(\frac{\pl S}{\pl y}\right)^2 - \left(\frac{\pl S}{\pl z}\right)^2 = m^2c^2
+	\label{chapter2:相对论力学的Hamilton-Jacobi方程2}
+\end{equation}
+将方程\eqref{chapter2:相对论力学的Hamilton-Jacobi方程2}过渡到经典力学极限需要首先作变换
+\begin{equation}
+	S = S'-mc^2t
+	\label{chapter2:作用量的代换}
+\end{equation}
+将$S'$作为新的作用量。这是由于相对论力学中一个粒子的能量包括了一个经典力学中没有的$mc^2$项。将式\eqref{chapter2:作用量的代换}代入\eqref{chapter2:相对论力学的Hamilton-Jacobi方程2}中，可得
+\begin{equation*}
+	\frac{1}{2mc^2} \left(\frac{\pl S'}{\pl t}\right)^2 - \frac{\pl S'}{\pl t} - \frac{1}{2m}\left[\left(\frac{\pl S'}{\pl x}\right)^2 + \left(\frac{\pl S'}{\pl y}\right)^2 + \left(\frac{\pl S'}{\pl z}\right)^2\right] = 0
+\end{equation*}
+在$c\to +\infty$的极限情况下，这个方程就退化为经典的Hamilton-Jacobi方程。
+
 \section{分布函数的变换}
 
+在许多物理问题中都需要处理粒子动量的分布函数$f(\mbf{p})$，乘积$f(\mbf{p})\mathd p_x\mathd p_y\mathd p_z$表示动量分量在给定间隔$\mathd p_x, \mathd p_y, \mathd p_z$内的粒子数，即在动量空间内体积元$\mathd^3p = \mathd p_x\mathd p_y \mathd p_z$内的粒子数。于是当我们从一个参考系变换到另一个参考系中时，需要同时获得分布函数$f(\mbf{p})$的变换。
+
+因为$f(\mbf{p})\mathd p_x\mathd p_y \mathd p_z$表示粒子数，这显然是一个不变量，所以只需要确定“体积元”$\mathd p_x\mathd p_y \mathd p_z$在Lorentz变换下的性质。引入一个四维坐标系，其坐标为四维动量矢量，则$\mathd p_x\mathd p_y \mathd p_z$可以看作是由方程$p^ip_i=m^2c^2$定义的超曲面元的零分量。这个超曲面元是沿该超曲面法线指向的四维矢量。超曲面$p^ip_i=m^2c^2$的法线方向与四维矢量$p_i$一致。由此可知，比值
+\begin{equation}
+	\frac{\mathd p_x\mathd p_y\mathd p_z}{\E}
+\end{equation}
+是一个不变量，因为它是两个平行四维矢量的对应分量的比值。由于$f(\mbf{p})\mathd p_x\mathd p_y \mathd p_z$也是不变量，将其写作
+\begin{equation*}
+	f(\mbf{p})\E \frac{\mathd p_x\mathd p_y\mathd p_z}{\E}
+\end{equation*}
+由此可得乘积$f(\mbf{p})\E$是不变量。因此可以得到$K'$系中的分布函数与$K$系中分布函数的关系为
+\begin{equation*}
+	f'(\mbf{p}')\E' = f(\mbf{p})\E
+\end{equation*}
+由此即有
+\begin{equation}
+	f'(\mbf{p}') = \frac{f(\mbf{p})\E}{\E'}
+\end{equation}
+其中$\mbf{p}$和$\E$需要利用变换公式\eqref{chapter2:惯性系能量动量变换关系式}表示。
+
+在气体动理论中，分布函数则表示为$f(\mbf{r},\mbf{p})$，乘积$f(\mbf{r},\mbf{p})\mathd p_x\mathd p_y\mathd p_z\mathd V$表示体积元$\mathd V$中动量在间隔$\mathd p_x, \mathd p_y, \mathd p_z$内的粒子数。函数$f(\mbf{r},\mbf{p})$称为{\bf 相空间}中的分布函数，微分形式$\mathd \tau = \mathd^3p\mathd V$是这个空间的体积元。
+
+方便起见，再引入一个具有给定动量的粒子在其中处于静止的参考系$K_0$，粒子在该参考系中占有的体积元即为其固有体积$\mathd V_0$。由于$K_0$相对于该粒子是静止的，所以$K$系和$K'$系相对于$K_0$系的速度与这些粒子在$K$和$K'$系中的速度相同，因此有
+\begin{equation*}
+	\mathd V = \mathd V_0\sqrt{1-\frac{v^2}{c^2}},\quad \mathd V' = \mathd V_0\sqrt{1-\frac{v'^2}{c^2}}
+\end{equation*}
+由此即有
+\begin{equation*}
+	\frac{\mathd V}{\mathd V'} = \frac{\sqrt{1-\dfrac{v^2}{c^2}}}{\sqrt{1-\dfrac{v'^2}{c^2}}} = \frac{\E'}{\E}
+\end{equation*}
+又由于$\dfrac{\mathd^3p}{\E} = \dfrac{\mathd^3p'}{\E'}$，即有
+\begin{equation*}
+	\mathd \tau = \mathd \tau'
+\end{equation*}
+即相空间的体积元是不变量\footnote{此处相当于是将经典统计力学中的Liouville定理推广至了相对论情形。}。因为粒子数$f(\mbf{r},\mbf{p})\mathd \tau$根据定义也是不变量，因而可得：相空间的分布函数是不变量，即
+\begin{equation}
+	f'(\mbf{r}',\mbf{p}') = f(\mbf{r},\mbf{p})
+\end{equation}
+式中的$\mbf{r}',\mbf{p}'$由Lorentz变换公式与$\mbf{r},\mbf{p}$相联系。
+
 \section{粒子的衰变}
+
+
 
 \section{不变截面}
 

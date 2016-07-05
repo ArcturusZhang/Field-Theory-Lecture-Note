@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9) (preloaded format=xelatex 2016.5.12)  5 JUL 2016 00:01
+This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9) (preloaded format=xelatex 2016.5.12)  5 JUL 2016 19:04
 entering extended mode
 **./FT_chs.tex
 (FT_chs.tex
@@ -2257,32 +2257,32 @@ Sun(0)/m/n/10.53937 力 学 中 的 做 法，|  将 矢 量 $[] \OT1/cmr/m/n/10
 1/SimSun(0)/m/n/10.53937 。|  利 用 式[]可
  []
 
-[21] [22]
-Overfull \hbox (15.80814pt too wide) in paragraph at lines 179--179
+[21] [22] [23]
+Overfull \hbox (15.80814pt too wide) in paragraph at lines 201--201
 |[]   []
  []
 
-[23]
-Overfull \hbox (15.80814pt too wide) in paragraph at lines 181--181
-|[]   []
- []
-
-
-Overfull \hbox (15.80814pt too wide) in paragraph at lines 183--183
+[24]
+Overfull \hbox (15.80814pt too wide) in paragraph at lines 243--243
 |[]   []
  []
 
 
-Overfull \hbox (15.80814pt too wide) in paragraph at lines 185--185
+Overfull \hbox (15.80814pt too wide) in paragraph at lines 247--247
 |[]   []
  []
 
 
-Overfull \hbox (15.80814pt too wide) in paragraph at lines 187--187
+Overfull \hbox (15.80814pt too wide) in paragraph at lines 249--249
 |[]   []
  []
 
-) (chapter/chapter10.tex [24]
+
+Overfull \hbox (15.80814pt too wide) in paragraph at lines 251--251
+|[]   []
+ []
+
+) (chapter/chapter10.tex [25]
 第三章
 
 Overfull \hbox (15.63632pt too wide) in paragraph at lines 1--1
@@ -2334,7 +2334,7 @@ Overfull \hbox (15.80814pt too wide) in paragraph at lines 19--19
 |[]   []
  []
 
-) (chapter/chapter11.tex [25
+) (chapter/chapter11.tex [26
 
 ]
 第四章
@@ -2383,7 +2383,7 @@ Overfull \hbox (15.80814pt too wide) in paragraph at lines 17--17
 |[]   []
  []
 
-[26
+[27
 
 ]
 第五章
@@ -2432,14 +2432,14 @@ Overfull \hbox (15.80814pt too wide) in paragraph at lines 36--36
 |[]   []
  []
 
-) [27
+) [28
 
 ]
 Overfull \hbox (15.63632pt too wide) in paragraph at lines 269--269
 |  []
  []
 
-(chapter/bibliography.tex [28
+(chapter/bibliography.tex [29
 
 
 ]
@@ -2449,7 +2449,7 @@ Overfull \hbox (15.63632pt too wide) in paragraph at lines 1--1
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 277.
- [29
+ [30
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 277.
@@ -2470,12 +2470,12 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 277.
  ) 
 Here is how much of TeX's memory you used:
- 32180 strings out of 428410
- 624781 string characters out of 3163061
- 639304 words of memory out of 3000000
- 35163 multiletter control sequences out of 15000+200000
+ 32185 strings out of 428410
+ 624898 string characters out of 3163061
+ 639460 words of memory out of 3000000
+ 35168 multiletter control sequences out of 15000+200000
  44667 words of font info for 151 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  65i,15n,89p,10440b,871s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on FT_chs.pdf (33 pages).
+Output written on FT_chs.pdf (34 pages).
