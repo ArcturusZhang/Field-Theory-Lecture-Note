@@ -292,9 +292,46 @@ Lagrange函数中的常数项对运动方程没有影响，可以略去。略去
 	M^2 = m_1^2+m_2^2+\frac{2m_2\E_1}{c^2}
 \end{equation}
 
-\section{不变截面}
+\iffalse
+\begin{example}
+一个以速度$V$运动的粒子在“飞行”中分解为两个粒子。求这些粒子的出射角同其能量之间的关系。
+\end{example}
+\begin{solution}
+记$\E_0$为衰变粒子之一在C系中的能量，$\E$是这一粒子在L系中的能量
+\end{solution}
+\fi
+
+%\section{不变截面}
 
 \section{粒子的弹性碰撞}
+
+现在我们从相对论力学的观点来考虑粒子的{\bf 弹性碰撞}。将两个碰撞粒子的质量、动量和能量分别记作$m_1, \mbf{p}_1, \E_1$和$m_2, \mbf{p}_2, \E_2$，用带撇号的相应量表示碰撞后的量。
+
+碰撞过程中的动量个能量守恒定律可以一并写为四维动量守恒方程
+\begin{equation}
+	p_1^i + p_2^i = p_1'^i + p_2'^i
+	\label{chapter2:粒子的弹性碰撞1}
+\end{equation}
+从这个四维矢量方程可以构造出有助于进一步计算的不变关系式。将式\eqref{chapter2:粒子的弹性碰撞1}
+改写为形式
+\begin{equation}
+	p_1^i+p_2^i - p_1'^i = p_2'^i
+	\label{chapter2:粒子的弹性碰撞2}
+\end{equation}
+将其两边平方，即有
+\begin{equation*}
+	(p_1^i+p_2^i - p_1'^i)(p_{1i}+p_{2i} - p'_{1i}) = p_2'^ip'_{2i}
+\end{equation*}
+注意到其中$p_1^ip_{1i} = p_1'^ip'_{1i} = m_1^2c^4, p_2^ip_{2i} = p_2'^ip'_{2i} = m_2^2c^4$，可得
+\begin{equation}
+	m_1^2c^4 + p_{1i}p_2^i - p_{1i}p_1'^i - p_{2i}p_1'^i = 0
+	\label{chapter2:粒子的弹性碰撞3}
+\end{equation}
+类似的将式$p_1^i+p_2^i - p_2'^i = p_1'^i$两边平方，可得
+\begin{equation}
+	m_2^2c^4 + p_{1i}p_2^i - p_{2i}p_2'^i - p_{1i}p_2'^i = 0
+	\label{chapter2:粒子的弹性碰撞4}
+\end{equation}
 
 \section{角动量}
 
