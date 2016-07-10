@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9) (preloaded format=xelatex 2016.5.12)  5 JUL 2016 19:04
+This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9) (preloaded format=xelatex 2016.5.12)  10 JUL 2016 23:41
 entering extended mode
 **./FT_chs.tex
 (FT_chs.tex
@@ -2268,17 +2268,17 @@ Overfull \hbox (15.80814pt too wide) in paragraph at lines 243--243
  []
 
 
-Overfull \hbox (15.80814pt too wide) in paragraph at lines 247--247
+Overfull \hbox (15.80814pt too wide) in paragraph at lines 252--252
 |[]   []
  []
 
 
-Overfull \hbox (15.80814pt too wide) in paragraph at lines 249--249
+Overfull \hbox (15.80814pt too wide) in paragraph at lines 254--254
 |[]   []
  []
 
 
-Overfull \hbox (15.80814pt too wide) in paragraph at lines 251--251
+Overfull \hbox (15.80814pt too wide) in paragraph at lines 256--256
 |[]   []
  []
 
@@ -2470,10 +2470,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 277.
  ) 
 Here is how much of TeX's memory you used:
- 32185 strings out of 428410
- 624898 string characters out of 3163061
- 639460 words of memory out of 3000000
- 35168 multiletter control sequences out of 15000+200000
+ 32186 strings out of 428410
+ 624918 string characters out of 3163061
+ 639498 words of memory out of 3000000
+ 35169 multiletter control sequences out of 15000+200000
  44667 words of font info for 151 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  65i,15n,89p,10440b,871s stack positions out of 5000i,500n,10000p,200000b,50000s
