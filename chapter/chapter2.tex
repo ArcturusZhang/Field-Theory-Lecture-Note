@@ -466,7 +466,10 @@ Lagrange函数中的常数项对运动方程没有影响，可以略去。略去
 	\E_2' = m_2c^2 \frac{(\E_1+m_2c^2)^2 + (\E_1^2-m_1^2c^4)\cos^2 \theta_2}{(\E_1+m_2c^2)^2 - (\E_1^2-m_1^2c^4)\cos^2 \theta_2}
 	\label{chapter2:粒子的弹性碰撞6}
 \end{equation}
-反演公式\eqref{chapter2:粒子弹性碰撞后粒子1的散射角}可得出在一般情形下用$\theta_1$表示$\E'$的非常复杂的公式。
+反演公式\eqref{chapter2:粒子弹性碰撞后粒子1的散射角}可得出在一般情形下用$\theta_1$表示$\E'$的非常复杂的公式。但当入射粒子质量为零，即$m_1=0$时，有$p_1c = \E_1, p_1'c = \E'$。此时入射粒子碰撞后的能量可以用其偏转角度表示为
+\begin{equation}
+	\E_1' = \frac{m_2c^2}{1-\cos\theta_1+\dfrac{m_2c^2}{\E_1}}
+\end{equation}
 
 注意到，如果$m_1>m_2$，即入射粒子重于靶粒子，则散射角$\theta_1$不能超过某一最大值，即
 \begin{equation}
@@ -474,6 +477,63 @@ Lagrange函数中的常数项对运动方程没有影响，可以略去。略去
 	\label{chapter2:粒子的弹性碰撞7}
 \end{equation}
 这与经典结果相一致。
+
+一般来讲，在C系中讨论碰撞最为简单。我们用带有下标$0$的量来代表这个参考系中的量。因此有$\mbf{p}_{10} = -\mbf{p}_{20} =:\mbf{p}_0$。根据动量守恒，碰撞过程中，两个粒子的动量只有转动，保持数值相等且方向相反。再根据能量守恒，每个动量的数值保持不变。
+
+设$\chi$为C系中的散射角，即动量$\mbf{p}_{10}$和$\mbf{p}_{20}$由于碰撞而转过的角。这个量完全决定了C系中，因而也是任何其他参考系中的散射过程。在L系中描述碰撞时它也是方便的，是应用动量和能量守恒以后仍然不定的单一参量。
+
+我们借助这个参量来表示两个粒子在L系中的终态能量。重新计算式\eqref{chapter2:粒子的弹性碰撞3}中的各项，在C系中写出乘积$p_{1i}p_1'^i$如下
+\begin{equation}
+	p_{1i}p_1'^i = \frac{\E_{10}\E'_{10}}{c^2} - \mbf{p}_{10}\cdot \mbf{p}'_{10} = \frac{\E_{10}^2}{c^2} - p_0^2\cos \chi = p_0^2(1-\cos\chi)+m_1^2c^2
+	\label{chapter2:粒子的弹性碰撞8}
+\end{equation}
+由于$p_{1i}p_1'^i$是四维标量，故在L系中，$p_{1i}p_1'^i$也为式\eqref{chapter2:粒子的弹性碰撞8}之取值。将式\eqref{chapter2:粒子的弹性碰撞8}和式\eqref{chapter2:粒子的弹性碰撞5}代入式\eqref{chapter2:粒子的弹性碰撞3}中，可得
+\begin{equation}
+	\E_1'-\E_1 = -\frac{p_0^2}{m_2}(1-\cos\chi)
+	\label{chapter2:粒子的弹性碰撞9}
+\end{equation}
+最后还需要用L系中的诸量来表示$p_0^2$，为此，只需让不变量$p_{1i}p_2^i$在L系和C系中的值相等即可，即
+\begin{equation*}
+	\frac{\E_{10}\E_{20}}{c^2} - \mbf{p}_{10}\cdot \mbf{p}_{20} = \E_1m_2
+\end{equation*}
+即有
+\begin{equation*}
+	\sqrt{(p_0^2+m_1^2c^2)(p_0^2+m_2^2c^2)} = \E_1m_2 - p_0^2
+\end{equation*}
+从上式中解出$p_0^2$可有
+\begin{equation}
+	p_0^2 = \frac{m_2^2(\E_1^2-m_1^2c^4)}{m_1^2c^2+m_2^2c^2+2\E_1m_2}
+	\label{chapter2:粒子的弹性碰撞10}
+\end{equation}
+因此最后可得
+\begin{equation}
+	\E_1' = \E_1 - \frac{m_2(\E_1^2-m_1^2c^4)}{m_1^2c^2+m_2^2c^2+2\E_1m_2}(1-\cos \chi)
+	\label{chapter2:粒子的弹性碰撞11}
+\end{equation}
+第二个粒子的能量可以通过能量守恒定律$\E_1+m_2c^2=\E_1'+\E_2'$得到，即
+\begin{equation}
+	\E_2' = m_2c^2 + \frac{m_2(\E_1^2-m_1^2c^4)}{m_1^2c^2+m_2^2c^2+2\E_1m_2}(1-\cos \chi)
+	\label{chapter2:粒子的弹性碰撞12}
+\end{equation}
+
+在式\eqref{chapter2:粒子的弹性碰撞11}和式\eqref{chapter2:粒子的弹性碰撞12}中，第二项表示第一个粒子失去并转移给第二个粒子的能量，当$\chi = \pi$时，能量转移最大为
+\begin{equation}
+	\E'_{2\max}-m_2c^2 = \E_1-\E_{1\min} = \frac{2m_2(\E_1^2-m_1^2c^4)}{m_1^2c^2+m_2^2c^2+2\E_1m_2}
+	\label{chapter2:粒子的弹性碰撞13}
+\end{equation}
+碰撞后入射粒子的最小动能语气初始能量的比值为
+\begin{equation}
+	\frac{\E'_{1\min}-m_1c^2}{\E_1-m_1c^2} = \frac{(m_1-m_2)^2c^2}{m_1^2c^2+m_2^2c^2+2\E_1m_2}
+	\label{chapter2:粒子的弹性碰撞14}
+\end{equation}
+在低速极限情况下（即$c\to +\infty$时），这个关系趋于常数
+\begin{equation*}
+	\left(\frac{m_1-m_2}{m_1+m_2}\right)^2
+\end{equation*}
+在能量$\E_1$很大的相反极限下，关系\eqref{chapter2:粒子的弹性碰撞14}则趋于$0$，而量$\E'_{1\min}$趋于常数
+\begin{equation*}
+	\E'_{1\min} = \frac{m_1^2c^2+m_2^2c^2}{2m_2}
+\end{equation*}
 
 \section{角动量}
 
