@@ -139,7 +139,7 @@ Lagrange函数中的常数项对运动方程没有影响，可以略去。略去
 \end{equation}
 而逆变分量则为
 \begin{equation}
-	p^i = \left(\frac{E}{c},\mbf{p}\right)
+	p^i = \left(\frac{\E}{c},\mbf{p}\right)
 	\label{chapter2:四维动量矢量的逆变分量}
 \end{equation}
 
@@ -301,7 +301,110 @@ Lagrange函数中的常数项对运动方程没有影响，可以略去。略去
 \end{solution}
 \fi
 
-%\section{不变截面}
+\section{不变截面}
+
+碰撞过程由其{\bf 有效截面}（或{\bf 截面}）表征，它决定碰撞的粒子束之间发生的（特定类型的）碰撞数。
+
+假设有两个碰撞束，用$n_1$和$n_2$表示其中的粒子数密度（即单位体积内的粒子数），用$\mbf{v}_1$和$\mbf{v}_2$表示粒子的速度。在粒子2处于静止的参考系（或者称粒子2的{\bf 静止系}）中，只需考虑粒子束1与静止靶的碰撞。于是按照碰撞截面$\sigma$的通常定义，体积$\mathd V$内时间$\mathd t$中发生的碰撞数是
+\begin{equation}
+	\mathd \nu = \sigma v_{\text{rel}}n_1n_2 \mathd V \mathd t
+	\label{chapter2:不变截面1}
+\end{equation}
+式中$v_{\text{rel}}$是粒子1在粒子2静止系中的速度。
+
+由于$\mathd \nu$是粒子数，因此$\mathd \nu$应该是不变量。下面我们来将它表示为可适用于任何参考系的形式：
+\begin{equation}
+	\mathd \nu = An_1n_2\mathd V\mathd t
+	\label{chapter2:不变截面2}
+\end{equation}
+式中$A$是一个待定的数，在粒子之一为静止的参考系中，$A$的值为$\sigma v_{\text{rel}}$。
+
+在式\eqref{chapter2:不变截面2}中，微分形式$\mathd V\mathd t$是不变量，因此乘积$An_1n_2$必然也是不变量。而给定体积元中的粒子数$n\mathd V$也是不变量，由此即可得到粒子数密度的变换规律。记$n\mathd V = n_0\mathd V_0$，其中带有指标$0$的量表示其在静止系中的值，利用体积变换公式\eqref{chapter1:固有体积}，可得粒子数密度之间的变换关系为
+\begin{equation}
+	n = \frac{n_0}{\sqrt{1-\dfrac{v^2}{c^2}}}
+	\label{chapter2:不变截面3}
+\end{equation}
+再由式\eqref{chapter2:自由实物粒子能量与动量之间的关系}和式\eqref{chapter2:自由实物粒子能量、动量和速度之间的关系}可得
+\begin{equation*}
+	\frac{\E^2}{m^2c^4} = \frac{p^2c^2}{m^2c^4} + 1 = 1 + \frac{\E^2}{m^2c^4} \frac{v^2}{c^2}
+\end{equation*}
+即有
+\begin{equation*}
+	\frac{\E}{mc^2} = \frac{1}{\sqrt{1-\dfrac{v^2}{c^2}}}
+\end{equation*}
+据此以及式\eqref{chapter2:不变截面3}可得
+\begin{equation}
+	n = \frac{\E}{mc^2}n_0
+	\label{chapter2:不变截面4}
+\end{equation}
+
+因此，$An_1n_2$是不变量与$A\E_1\E_2$是不变量等价。这个条件也可以表示为如下更方便的形式，即量
+\begin{equation}
+	A\frac{\E_1\E_2}{p_{1i}p_2^i} = A\frac{\E_1\E_2}{\E_1\E_2-\mbf{p}_1\cdot \mbf{p}_2}
+	\label{chapter2:不变截面5}
+\end{equation}
+也是不变量。在粒子2的静止系中，有$\E_2=m_2c^2, \mbf{p}_2=\mbf{0}$，此时不变量\eqref{chapter2:不变截面5}就等于$A$。另一方面，在该参考系中有$A = \sigma v_{\text{rel}}$。所以再任意参考系中有
+\begin{equation}
+	A = \sigma v_{\text{rel}} \frac{p_{1i}p_2^i}{\E_1\E_2}
+	\label{chapter2:不变截面6}
+\end{equation}
+
+下面用两个粒子的速度来改写该式。在粒子2的静止系中，有
+\begin{equation*}
+	p_{1i}p^{2i} = \frac{\E_1\E_2}{c^2} = \E_1m_2 = \frac{m_1m_2c^2}{\sqrt{1-\dfrac{v_{\text{rel}}^2}{c^2}}}
+\end{equation*}
+于是有
+\begin{equation}
+	v_{\text{rel}} = c\sqrt{1-\frac{m_1^2m_2^2c^4}{(p_{1i}p_2^i)^2}}
+	\label{chapter2:不变截面7}
+\end{equation}
+利用式\eqref{chapter2:自由实物粒子的能量}和式\eqref{chapter2:自由实物粒子的动量}可得
+\begin{equation*}
+	p_{1i}p_2^i = \frac{\E_1\E_2}{c^2} - \mbf{p}_1\cdot\mbf{p}_2 = m_1m_2c^2 \frac{1-\dfrac{\mbf{v}_1}{c}\cdot \dfrac{\mbf{v}_2}{c}}{\sqrt{\left(1-\dfrac{v_1^2}{c^2}\right)\left(1-\dfrac{v_2^2}{c^2}\right)}}
+\end{equation*}
+据此可有
+\begin{equation}
+	v_{\text{rel}} = \frac{\sqrt{(\mbf{v}_1-\mbf{v}_2)^2-(\mbf{v}_1 \times \mbf{v}_2)^2}}{1-\dfrac{\mbf{v}_1}{c}\cdot \dfrac{\mbf{v}_2}{c}}
+	\label{chapter2:不变截面8-粒子间相对速度的计算}
+\end{equation}
+注意到式\eqref{chapter2:不变截面8-粒子间相对速度的计算}对$\mbf{v}_1$和$\mbf{v}_2$是对称的，即相对速度的数值与用来定义它的粒子的选择无关。
+
+由此，将式\eqref{chapter2:不变截面7}或式\eqref{chapter2:不变截面8-粒子间相对速度的计算}代入式\eqref{chapter2:不变截面6}和式\eqref{chapter2:不变截面2}中，即得到不变截面的最终形式为
+\begin{equation}
+	\mathd \nu = \sigma \frac{\sqrt{(p_{1i}p_2^i)^2-m_1^2m_2^2c^4}}{\E_1\E_2}n_1n_2 \mathd V\mathd t
+	\label{chapter2:不变截面最终形式1}
+\end{equation}
+或者
+\begin{equation}
+	\mathd \nu = \sigma \sqrt{(\mbf{v}_1-\mbf{v}_2)^2-(\mbf{v}_1 \times \mbf{v}_2)^2} n_1n_2 \mathd V\mathd t
+	\label{chapter2:不变截面最终形式2}
+\end{equation}
+
+如果速度$\mbf{v}_1$和$\mbf{v}_2$共线，此时$\mbf{v}_1\times \mbf{v}_2 = \mbf{0}$，于是式\eqref{chapter2:不变截面最终形式2}化为如下形式：
+\begin{equation}
+	\mathd \nu = \sigma |\mbf{v}_1-\mbf{v}_2|n_1n_2 \mathd V\mathd t
+\end{equation}
+
+本节的中间结果可以导出如下一个重要结论。
+\begin{example}
+求相对论速度空间中的“线元”，即速度为$\mbf{v}$和$\mbf{v}+\mathd \mbf{v}$两点间的相对速度。
+\end{example}
+\begin{solution}
+根据式\eqref{chapter2:不变截面8-粒子间相对速度的计算}可得
+\begin{equation*}
+	\mathd l_{\mbf{v}}^2 = \frac{(\mathd \mbf{v})^2 - (\mbf{v}\times \mathd \mbf{v})^2}{\left(1-\dfrac{v^2}{c^2}\right)^2}
+\end{equation*}
+如果在速度空间中引入球坐标系，则有
+\begin{equation*}
+	\mathd l_{\mbf{v}}^2 = \frac{\mathd v^2}{\left(1-\dfrac{v^2}{c^2}\right)^2} + \frac{v^2}{1-\dfrac{v^2}{c^2}}(\mathd \theta^2 + \sin^2 \theta \mathd \phi^2)
+\end{equation*}
+如果通过方程$v = \tanh \chi$引进新变量$\chi$来代替$v$，则线元表示为
+\begin{equation}
+	\mathd l_{\mbf{v}}^2 = \mathd \chi^2 + \sinh^2\chi (\mathd \theta^2 + \sin^2 \theta\mathd \phi^2)
+\end{equation}
+
+从几何的观点来看，这就是三维Lobachevsky空间\footnote{即罗巴切夫斯基空间。}（负常曲率空间）的线元。
+\end{solution}
 
 \section{粒子的弹性碰撞}
 
@@ -322,16 +425,55 @@ Lagrange函数中的常数项对运动方程没有影响，可以略去。略去
 \begin{equation*}
 	(p_1^i+p_2^i - p_1'^i)(p_{1i}+p_{2i} - p'_{1i}) = p_2'^ip'_{2i}
 \end{equation*}
-注意到其中$p_1^ip_{1i} = p_1'^ip'_{1i} = m_1^2c^4, p_2^ip_{2i} = p_2'^ip'_{2i} = m_2^2c^4$，可得
+注意到其中$p_1^ip_{1i} = p_1'^ip'_{1i} = m_1^2c^2, p_2^ip_{2i} = p_2'^ip'_{2i} = m_2^2c^2$，可得
 \begin{equation}
-	m_1^2c^4 + p_{1i}p_2^i - p_{1i}p_1'^i - p_{2i}p_1'^i = 0
+	m_1^2c^2 + p_{1i}p_2^i - p_{1i}p_1'^i - p_{2i}p_1'^i = 0
 	\label{chapter2:粒子的弹性碰撞3}
 \end{equation}
 类似的将式$p_1^i+p_2^i - p_2'^i = p_1'^i$两边平方，可得
 \begin{equation}
-	m_2^2c^4 + p_{1i}p_2^i - p_{2i}p_2'^i - p_{1i}p_2'^i = 0
+	m_2^2c^2 + p_{1i}p_2^i - p_{2i}p_2'^i - p_{1i}p_2'^i = 0
 	\label{chapter2:粒子的弹性碰撞4}
 \end{equation}
+
+现在来考虑实验室系（L系）中的碰撞，该系中的粒子$m_2$碰撞前处于静止，即$\mbf{p}_2=\mbf{0}, \E_2 = m_2c^2$，于是有
+\begin{equation}
+\begin{cases}
+	p_{1i}p_2^i = \E_1m_2 \\
+	p_{2i}p_1'^i = m_2\E'_1 \\
+	p_{1i}p_1'^i = \dfrac{\E_1\E'_1}{c^2} - \mbf{p}_1 \cdot \mbf{p}'_1 = \dfrac{\E_1\E'_1}{c^2} - p_1p'_1\cos \theta_1
+\end{cases}
+\label{chapter2:粒子的弹性碰撞5}
+\end{equation}
+式中$\theta_1$是入射粒子$m_1$的散射角。将式\eqref{chapter2:粒子的弹性碰撞5}代入式\eqref{chapter2:粒子的弹性碰撞3}中可得
+\begin{equation}
+	\cos \theta_1 = \frac{\E'_1(\E_1+m_2c^2) - \E_1m_2c^2-m_1^2c^4}{c^2p_1p'_1}
+	\label{chapter2:粒子弹性碰撞后粒子1的散射角}
+\end{equation}
+类似地，由式\eqref{chapter2:粒子的弹性碰撞4}可得
+\begin{equation}
+	\cos \theta_2 = \frac{(\E_1+m_2c^2)(\E'_2-m_2c^2)}{c^2p_1p'_2}
+	\label{chapter2:粒子弹性碰撞后粒子2的散射角}
+\end{equation}
+式中$\theta_2$是入射粒子的动量$\mbf{p}_1$与变换后动量$\mbf{p}'_2$之间的夹角。
+
+式\eqref{chapter2:粒子弹性碰撞后粒子1的散射角}和式\eqref{chapter2:粒子弹性碰撞后粒子2的散射角}将L系中两个粒子的散射角与它们在碰撞中的能量变化联系了起来。反演这些公式，就可以用$\theta_1$和$\theta_2$来表示能量$\E'_1$和$\E'_2$。将式\eqref{chapter2:粒子弹性碰撞后粒子2的散射角}两边平方，并将关系
+\begin{equation*}
+	p_1^2c^2 = \E_1^2 - m_1^2c^4,\quad p_2'^2c^2 = \E_2'^2-m_2^2c^4
+\end{equation*}
+代入，可得
+\begin{equation}
+	\E_2' = m_2c^2 \frac{(\E_1+m_2c^2)^2 + (\E_1^2-m_1^2c^4)\cos^2 \theta_2}{(\E_1+m_2c^2)^2 - (\E_1^2-m_1^2c^4)\cos^2 \theta_2}
+	\label{chapter2:粒子的弹性碰撞6}
+\end{equation}
+反演公式\eqref{chapter2:粒子弹性碰撞后粒子1的散射角}可得出在一般情形下用$\theta_1$表示$\E'$的非常复杂的公式。
+
+注意到，如果$m_1>m_2$，即入射粒子重于靶粒子，则散射角$\theta_1$不能超过某一最大值，即
+\begin{equation}
+	\sin \theta_{1\max} = \frac{m_2}{m_1}
+	\label{chapter2:粒子的弹性碰撞7}
+\end{equation}
+这与经典结果相一致。
 
 \section{角动量}
 
