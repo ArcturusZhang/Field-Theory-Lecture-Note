@@ -112,15 +112,16 @@ Lagrange函数中的常数项对运动方程没有影响，可以略去。略去
 \end{equation}
 同样的公式对于非零质量的粒子在{\bf 极端相对论}情况下{\bf 近似成立}，此时粒子的能量将远远大于其静能$mc^2$。
 
-下面来推导上面所得到所有关系式的四维形式。根据最小作用量原理
+下面来推导上面所得到所有关系式的四维形式。根据Hamilton原理
 \begin{equation*}
 	\delta S = -mc\delta\int_a^b \mathd s
 \end{equation*}
 由于$\mathd s = \sqrt{\mathd x^i\mathd x_i}$，故有
-\begin{align*}
-	\delta S & = -mc\int_a^b \frac{\mathd x_i\delta \mathd x^i}{\mathd s} = -m\int_a^b u_i\mathd \delta x^i = -mu_i\delta x^i\bigg|_a^b + m\int_a^b \delta x^i \frac{\mathd u_i}{\mathd s}\mathd s \\
+\begin{align}
+	\delta S & = -mc\int_a^b \frac{\mathd x_i\delta \mathd x^i}{\mathd s} = -m\int_a^b u_i\mathd \delta x^i = -mu_i\delta x^i\bigg|_a^b + m\int_a^b \delta x^i \frac{\mathd u_i}{\mathd s}\mathd s \nonumber \\
 	& = -mu_i\delta x^i\bigg|_a^b + \frac{m}{c}\int_a^b \delta x^i \frac{\mathd u_i}{\mathd \tau}\mathd s
-\end{align*}
+	\label{chapter2.section2.1:作用量的变分}
+\end{align}
 由$\delta S = 0$和固定边界条件可得自由实物粒子的运动方程即为$\dfrac{\mathd u_i}{\mathd \tau} = 0$。
 
 但现在我们需要将作用量的变分表示为坐标的函数，此时需将$a$点当做固定的，令粒子按照实际的轨道运动，考察$\delta S$与$(\delta x^i)_b$之间的关系。根据$b$点所取的任意性，将$(\delta x^i)_b$记作$\delta x^i$，则有
@@ -530,10 +531,93 @@ Lagrange函数中的常数项对运动方程没有影响，可以略去。略去
 \begin{equation*}
 	\left(\frac{m_1-m_2}{m_1+m_2}\right)^2
 \end{equation*}
-在能量$\E_1$很大的相反极限下，关系\eqref{chapter2:粒子的弹性碰撞14}则趋于$0$，而量$\E'_{1\min}$趋于常数
+在能量$\E_1$很大的相反极限下，关系\eqref{chapter2:粒子的弹性碰撞14}趋于$0$，而量$\E'_{1\min}$则趋于常数
 \begin{equation*}
 	\E'_{1\min} = \frac{m_1^2c^2+m_2^2c^2}{2m_2}
 \end{equation*}
 
 \section{角动量}
 
+在经典力学中，一个封闭系统除动量和能量守恒外，还有角动量守恒，即矢量
+\begin{equation*}
+	\mbf{L} = \sum \mbf{r}\times \mbf{p}
+\end{equation*}
+守恒。其中的$\mbf{r}$和$\mbf{p}$是粒子的矢径和动量，求和遍历系统内的所有粒子。由于空间的各向同性，因而有封闭系统的Lagrange函数在系统整体转动下不变，因而导出了角动量守恒。
+
+下面推导角动量守恒的四维形式。设$x^i$是该系统中一个粒子的坐标，在该四维空间中作一个无限小转动\footnote{这样的变换一定是线性变换。}，设新旧坐标满足如下关系
+\begin{equation}
+	x'^i-x^i = x_j\delta \varOmega^{ij}
+	\label{chapter2:角动量1}
+\end{equation}
+其中$\delta \varOmega_{ij}$为该无穷小线性变换的系数，其所有分量构成一个四维张量。四维张量$\delta\varOmega_{ij}$的各个分量的取值需满足：矢径的长度在该转动下不变，即$x'^ix'_i = x^ix_i$，将式\eqref{chapter2:角动量1}的结果代入并略去二阶小量，可得
+\begin{equation*}
+	x_ix_j\delta \varOmega^{ij}+x^ix^k\delta \varOmega_{ik} = 0
+\end{equation*}
+或者
+\begin{equation}
+	x^ix^j \delta\varOmega_{ij} = 0
+	\label{chapter2:角动量2}
+\end{equation}
+这个方程对于任意的$x^i$都要满足。注意到$x^ix^j$是一个对称张量，所以$\delta\varOmega_{ij}$必为反对称张量\footnote{也可将式\eqref{chapter2:角动量2}中的傀指标$i, j$交换，再与自身相加得到。}，即
+\begin{equation}
+	\delta \varOmega_{ij} = -\delta \varOmega_{ji}
+	\label{chapter2:角动量3}
+\end{equation}
+
+对于起点为$a$终点为$b$的轨道的无穷小坐标变换，根据式\eqref{chapter2.section2.1:作用量的变分}可得
+\begin{equation*}
+	\delta S = -mu_i\delta x^i \big|_a^b = -p^i\delta x_i\big|_a^b
+\end{equation*}
+而对系统中所有粒子，系统的作用量的改变则具有形式
+\begin{equation*}
+	\delta S = -\sum p^i\delta x_i\Big|_a^b
+\end{equation*}
+式中的求和遍历系统中的所有粒子。在无穷小转动下，有$\delta x_i = x^j\delta \varOmega_{ij}$，于是有
+\begin{equation*}
+	\delta S = -\delta \varOmega_{ij} \sum p^ix^j\Big|_a^b
+\end{equation*}
+将张量$\ds\sum p^ix^j$分解为对称和反对称两部分之和，对称部分与反对称张量$\delta \varOmega_{ij}$的乘积恒为零，因此只余下张量$\ds\sum p^ix^j$的反对称部分，即
+\begin{equation}
+	\delta S = -\delta \varOmega_{ij} \frac12 \sum (p^ix^j-p^jx^i)\Big|_a^b
+	\label{chapter2:角动量4}
+\end{equation}
+
+对于封闭系统，Lagrange函数是一个不变量，它不因四维空间中的转动而改变，因此对任意的转动，即任意的四维反对称张量$\delta\varOmega_{ij}$都有$\delta S=0$，这说明式\eqref{chapter2:角动量4}中$\delta\varOmega_{ij}$的系数必须为零，即
+\begin{equation}
+	\sum (p^ix^j-p^jx^i)_b = \sum (p^ix^j-p^jx^i)_a
+\end{equation}
+这说明在封闭系统中，四维张量
+\begin{equation}
+	L^{ij} = \sum (x^ip^j-x^jp^i)
+	\label{chapter2:四维角动量张量的定义}
+\end{equation}
+是守恒的。这个反对称张量称为{\bf 四维角动量张量}。这个张量的空间分量是三维角动量矢量$\ds \mbf{L} = \sum\mbf{r}\times \mbf{p}$的分量：
+\begin{equation*}
+	L^{23} = L_x,\quad L^{31} = L_y,\quad L^{12} = L_z
+\end{equation*}
+而分量$L^{01}, L^{02}, L^{03}$构成一个矢量$\ds c\sum \left(t\mbf{p}-\dfrac{\E\mbf{r}}{c^2}\right)$，于是，对比式\eqref{chapter1:四维反对称张量的表示}和式\eqref{chapter1:四维反对称张量的逆变分量}的形式，可以把张量$L^{ij}$的分量写成形式
+\begin{equation}
+	L^{ij} = \left(c\sum \left(t\mbf{p}-\dfrac{\E\mbf{r}}{c^2}\right), -\mbf{L}\right)
+	\label{chapter2:四维角动量张量的逆变分量表示}
+\end{equation}
+
+特别地，由于四维角动量张量$L^{ij}$对封闭系统守恒，所以有
+\begin{equation*}
+	\sum \left(t\mbf{p}-\frac{\E\mbf{r}}{c^2}\right) = \const
+\end{equation*}
+另外由于总能量$\ds\sum \E$也守恒，因此可以将其改写为
+\begin{equation}
+	\frac{\ds \sum\E\mbf{r}}{\ds \sum \E} - t\,\frac{\ds c^2\sum\mbf{p}}{\ds \sum\E} = \const
+	\label{chapter2:角动量5}
+\end{equation}
+从式\eqref{chapter2:角动量5}中可以看出，矢径
+\begin{equation}
+	\mbf{R} = \frac{\ds\sum \E\mbf{r}}{\ds\sum\E}
+	\label{chapter2:角动量-惯性中心的坐标}
+\end{equation}
+在以速度
+\begin{equation}
+	\mbf{v} = \frac{\ds c^2\sum\mbf{p}}{\ds\sum\E}
+	\label{chapter2:角动量-惯性中心的速度}
+\end{equation}
+作匀速运动，这正是系统整体的运动速度。式\eqref{chapter2:角动量-惯性中心的坐标}给出了系统{\bf 惯性中心}坐标的相对论定义。如果
