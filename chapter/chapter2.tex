@@ -625,4 +625,45 @@ Lagrange函数中的常数项对运动方程没有影响，可以略去。略去
 	\mbf{R} = \frac{\ds \sum m\mbf{r}}{\ds \sum m}
 \end{equation*}
 
-需要注意的是，矢量\eqref{chapter2:角动量-惯性中心的坐标}并不能被构造为任何一个四维矢量的空间分量，故在参考系的变换下它的分量并
+需要注意的是，矢量\eqref{chapter2:角动量-惯性中心的坐标}并不能被构造为任何一个四维矢量的空间分量，故在参考系的变换下它的分量并不像一个点的坐标那样变换，因此同一粒子系统的惯性中心对不同的参考系来讲是不同的点。
+
+\begin{example}
+一物体（即粒子系统）在其以速度$\mbf{V}$运动的参考系$K$中的角动量为$\mbf{L}$，在该物体总体静止的参考系$K_0$中的角动量为$\mbf{L}_{(0)}$，试求$\mbf{L}$和$\mbf{L}_{(0)}$之间的关系。此处两种情形下的角动量都是相对于物体在$K_0$系的惯性中心定义的。
+\end{example}
+\begin{solution}
+将$K$系中的四维坐标记作$x^i$，$K'$系中的四维坐标则记作$x^i_{(0)}$，则根据Lorentz变换可得
+\begin{equation*}
+\begin{cases}
+	\ds x^0 = \frac{x^0_{(0)}+\dfrac{V}{c}x^1_{(0)}}{\sqrt{1-\dfrac{V^2}{c^2}}} \\
+	\ds x^1 = \frac{x^1_{(0)}+\dfrac{V}{c}x^0_{(0)}}{\sqrt{1-\dfrac{V^2}{c^2}}} \\
+	x^2 = x^2_{(0)} \\
+	x^3 = x^3_{(0)}
+\end{cases}
+\end{equation*}
+根据四维张量的变换法则可得
+\begin{equation*}
+	L^{ij} = \frac{\pl x^i}{\pl x^k_{(0)}} \frac{\pl x^j}{\pl x^l_{(0)}} L^{kl}_{(0)}
+\end{equation*}
+由此可有
+\begin{align*}
+	L^{23} & = L^{23}_{(0)} \\
+	L^{31} & = \frac{\pl x^1}{\pl x^0_{(0)}} L^{30}_{(0)} + \frac{\pl x^1}{\pl x^1_{(0)}} L^{31}_{(0)} = \frac{-\dfrac{V}{c}}{\sqrt{1-\dfrac{V^2}{c^2}}} L^{03}_{(0)} + \frac{1}{\sqrt{1-\dfrac{V^2}{c^2}}} L^{31}_{(0)} \\
+	L^{12} & = \frac{\pl x^1}{\pl x^0_{(0)}} L^{02}_{(0)} + \frac{\pl x^1}{\pl x^1_{(0)}} L^{12}_{(0)} = \frac{\dfrac{V}{c}}{\sqrt{1-\dfrac{V^2}{c^2}}} L^{02}_{(0)} + \frac{1}{\sqrt{1-\dfrac{V^2}{c^2}}} L^{12}_{(0)}
+\end{align*}
+由于$K_0$系是惯性中心系，因此在$K_0$系中有
+\begin{equation*}
+	\sum \mbf{p}_{(0)} = \mbf{0},\quad \sum \E_{(0)}\mbf{r}_{(0)} = \mbf{0}
+\end{equation*}
+即$L^{01}_{(0)} = L^{02}_{(0)} = L^{03}_{(0)} = 0$，故有
+\begin{equation*}
+\begin{cases}
+	\ds L^{23} = L^{23}_{(0)} \\
+	\ds L^{31} = \frac{1}{\sqrt{1-\dfrac{V^2}{c^2}}} L^{31}_{(0)} \\
+	\ds L^{12} = \frac{1}{\sqrt{1-\dfrac{V^2}{c^2}}} L^{12}_{(0)}
+\end{cases}
+\end{equation*}
+即
+\begin{equation*}
+	L_x = L_{(0)x},\quad L_y = \frac{L_{(0)y}}{\sqrt{1-\dfrac{V^2}{c^2}}} ,\quad L_z = \frac{L_{(0)z}}{\sqrt{1-\dfrac{V^2}{c^2}}}
+\end{equation*}
+\end{solution}

@@ -17,7 +17,7 @@
 \usepackage{multirow}
 \usepackage{textcomp}
 \usepackage[top=2.54cm, bottom=2.54cm, left=3.18cm, right=3.18cm]{geometry}
-\usepackage[toc]{multitoc}
+\usepackage[toc,lof]{multitoc}
 
 \usepackage{asymptote}
 
@@ -154,10 +154,6 @@
 %\usepackage{titletoc}
 %\titlecontents{figure}[0.5cm]{\songti}{\figurename~\thecontentslabel\quad}{\hspace*{-1.5cm}}{\titlerule*[0.12cm]{.}\contentspage}[\addvspace{6pt}]
 
-%旧的样式
-%\usepackage{titlesec}
-%\titleformat{\section}{\bf \xiaosan}{\thesection}{1em}{}
-
 %新的样式
 \usepackage{titlesec}
 \usepackage{xcolor,colortbl}
@@ -182,7 +178,7 @@
 {\newline\hwyk\LARGE #1}
 \end{tabular}
 \arrayrulewidth=0.4pt
-\vspace{-2.0cm}
+\vspace{-1.5cm}
 }
  
 \newcommand{\mysection}[1]{
@@ -217,6 +213,14 @@
 \vspace{-0.5cm}
 }
 
+\newcommand{\mybackmatter}[1]{
+\begin{tabular}{p{0.01\textwidth}p{0.99\textwidth}}
+\cellcolor{black} &\cellcolor{titlecolor} \textcolor{white}
+{\newline\hwyk\LARGE #1}
+\end{tabular}
+\arrayrulewidth=0.4pt
+}
+
 \begin{document}
 
 \maketitle
@@ -241,7 +245,7 @@
 \clearpage
 
 \mainmatter
- 
+
 \titleformat{\chapter}[hang]{\hwyk\LARGE}
 {}{0mm}{\hspace{-0.4cm}\mytitle}
  
@@ -259,20 +263,22 @@
 
 \input{chapter/chapter1.tex}
 \input{chapter/chapter2.tex}
+\input{chapter/chapter3.tex}
 \input{chapter/chapter10.tex}
 \input{chapter/chapter11.tex}
 
 \backmatter
 
-\addcontentsline{toc}{part}{\listfigurename}{%
+\titleformat{\chapter}[hang]{\hwyk\LARGE}
+{}{0mm}{\hspace{-0.4cm}\mybackmatter}
+
+\addcontentsline{toc}{chapter}{\listfigurename}{%
 \let\oldnumberline\numberline%
 \renewcommand{\numberline}{\figurename~\oldnumberline}%
 \listoffigures
 }
 
-%\listoffigures
-
 %参考文献
-\input{chapter/bibliography}
+\input{chapter/bibliography.tex}
 
 \end{document}

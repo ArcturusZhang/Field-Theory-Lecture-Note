@@ -1,0 +1,212 @@
+\chapter{电磁场中的电荷}
+
+\section{相对论中的基本粒子}
+
+粒子间的相互作用可以用{\bf 场}的概念来描述。在这种观点下，我们不认为是一个粒子直接作用于另一个粒子，而是认为一个粒子在其周围建立起场，这个场内的任何其他粒子都受到一定的力的作用。在经典力学中，场仅仅是用来描述粒子相互作用这一现象的方法。但在相对论中，由于相互作用是以有限速度传播的，因此，在某一时刻，作用在一个粒子上的力并不是由其他粒子在该时刻的位置决定。某一个粒子改变了位置，需要经过一段时间后才能影响到其他粒子。这说明了场本身具有物理上的真实性。相互作用具有传播速度表明粒子之间不能直接发生相互作用，而仅能影响其周围空间中的邻近区域。因此，应当认为，一个粒子与场发生相互作用，然后场与粒子发生相互作用。
+
+在经典力学中，我们可以引入刚体的概念。刚体指在任何情况下都不会发生形变的物体。类似地，如果希望在相对论中引入刚体的概念，则这种刚体应该在它们处于静止的参考系中其所有尺寸都保持不变。但是，相对论使得一般情形下的刚体不可能存在。
+
+例如，考虑一个绕自身轴转动的圆盘，并假设它是刚体。固连于圆盘的参考系显然不是惯性系。但是对于圆盘的每一个无限小单元，可以引入一个惯性参考系，其中该单元在某一时刻处于静止。而对圆盘上的不同单元，这些惯性系之间必然是有相对运动的。现在考察圆盘的一条半径上的所有无限小单元，由于它们之间的相对运动与其自身取向相垂直，因此一个静止的观察者在该半径扫过他时测量出旋转圆盘的半径应与圆盘静止时相同。而另一方面，在给定时刻圆盘圆周上从静止观察者身旁经过的每一单元的长度由于其取向与运动方向垂直，会发生Lorentz收缩而导致静止观察者测量出的旋转圆盘整个圆周的长度将小于静止圆盘的周长。于是我们发现，由于圆盘的转动静止观察者测得旋转圆盘的圆周与半径的比值将不再是$2\pi$（事实上这个数值将小于$2\pi$）。这个结论表明，圆盘实际上不再是刚体，它在转动时必然发生了某种复杂的形变，这种形变则显然与其组成物质的弹性性质有关。
+
+还可以用另外一种方法来证明刚体是不可能存在的。假设某一外力作用在刚体的某一点上，使这个物体发生了运动。如果这个物体是刚体，那么它上面的任何一点都必须在相同时刻与受到外力的点同时开始运动，否则物体就要发生变形了。然而相对论表明相互作用具有传播速度，力是以有限速度从其作用点传到其余的点，它们不可能同时开始运动。
+
+刚体的不存在性使得相对论力学中的基本粒子必须以{\bf 几何点}的形式存在而不能有有限的尺寸。即在经典的（非量子的）相对论力学中，基本粒子不能被赋予有限的尺寸，必须将其当做几何点来看待。
+
+\section{场的四维势}
+
+一个在给定电磁场中运动的粒子的作用量将由两部分组成\footnote{类比经典力学对势能的引入方式。}：一项即为自由粒子的作用量\eqref{chapter2:自由实物粒子的作用量}，而另一项则描述粒子与场的相互作用，其中必然包括表征粒子本身性质的量和表征场的性质的量。
+
+实验表明，粒子同电磁场相互作用的性质由一个量所决定，这个量称为粒子的{\bf 电荷}$e$\footnote{此处需要指出的是，这里的$e$只是指任意的电荷而非特指元电荷。现在我们还没有建立任何将电磁学量同任何已知的量联系起来的关系，因此这些新引入的量的单位可以任意选取。}。电荷可以为正，也可以为负，也可以为零。而场的性质则由一个四维矢量$A^i$，称为{\bf 四维势}表征，其分量是四维坐标的函数。这些量以形式
+\begin{equation*}
+	-e\int_a^b A_i\mathd x^i
+\end{equation*}
+出现在作用量里。因此，电磁场中带电粒子的作用量将具有如下形式：
+\begin{equation}
+	S = \int_a^b \left(-mc\mathd s - eA_i\mathd x^i\right)
+	\label{chapter3:电磁场中带电粒子的作用量1}
+\end{equation}
+
+四维势矢量$A^i$的三个空间分量构成一个三维空间矢量$\mbf{A}$，称为电磁场的{\bf 矢势}，时间分量称为电磁场的{\bf 标势}，记作$A^0 = \dfrac{\phi}{c}$。即有
+\begin{equation}
+	A^i = \left(\frac{\phi}{c},\mbf{A}\right),\quad A_i = \left(\frac{\phi}{c},-\mbf{A}\right)
+	\label{chapter3:电磁场的标势和矢势}
+\end{equation}
+所以作用量的积分可以写作
+\begin{equation*}
+	S = \int_a^b \left(-mc\mathd s + e\mbf{A}\cdot \mathd \mbf{r} - e\phi \mathd t\right)
+\end{equation*}
+引入$\mbf{v} = \dfrac{\mathd \mbf{r}}{\mathd t}$可得
+\begin{equation}
+	S = \int_{t_1}^{t_2} \left(-mc^2\sqrt{1-\frac{v^2}{c^2}} + e\mbf{A}\cdot \mbf{v} - e\phi\right) \mathd t
+	\label{chapter3:电磁场中带电粒子的作用量2}
+\end{equation}
+由此可得电磁场中带电粒子的Lagrange函数
+\begin{equation}
+	L = -mc^2\sqrt{1-\frac{v^2}{c^2}} + e\mbf{A}\cdot \mbf{v} - e\phi
+	\label{chapter3:电磁场中带电粒子的Lagrange函数}
+\end{equation}
+这个Lagrange函数与自由粒子Lagrange函数\eqref{chapter2:自由实物粒子的Lagrange函数}相差了
+\begin{equation*}
+	e\mbf{A}\cdot \mbf{v} - e\phi
+\end{equation*}
+该项描述了带电粒子与电磁场的相互作用。
+
+粒子的广义动量为
+\begin{equation}
+	\mbf{P} = \frac{\pl L}{\pl \mbf{v}} = \frac{m\mbf{v}}{\sqrt{1-\dfrac{v^2}{c^2}}} + e\mbf{A} = \mbf{p}+e\mbf{A}
+	\label{chapter3:电磁场中带电粒子的广义动量}
+\end{equation}
+此处$\mbf{p}$表示该带电粒子的{\bf 机械动量}，以后简称为动量。
+
+而电磁场中带电粒子的Hamilton量则由式
+\begin{equation*}
+	\mathscr{H} = \mbf{v}\cdot \frac{\pl L}{\pl \mbf{v}} - L
+\end{equation*}
+决定。将式\eqref{chapter3:电磁场中带电粒子的Lagrange函数}代入，可得
+\begin{equation}
+	\mathscr{H} = \frac{mc^2}{\sqrt{1-\dfrac{v^2}{c^2}}}+e\phi
+	\label{chapter3:电磁场中带电粒子的Hamilton量-初步}
+\end{equation}
+但粒子的Hamilton量需用粒子的广义动量表示而非运动速度，由式\eqref{chapter3:电磁场中带电粒子的广义动量}和式\eqref{chapter3:电磁场中带电粒子的Hamilton量-初步}可以看出，$\mathscr{H}-e\phi$与$\mbf{P}-e\mbf{A}$之间应该满足
+\begin{equation}
+	\left(\frac{\mathscr{H}-e\phi}{c}\right)^2 = m^2c^2+\left(\mbf{P}-e\mbf{A}\right)^2
+	\label{chapter3:电磁场中带电粒子的Hamilton量-初步}
+\end{equation}
+即有
+\begin{equation}
+	\mathscr{H} = \sqrt{m^2c^4+c^2\left(\mbf{P}-e\mbf{A}\right)^2}+e\phi
+	\label{chapter3:电磁场中带电粒子的Hamilton量}
+\end{equation}
+
+在低速近似下，电磁场中带电粒子的Lagrange函数化为
+\begin{equation}
+	L = \frac12mv^2+e\mbf{A}\cdot \mbf{v}-e\phi
+	\label{chapter3:低速近似下，电磁场中带电粒子的Lagrange函数}
+\end{equation}
+此时
+\begin{equation*}
+	\mbf{p} = m\mbf{v} = \mbf{P}-e\mbf{A}
+\end{equation*}
+Hamilton量的表达式为
+\begin{equation}
+	\mathscr{H} = \frac{1}{2m}\left(\mbf{P}-e\mbf{A}\right)^2 + e\phi
+	\label{chapter3:低速近似下，电磁场中带电粒子的Hamilton量}
+\end{equation}
+
+最后来推导出电磁场中带电粒子的Hamilton-Jacobi方程，只需在Hamilton量\eqref{chapter3:电磁场中带电粒子的Hamilton量}中，用$\bnb S$代替广义动量$\mbf{P}$，用$-\dfrac{\pl S}{\pl t}$代替$\mathscr{H}$即可。由此，根据式\eqref{chapter3:电磁场中带电粒子的Hamilton量-初步}可得
+\begin{equation}
+	\left(\bnb S-e\mbf{A}\right)^2-\frac{1}{c^2}\left(\frac{\pl S}{\pl t} + e\phi\right)^2 + m^2c^2 = 0
+	\label{chapter3:电磁场中带电粒子的Hamilton-Jacobi方程}
+\end{equation}
+
+\section{场中带电粒子的运动方程}
+
+场内的带电粒子不只会受到场的作用力，还会反过来对场起作用，改变场的分布。但是，当电荷量很小的时候，电荷对于场的作用就可以忽略不计。在这种情况下，当我们只考虑电荷在给定的外电磁场中的运动时，可以假设场本身与电荷的坐标或速度无关。
+
+现在我们在这种假设下，推导出带电粒子在给定电磁场内的运动方程。通过对作用量进行变分，可得运动方程就是Lagrange方程
+\begin{equation}
+	\frac{\mathd}{\mathd t} \frac{\pl L}{\pl \mbf{v}} - \frac{\pl L}{\pl \mbf{r}} = \mbf{0}
+	\label{chapter3:电磁场中带电粒子的Lagrange方程}
+\end{equation}
+其中Lagrange函数由式\eqref{chapter3:电磁场中带电粒子的Lagrange函数}决定。导数$\dfrac{\pl L}{\pl \mbf{v}}$就是粒子的广义动量\eqref{chapter3:电磁场中带电粒子的广义动量}，然后可以计算
+\begin{equation*}
+	\frac{\pl L}{\pl \mbf{r}} = e\bnb (\mbf{A}\cdot \mbf{v}) - e\bnb \phi
+\end{equation*}
+根据矢量恒等式
+\begin{equation*}
+	\bnb (\mbf{a}\cdot \mbf{b}) = (\mbf{a}\cdot \bnb)\mbf{b} + (\mbf{b}\cdot \bnb)\mbf{a} + \mbf{b}\times (\bnb \times \mbf{a}) + \mbf{a}\times (\bnb \times \mbf{b})
+\end{equation*}
+可得
+\begin{equation*}
+	\frac{\pl L}{\pl \mbf{r}} = e(\mbf{v}\cdot \bnb)\mbf{A} + e\mbf{v}\times (\bnb \times \mbf{A}) - e\bnb \phi
+\end{equation*}
+因此，Lagrange方程\eqref{chapter3:电磁场中带电粒子的Lagrange方程}变为
+\begin{equation*}
+	\frac{\mathd}{\mathd t}\left(\mbf{p}+e\mbf{A}\right) = e(\mbf{v}\cdot \bnb)\mbf{A} + e\mbf{v}\times (\bnb \times \mbf{A}) - e\bnb \phi
+\end{equation*}
+为了计算上式左端，考虑到矢势$\mbf{A}$是空间坐标和时间的函数，因此其全微分为
+\begin{equation*}
+	\mathd \mbf{A} = \frac{\pl \mbf{A}}{\pl t}\mathd t + (\mathd \mbf{r}\cdot \bnb) \mbf{A}
+\end{equation*}
+据此可有
+\begin{equation*}
+	\frac{\mathd \mbf{A}}{\mathd t} = \frac{\pl \mbf{A}}{\pl t} + (\mbf{v}\cdot \bnb)\mbf{A}
+\end{equation*}
+由此可得带电粒子在给定电磁场中运动的方程为
+\begin{equation}
+	\frac{\mathd \mbf{p}}{\mathd t} = -e\frac{\pl \mbf{A}}{\pl t} - e\bnb \phi + e\mbf{v}\times (\bnb \times \mbf{A})
+	\label{chapter3:带电粒子在给定电磁场中的运动方程}
+\end{equation}
+
+式\eqref{chapter3:带电粒子在给定电磁场中的运动方程}左端即为粒子的动量对时间的导数，因此其右端就是电磁场作用在带电粒子上的力。这个力可以分为两部分，式\eqref{chapter3:带电粒子在给定电磁场中的运动方程}右端第一、第二项即为第一部分，这一部分的力与粒子的速度无关。第三项为第二部分，这部分的力与粒子的速度有关，它与速度成正比，而且垂直于速度。
+
+我们将作用于单位电荷上的第一部分的力，称为{\bf 电场强度}，记作$\mbf{E}$，于是有
+\begin{equation}
+	\mbf{E} = -\bnb \phi- \frac{\pl \mbf{A}}{\pl t}
+	\label{chapter3:电场强度的定义}
+\end{equation}
+电场强度$\mbf{E}$是极矢量。作用于单位电荷上的第二部分的力中的速度因子，称为{\bf 磁场强度}\footnote{其他材料上一般按历史原因称为{\bf 磁感应强度}，符号为$\mbf{B}$。}，记作$\mbf{H}$，于是有
+\begin{equation}
+	\mbf{H} = \bnb \times \mbf{A}
+	\label{chapter3:磁场强度的定义}
+\end{equation}
+磁场强度$\mbf{H}$是轴矢量。
+
+如果在一电磁场中$\mbf{E}\neq \mbf{0}$，但$\mbf{H}=\mbf{0}$，我们就称他为{\bf 电场}；如果$\mbf{E}= \mbf{0}$，但$\mbf{H}\neq \mbf{0}$，我们就称他为{\bf 磁场}。在一般情形下，电磁场是电场和磁场的叠加。
+
+由此，一个带电粒子在电磁场中的运动方程可以写作
+\begin{equation}
+	\frac{\mathd \mbf{p}}{\mathd t} = e\mbf{E}+e\mbf{v}\times \mbf{H}
+	\label{chapter3:带电粒子在给定电磁场中的运动方程-Lorentz力}
+\end{equation}
+等式右端的式子称为{\bf Lorentz力}。其第一部分（电场作用于电荷上的力）与电荷速度无关，并沿着$\mbf{E}$的方向。第二部分（磁场作用于电荷上的力）与电荷速度成正比，而其方向既垂直于速度又垂直于磁场$\mbf{H}$。
+
+粒子在电磁场中的能量由式\eqref{chapter2:自由实物粒子的能量}决定，即
+\begin{equation*}
+	\E_{\text{kin}} = \frac{mc^2}{\sqrt{1-\dfrac{v^2}{c^2}}}
+\end{equation*}
+将式\eqref{chapter2:自由实物粒子能量与动量之间的关系}两端对时间求导数，即可得
+\begin{equation*}
+	\frac{\mathd \E_{\text{kin}}}{\mathd t} = \mbf{v}\cdot \frac{\mathd \mbf{p}}{\mathd t}
+\end{equation*}
+将式\eqref{chapter3:带电粒子在给定电磁场中的运动方程-Lorentz力}中的$\dfrac{\mathd \mbf{p}}{\mathd t}$代入，可得
+\begin{equation}
+	\frac{\mathd \E_{\text{kin}}}{\mathd t} = e\mbf{E}\cdot \mbf{v}
+	\label{chapter3:电磁场中带电粒子能量的变化}
+\end{equation}
+
+带电粒子能量随时间的变化率就是场对粒子做功的功率。对电荷做功的仅仅是电场，磁场不能对在其中运动的粒子做功。
+
+\section{规范不变性}
+
+现在来研究场的势可唯一地确定到什么程度。首先，需要强调的是，场是由它对其内电荷的运动所产生的影响来刻画的。但是在运动方程\eqref{chapter3:带电粒子在给定电磁场中的运动方程-Lorentz力}，而只出现了场强$\mbf{E}$和$\mbf{H}$。所以两个场如果用两个矢量$\mbf{E}$和$\mbf{H}$来描述，在物理上也是完全等同的。
+
+假如给定了四维势$A^i$，则根据式\eqref{chapter3:电场强度的定义}和\eqref{chapter3:磁场强度的定义}，$\mbf{E}$和$\mbf{H}$就由它们完全唯一地确定了。但是同一个场可以对应于不同的势。对四维势做变换
+\begin{equation}
+	A'_i = A_i-\frac{\pl f}{\pl x^i}
+	\label{chapter3:四维势的一个变换}
+\end{equation}
+其中$f$是四维坐标的任意函数。经过这样的改变，在作用量积分\eqref{chapter3:电磁场中带电粒子的作用量1}中将出现附加项
+\begin{equation}
+	e\frac{\pl f}{\pl x^i}\mathd x^i = \mathd (ef)
+\end{equation}
+然而将一个全微分加在作用量积分的被积函数中，运动方程不会受到影响。
+
+这个变换反应在矢势和标势上可以写作
+\begin{equation}
+	\mbf{A}'=\mbf{A} + \bnb f,\quad \phi' = \phi-\frac{\pl f}{\pl t}
+\end{equation}
+很容易验证，在此变换下，由式\eqref{chapter3:电场强度的定义}和\eqref{chapter3:磁场强度的定义}定义的电场强度和磁场强度并不发生改变。因此，势的变换\eqref{chapter3:四维势的一个变换}并不改变场，所以势没有被唯一地确定，确定矢势仅仅精确到一个任意函数的梯度，而确定标势则仅仅精确到同一个任意函数的时间导数。
+
+只有那些对于四维势变换\eqref{chapter3:四维势的一个变换}为不变的量才有物理意义，特别地，所有方程在这个变换下必须是不变的。这种不变性称为{\bf 规范不变性（Gauge invariance）}。
+
+势缺乏唯一性，使得我们有可能去选择它们，使他们满足我们所选择的附加条件。由于势仅能精确到相差一个任意函数的四维梯度，因此我们能够令四维势的各个分量之间满足一个额外条件，以确定变换\eqref{chapter3:四维势的一个变换}中的任意函数$f$。特别而言，我们总是能够选择势，使得标势$\phi$为零。
+
+\section{恒定电磁场}
+
+{\bf 恒定}电磁场指与时间无关的电磁场。显然，恒定电磁场的势可以选择为与时间无关而仅与坐标有关的函数，恒定电场和恒定磁场即为
+\begin{equation*}
+	\mbf{E} = -\bnb \phi,\quad \mbf{H} = \bnb \times \mbf{A}
+\end{equation*}
+
+由于势没有被唯一确定，我们可以在标势上加一个任意常数而不改变场。通常要给$\phi$加上一个附加条件，即在空间内某一特定点有一个特定的值
