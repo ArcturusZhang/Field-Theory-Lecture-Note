@@ -65,7 +65,7 @@
 决定。将式\eqref{chapter3:电磁场中带电粒子的Lagrange函数}代入，可得
 \begin{equation}
 	\mathscr{H} = \frac{mc^2}{\sqrt{1-\dfrac{v^2}{c^2}}}+e\phi
-	\label{chapter3:电磁场中带电粒子的Hamilton量-初步}
+	\label{chapter3:电磁场中带电粒子的Hamilton量-用速度表示的Hamilton量}
 \end{equation}
 但粒子的Hamilton量需用粒子的广义动量表示而非运动速度，由式\eqref{chapter3:电磁场中带电粒子的广义动量}和式\eqref{chapter3:电磁场中带电粒子的Hamilton量-初步}可以看出，$\mathscr{H}-e\phi$与$\mbf{P}-e\mbf{A}$之间应该满足
 \begin{equation}
@@ -161,21 +161,21 @@ Hamilton量的表达式为
 \end{equation}
 等式右端的式子称为{\bf Lorentz力}。其第一部分（电场作用于电荷上的力）与电荷速度无关，并沿着$\mbf{E}$的方向。第二部分（磁场作用于电荷上的力）与电荷速度成正比，而其方向既垂直于速度又垂直于磁场$\mbf{H}$。
 
-粒子在电磁场中的能量由式\eqref{chapter2:自由实物粒子的能量}决定，即
+粒子在电磁场中的机械能由式\eqref{chapter2:自由实物粒子的能量}决定，即
 \begin{equation*}
-	\E_{\text{kin}} = \frac{mc^2}{\sqrt{1-\dfrac{v^2}{c^2}}}
+	\E_{\text{m}} = \frac{mc^2}{\sqrt{1-\dfrac{v^2}{c^2}}}
 \end{equation*}
 将式\eqref{chapter2:自由实物粒子能量与动量之间的关系}两端对时间求导数，即可得
 \begin{equation*}
-	\frac{\mathd \E_{\text{kin}}}{\mathd t} = \mbf{v}\cdot \frac{\mathd \mbf{p}}{\mathd t}
+	\frac{\mathd \E_{\text{m}}}{\mathd t} = \mbf{v}\cdot \frac{\mathd \mbf{p}}{\mathd t}
 \end{equation*}
 将式\eqref{chapter3:带电粒子在给定电磁场中的运动方程-Lorentz力}中的$\dfrac{\mathd \mbf{p}}{\mathd t}$代入，可得
 \begin{equation}
-	\frac{\mathd \E_{\text{kin}}}{\mathd t} = e\mbf{E}\cdot \mbf{v}
+	\frac{\mathd \E_{\text{m}}}{\mathd t} = e\mbf{E}\cdot \mbf{v}
 	\label{chapter3:电磁场中带电粒子能量的变化}
 \end{equation}
 
-带电粒子能量随时间的变化率就是场对粒子做功的功率。对电荷做功的仅仅是电场，磁场不能对在其中运动的粒子做功。
+带电粒子的机械能随时间的变化率就是场对粒子做功的功率。对电荷做功的仅仅是电场，磁场不能对在其中运动的粒子做功。
 
 \section{规范不变性}
 
@@ -209,4 +209,34 @@ Hamilton量的表达式为
 	\mbf{E} = -\bnb \phi,\quad \mbf{H} = \bnb \times \mbf{A}
 \end{equation*}
 
-由于势没有被唯一确定，我们可以在标势上加一个任意常数而不改变场。通常要给$\phi$加上一个附加条件，即在空间内某一特定点有一个特定的值
+由于势没有被唯一确定，我们可以在标势上加一个任意常数而不改变场。通常要给$\phi$加上一个附加条件，即在空间内某一特定点有一个特定的值。通常，我们规定$\phi$在无穷远处的值为零。这样恒定场的标势就被唯一地确定了。
+
+同样地，矢势也没有被唯一确定，我们可以把任意一个坐标的函数的梯度加到矢势上。
+
+对于恒定电磁场，带电粒子的Lagrange函数中不显含时间。在这种情况下，能量是守恒的，即为其Hamilton量。根据式\eqref{chapter3:电磁场中带电粒子的Hamilton量-用速度表示的Hamilton量}，可有
+\begin{equation}
+	\E = \frac{mc^2}{\sqrt{1-\dfrac{v^2}{c^2}}}+e\phi
+	\label{chapter3:恒定电磁场中带电粒子的总能量}
+\end{equation}
+由于场的存在，粒子的能量加上了一项$e\phi$，它就是带电粒子在电磁场内的势能。此处可以注意到，总能量仅与标势有关，而与矢势无关。这说明磁场不影响带电粒子的能量，只有电场才能改变带电粒子的能量。
+
+假如场强在空间所有点上都一样，这样的场称为{\bf 均匀场}。场强为$\mbf{E}$的均匀电场，其标势应为
+\begin{equation}
+	\phi = -\mbf{E}\cdot \mbf{r}
+	\label{chapter3:恒定均匀电场的标势}
+\end{equation}
+均匀磁场的矢势可以用场强$\mbf{H}$表示为
+\begin{equation}
+	\mbf{H} = \frac12 \mbf{H}\times \mbf{r}
+	\label{chapter3:均匀磁场的矢势1}
+\end{equation}
+如果选取$z$轴沿着$\mbf{H}$的方向，均匀磁场的矢势也可以选择为以下形式：
+\begin{equation}
+	A_x = -Hy,\quad A_y = A_z = 0
+	\label{chapter3:均匀磁场的矢势2}
+\end{equation}
+很容易发现，势\eqref{chapter3:均匀磁场的矢势1}和\eqref{chapter3:均匀磁场的矢势2}彼此之间的差为函数$f = -\dfrac12 xyH$的梯度。
+
+\section{在恒定均匀电场中的运动}
+
+现在研究电荷量为$e$的带电粒子在均匀的恒定电场$\mbf{E}$中的运动。取电场方向为$x$轴。
