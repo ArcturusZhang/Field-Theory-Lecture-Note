@@ -239,4 +239,55 @@ Hamilton量的表达式为
 
 \section{在恒定均匀电场中的运动}
 
-现在研究电荷量为$e$的带电粒子在均匀的恒定电场$\mbf{E}$中的运动。取电场方向为$x$轴。
+现在研究电荷量为$e$的带电粒子在均匀的恒定电场$\mbf{E}$中的运动。取电场方向为$x$轴，运动显然在一个平面内进行，将其取为$xy$平面。这时，运动方程\eqref{chapter3:带电粒子在给定电磁场中的运动方程-Lorentz力}变为
+\begin{equation*}
+\begin{cases}
+	\dot{p}_x = eE \\
+	\dot{p}_y = 0
+\end{cases}
+\end{equation*}
+所以可得
+\begin{equation}
+	p_x = eEt,\quad p_y = p_0
+	\label{chapter3:恒定电场中带电粒子的动量}
+\end{equation}
+将时间参考点选择在$p_x=0$的时刻，$p_0$表示粒子在该时刻的动量。据此，可求得粒子的机械能为
+\begin{equation}
+	\E_m = \sqrt{m^2c^4+p^2} = \sqrt{m^2c^4+c^2p_0^2+(ceEt)^2} = \sqrt{\E_0^2+(ceEt)^2}
+	\label{chapter3:恒定电场中带电粒子的机械能}
+\end{equation}
+其中$\E_0$是$t=0$时的机械能。根据式\eqref{chapter2:自由实物粒子能量、动量和速度之间的关系}可得
+\begin{equation*}
+	\frac{\mathd x}{\mathd t} = \frac{p_xc^2}{\E_m} = \frac{c^2eEt}{\sqrt{\E_0^2+(ceEt)^2}}
+\end{equation*}
+积分可得
+\begin{equation}
+	x = \frac{1}{eE}\sqrt{\E_0^2+(ceEt)^2}
+	\label{chapter3:均匀恒定电场中带电粒子的x坐标随时间关系}
+\end{equation}
+其中我们已经令积分常数等于零。为了求得$y$，考虑
+\begin{equation*}
+	\frac{\mathd y}{\mathd t} = \frac{p_yc^2}{\E_m} = \frac{p_0c^2}{\sqrt{\E_0^2+(ceEt)^2}}
+\end{equation*}
+积分可得
+\begin{equation}
+	y = \frac{p_0c}{eE}\arsinh \frac{ceEt}{\E_0}
+	\label{chapter3:均匀恒定电场中带电粒子的y坐标随时间关系}
+\end{equation}
+
+联立式\eqref{chapter3:均匀恒定电场中带电粒子的x坐标随时间关系}和\eqref{chapter3:均匀恒定电场中带电粒子的y坐标随时间关系}，即可得到轨道方程为
+\begin{equation}
+	x = \frac{\E_0}{eE}\cosh \frac{eEy}{p_0c}
+	\label{chapter3:均匀恒定电场中带电粒子的轨迹方程}
+\end{equation}
+由此可见，均匀电场中的一个带电粒子沿着悬链线运动。
+
+在低速近似下，可令$p_0=mv_0, \E_0 = mc^2$，并将式\eqref{chapter3:均匀恒定电场中带电粒子的轨迹方程}展开为$\dfrac1c$的幂级数并略去高阶项，可得
+\begin{equation*}
+	x = \frac{eE}{2mv_0^2}y^2+\text{const}
+\end{equation*}
+即电荷在低速近似下沿抛物线运动，与经典力学中的结果一致。
+
+\section{在恒定均匀磁场中的运动}
+
+
