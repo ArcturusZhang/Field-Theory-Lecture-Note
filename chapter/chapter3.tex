@@ -99,9 +99,9 @@ Hamilton量的表达式为
 	\label{chapter3:电磁场中带电粒子的Hamilton-Jacobi方程}
 \end{equation}
 
-\section{场中带电粒子的运动方程}
+\section{场中带电粒子的运动方程}\label{chapter3:section:场中带电粒子的运动方程}
 
-场内的带电粒子不只会受到场的作用力，还会反过来对场起作用，改变场的分布。但是，当电荷量很小的时候，电荷对于场的作用就可以忽略不计。在这种情况下，当我们只考虑电荷在给定的外电磁场中的运动时，可以假设场本身与电荷的坐标或速度无关。
+场内的带电粒子不仅会受到场的作用力，还会反过来对场起作用，改变场的分布。但是，当电荷量很小的时候，电荷对于场的作用就可以忽略不计。在这种情况下，当我们只考虑电荷在给定的外电磁场中的运动时，可以假设场本身与电荷的坐标或速度无关。
 
 现在我们在这种假设下，推导出带电粒子在给定电磁场内的运动方程。通过对作用量进行变分，可得运动方程就是Lagrange方程
 \begin{equation}
@@ -479,7 +479,7 @@ Hamilton量的表达式为
 	add(arrow(p,invisible,FillDraw(black),Relative(0.93)));
 	add(arrow(p,invisible,FillDraw(black),Relative(0.53)));
 \end{asy}
-\caption{$|a|>\dfrac{cE_y}{H}$的情形}
+\caption{外摆线：$|a|>\dfrac{cE_y}{H}$的情形}
 \label{chapter3:外摆线的情形}
 \end{minipage}
 \hspace{0.1cm}
@@ -511,7 +511,7 @@ Hamilton量的表达式为
 	add(arrow(p,invisible,FillDraw(black),Relative(0.93)));
 	add(arrow(p,invisible,FillDraw(black),Relative(0.53)));
 \end{asy}
-\caption{$|a|<\dfrac{cE_y}{H}$的情形}
+\caption{内摆线：$|a|<\dfrac{cE_y}{H}$的情形}
 \label{chapter3:内摆线的情形}
 \end{minipage}\\
 
@@ -543,7 +543,7 @@ Hamilton量的表达式为
 	add(arrow(p,invisible,FillDraw(black),Relative(0.93)));
 	add(arrow(p,invisible,FillDraw(black),Relative(0.53)));
 \end{asy}
-\caption{$|a|=\dfrac{cE_y}{H}$的情形}
+\caption{摆线：$|a|=\dfrac{cE_y}{H}$的情形}
 \label{chapter3:摆线的情形}
 \end{minipage}
 \end{figure}
@@ -637,8 +637,93 @@ Hamilton量的表达式为
 \begin{example}
 求带电粒子在互相垂直且数值相等的电场和磁场中的相对论运动。\footnote{互相垂直而数值不等的$\mbf{E}$和$\mbf{H}$场中的运动问题，可以通过适当的参考系变换，化为纯电场或纯磁场中运动的问题，见第\ref{chapter3:section:场的不变量}节。}
 \end{example}
+\begin{solution}
+取$\mbf{H}$的方向为$z$方向，$\mbf{E}$的方向为$y$方向，并考虑到$E=H$可有运动方程为
+\begin{subnumcases}{}
+	\dfrac{\mathd p_x}{\mathd t} = \frac{e}{c}Ev_y \label{chapter3:例3.3运动方程1} \\
+	\dfrac{\mathd p_y}{\mathd t} = eE-\frac{e}{c}Ev_x \label{chapter3:例3.3运动方程2} \\
+	\dfrac{\mathd p_z}{\mathd t} = 0 \label{chapter3:例3.3运动方程3} 
+\end{subnumcases}
+由方程\eqref{chapter3:例3.3运动方程3}可得
+\begin{equation}
+	p_z = p_{0z}\quad \text{（常数）}
+	\label{chapter3:例3.3-z方向动量}
+\end{equation}
+再由式\eqref{chapter3:电磁场中带电粒子能量的变化}可得
+\begin{equation*}
+	\frac{\mathd \E_m}{\mathd t} = eEv_y
+\end{equation*}
+即有
+\begin{equation}
+	\E_m-cp_x = \alpha\quad \text{（常数）}
+	\label{chapter3:例3.3守恒定律1}
+\end{equation}
+由式\eqref{chapter2:自由实物粒子能量与动量之间的关系}可得
+\begin{equation*}
+	\E_m^2 = c^2p_x^2+c^2p_y^2+c^2p_z^2+m^2c^4
+\end{equation*}
+令$\eps^2 = m^2c^4+c^2p_z^2$（常数），可有
+\begin{equation*}
+	\E_m^2-c^2p_x^2 = (\E_m+cp_x)(\E_m-cp_x) = c^2p_y^2+\eps^2
+\end{equation*}
+所以可得
+\begin{equation}
+	\E_m+cp_x = \frac{1}{\alpha}(c^2p_y^2+\eps^2)
+	\label{chapter3:例3.3能量动量关系1}
+\end{equation}
+联立式\eqref{chapter3:例3.3守恒定律1}和式\eqref{chapter3:例3.3能量动量关系1}可得
+\begin{subnumcases}{}
+	\ds \E_m = \frac{\alpha}{2}+\frac{c^2p_y^2+\eps^2}{2\alpha} \label{chapter3:例3.3机械能和y方向动量的关系} \\
+	\ds p_x = -\frac{\alpha}{2c}+\frac{c^2p_y^2+\eps^2}{2\alpha c} \label{chapter3:例3.3x方向动量和y方向动量的关系}
+\end{subnumcases}
+进一步可有
+\begin{equation*}
+	\E_m \frac{\mathd p_y}{\mathd t} = eE\left(\E_m - \frac{\E_mv_x}{c}\right) = eE(\E_m-cp_x) = eE\alpha
+\end{equation*}
+结合式\eqref{chapter3:例3.3机械能和y方向动量的关系}可得
+\begin{equation}
+	2eEt = \left(1+\frac{\eps^2}{\alpha^2}\right)p_y + \frac{c^2}{3\alpha^2} p_y^3
+	\label{chapter3:例3.3时间与y方向动量的关系}
+\end{equation}
+
+下面，为了确定轨道方程，首先在方程
+\begin{equation}
+	\frac{\mathd x}{\mathd t} = \frac{c^2p_x}{\E_m},\quad \frac{\mathd y}{\mathd t} = \frac{c^2p_y}{\E_m},\quad \frac{\mathd z}{\mathd t} = \frac{c^2p_z}{\E_m}
+\end{equation}
+中，作变量代换
+\begin{equation*}
+	\mathd t = \frac{\E_m}{eE\alpha}\mathd p_y
+\end{equation*}
+可得以$p_y$为参数的轨道方程
+\begin{equation}
+\begin{cases}
+	\ds x = \frac{c}{2eE}\left(-1+\frac{\eps^2}{\alpha^2}\right)p_y + \frac{c^3}{6\alpha^2eE}p_y^3 \\[1.5ex]
+	\ds y = \frac{c^2}{2\alpha eE}p_y^2 \\[1.5ex]
+	\ds z = \frac{p_zc^2}{eE\alpha}p_y
+\end{cases}
+\end{equation}
+\end{solution}
 
 \section{电磁场张量}
+
+在第\ref{chapter3:section:场中带电粒子的运动方程}节中，我们从三维形式的Lagrange函数\eqref{chapter3:电磁场中带电粒子的Lagrange函数}导出了带电粒子在场内的运动方程。本节将直接从四维形式的作用量\eqref{chapter3:电磁场中带电粒子的作用量1}中导出同样的方程。
+
+Hamilton原理给出：
+\begin{equation}
+	\delta S = \delta \int_a^b \left(-mc\mathd s-\frac{e}{c}A_i\mathd x^i\right)
+	\label{chapter3:电磁场张量-电磁场的Hamilton原理1}
+\end{equation}
+注意到$\mathd s^2 = \mathd x_i\mathd x^i$，可求得
+\begin{equation*}
+	\delta S = -\int_a^b \left(mc\frac{\mathd x_i\mathd \delta x^i}{\mathd s} + \frac{e}{c}A_i\mathd \delta x^i + \frac{e}{c}\delta A_i\mathd x^i\right)
+\end{equation*}
+分部积分可得
+\begin{align}
+	\delta S & = -\int_a^b \left(mu_i\mathd \delta x^i + \frac{e}{c}A_i\mathd \delta x^i + \frac{e}{c}\delta A_i\mathd x^i\right) \nonumber \\
+	& = \int_a^b \left(m\mathd u_i \delta x^i + \frac{e}{c}\frac{\pl A_i}{\pl x^j}\mathd x^j\delta x^i - \frac{e}{c} \frac{\pl A_i}{\pl x^j}\mathd x^i \delta x^j\right) - \left(mu_i+\frac{e}{c}A_i\right)\delta x^i\bigg|_a^b \nonumber \\
+	& = \frac1c \int_a^b \left[m\frac{\mathd u_i}{\mathd \tau} - \frac{e}{c}\left(\frac{\pl A_j}{\pl x^i} - \frac{\pl A_i}{\pl x^j}\right) u^j\right] \delta x^i\mathd s - \left(mu_i+\frac{e}{c}A_i\right)\delta x^i\bigg|_a^b
+	\label{chapter3:电磁场张量-电磁场的Hamilton原理2}
+\end{align}
 
 \section{场的Lorentz变换}
 
