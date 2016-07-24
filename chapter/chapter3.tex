@@ -18,42 +18,42 @@
 
 实验表明，粒子同电磁场相互作用的性质由一个量所决定，这个量称为粒子的{\bf 电荷}$e$\footnote{此处需要指出的是，这里的$e$只是指任意的电荷而非特指元电荷。现在我们还没有建立任何将电磁学量同任何已知的量联系起来的关系，因此这些新引入的量的单位可以任意选取。}。电荷可以为正，也可以为负，也可以为零。而场的性质则由一个四维矢量$A^i$，称为{\bf 四维势}表征，其分量是四维坐标的函数。这些量以形式
 \begin{equation*}
-	-e\int_a^b A_i\mathd x^i
+	-\frac{e}{c}\int_a^b A_i\mathd x^i
 \end{equation*}
 出现在作用量里。因此，电磁场中带电粒子的作用量将具有如下形式：
 \begin{equation}
-	S = \int_a^b \left(-mc\mathd s - eA_i\mathd x^i\right)
+	S = \int_a^b \left(-mc\mathd s - \frac{e}{c}A_i\mathd x^i\right)
 	\label{chapter3:电磁场中带电粒子的作用量1}
 \end{equation}
 
-四维势矢量$A^i$的三个空间分量构成一个三维空间矢量$\mbf{A}$，称为电磁场的{\bf 矢势}，时间分量称为电磁场的{\bf 标势}，记作$A^0 = \dfrac{\phi}{c}$。即有
+四维势矢量$A^i$的三个空间分量构成一个三维空间矢量$\mbf{A}$，称为电磁场的{\bf 矢势}，时间分量称为电磁场的{\bf 标势}，记作$A^0 = \phi$。即有
 \begin{equation}
-	A^i = \left(\frac{\phi}{c},\mbf{A}\right),\quad A_i = \left(\frac{\phi}{c},-\mbf{A}\right)
+	A^i = \left(\phi,\mbf{A}\right),\quad A_i = \left(\phi,-\mbf{A}\right)
 	\label{chapter3:电磁场的标势和矢势}
 \end{equation}
 所以作用量的积分可以写作
 \begin{equation*}
-	S = \int_a^b \left(-mc\mathd s + e\mbf{A}\cdot \mathd \mbf{r} - e\phi \mathd t\right)
+	S = \int_a^b \left(-mc\mathd s + \frac{e}{c}\mbf{A}\cdot \mathd \mbf{r} - e\phi \mathd t\right)
 \end{equation*}
 引入$\mbf{v} = \dfrac{\mathd \mbf{r}}{\mathd t}$可得
 \begin{equation}
-	S = \int_{t_1}^{t_2} \left(-mc^2\sqrt{1-\frac{v^2}{c^2}} + e\mbf{A}\cdot \mbf{v} - e\phi\right) \mathd t
+	S = \int_{t_1}^{t_2} \left(-mc^2\sqrt{1-\frac{v^2}{c^2}} + \frac{e}{c}\mbf{A}\cdot \mbf{v} - e\phi\right) \mathd t
 	\label{chapter3:电磁场中带电粒子的作用量2}
 \end{equation}
 由此可得电磁场中带电粒子的Lagrange函数
 \begin{equation}
-	L = -mc^2\sqrt{1-\frac{v^2}{c^2}} + e\mbf{A}\cdot \mbf{v} - e\phi
+	L = -mc^2\sqrt{1-\frac{v^2}{c^2}} + \frac{e}{c}\mbf{A}\cdot \mbf{v} - e\phi
 	\label{chapter3:电磁场中带电粒子的Lagrange函数}
 \end{equation}
 这个Lagrange函数与自由粒子Lagrange函数\eqref{chapter2:自由实物粒子的Lagrange函数}相差了
 \begin{equation*}
-	e\mbf{A}\cdot \mbf{v} - e\phi
+	\frac{e}{c}\mbf{A}\cdot \mbf{v} - e\phi
 \end{equation*}
 该项描述了带电粒子与电磁场的相互作用。
 
 粒子的广义动量为
 \begin{equation}
-	\mbf{P} = \frac{\pl L}{\pl \mbf{v}} = \frac{m\mbf{v}}{\sqrt{1-\dfrac{v^2}{c^2}}} + e\mbf{A} = \mbf{p}+e\mbf{A}
+	\mbf{P} = \frac{\pl L}{\pl \mbf{v}} = \frac{m\mbf{v}}{\sqrt{1-\dfrac{v^2}{c^2}}} + \frac{e}{c}\mbf{A} = \mbf{p}+\frac{e}{c}\mbf{A}
 	\label{chapter3:电磁场中带电粒子的广义动量}
 \end{equation}
 此处$\mbf{p}$表示该带电粒子的{\bf 机械动量}，以后简称为动量。
@@ -67,35 +67,35 @@
 	\mathscr{H} = \frac{mc^2}{\sqrt{1-\dfrac{v^2}{c^2}}}+e\phi
 	\label{chapter3:电磁场中带电粒子的Hamilton量-用速度表示的Hamilton量}
 \end{equation}
-但粒子的Hamilton量需用粒子的广义动量表示而非运动速度，由式\eqref{chapter3:电磁场中带电粒子的广义动量}和式\eqref{chapter3:电磁场中带电粒子的Hamilton量-初步}可以看出，$\mathscr{H}-e\phi$与$\mbf{P}-e\mbf{A}$之间应该满足
+但粒子的Hamilton量需用粒子的广义动量表示而非运动速度，由式\eqref{chapter3:电磁场中带电粒子的广义动量}和式\eqref{chapter3:电磁场中带电粒子的Hamilton量-初步}可以看出，$\mathscr{H}-e\phi$与$\mbf{P}-\dfrac{e}{c}\mbf{A}$之间应该满足
 \begin{equation}
-	\left(\frac{\mathscr{H}-e\phi}{c}\right)^2 = m^2c^2+\left(\mbf{P}-e\mbf{A}\right)^2
+	\left(\frac{\mathscr{H}-e\phi}{c}\right)^2 = m^2c^2+\left(\mbf{P}-\dfrac{e}{c}\mbf{A}\right)^2
 	\label{chapter3:电磁场中带电粒子的Hamilton量-初步}
 \end{equation}
 即有
 \begin{equation}
-	\mathscr{H} = \sqrt{m^2c^4+c^2\left(\mbf{P}-e\mbf{A}\right)^2}+e\phi
+	\mathscr{H} = \sqrt{m^2c^4+c^2\left(\mbf{P}-\dfrac{e}{c}\mbf{A}\right)^2}+e\phi
 	\label{chapter3:电磁场中带电粒子的Hamilton量}
 \end{equation}
 
 在低速近似下，电磁场中带电粒子的Lagrange函数化为
 \begin{equation}
-	L = \frac12mv^2+e\mbf{A}\cdot \mbf{v}-e\phi
+	L = \frac12mv^2+\dfrac{e}{c}\mbf{A}\cdot \mbf{v}-e\phi
 	\label{chapter3:低速近似下，电磁场中带电粒子的Lagrange函数}
 \end{equation}
 此时
 \begin{equation*}
-	\mbf{p} = m\mbf{v} = \mbf{P}-e\mbf{A}
+	\mbf{p} = m\mbf{v} = \mbf{P}-\dfrac{e}{c}\mbf{A}
 \end{equation*}
 Hamilton量的表达式为
 \begin{equation}
-	\mathscr{H} = \frac{1}{2m}\left(\mbf{P}-e\mbf{A}\right)^2 + e\phi
+	\mathscr{H} = \frac{1}{2m}\left(\mbf{P}-\dfrac{e}{c}\mbf{A}\right)^2 + e\phi
 	\label{chapter3:低速近似下，电磁场中带电粒子的Hamilton量}
 \end{equation}
 
 最后来推导出电磁场中带电粒子的Hamilton-Jacobi方程，只需在Hamilton量\eqref{chapter3:电磁场中带电粒子的Hamilton量}中，用$\bnb S$代替广义动量$\mbf{P}$，用$-\dfrac{\pl S}{\pl t}$代替$\mathscr{H}$即可。由此，根据式\eqref{chapter3:电磁场中带电粒子的Hamilton量-初步}可得
 \begin{equation}
-	\left(\bnb S-e\mbf{A}\right)^2-\frac{1}{c^2}\left(\frac{\pl S}{\pl t} + e\phi\right)^2 + m^2c^2 = 0
+	\left(\bnb S-\dfrac{e}{c}\mbf{A}\right)^2-\frac{1}{c^2}\left(\frac{\pl S}{\pl t} + e\phi\right)^2 + m^2c^2 = 0
 	\label{chapter3:电磁场中带电粒子的Hamilton-Jacobi方程}
 \end{equation}
 
@@ -110,7 +110,7 @@ Hamilton量的表达式为
 \end{equation}
 其中Lagrange函数由式\eqref{chapter3:电磁场中带电粒子的Lagrange函数}决定。导数$\dfrac{\pl L}{\pl \mbf{v}}$就是粒子的广义动量\eqref{chapter3:电磁场中带电粒子的广义动量}，然后可以计算
 \begin{equation*}
-	\frac{\pl L}{\pl \mbf{r}} = e\bnb (\mbf{A}\cdot \mbf{v}) - e\bnb \phi
+	\frac{\pl L}{\pl \mbf{r}} = \dfrac{e}{c}\bnb (\mbf{A}\cdot \mbf{v}) - e\bnb \phi
 \end{equation*}
 根据矢量恒等式
 \begin{equation*}
@@ -118,11 +118,11 @@ Hamilton量的表达式为
 \end{equation*}
 可得
 \begin{equation*}
-	\frac{\pl L}{\pl \mbf{r}} = e(\mbf{v}\cdot \bnb)\mbf{A} + e\mbf{v}\times (\bnb \times \mbf{A}) - e\bnb \phi
+	\frac{\pl L}{\pl \mbf{r}} = \dfrac{e}{c}(\mbf{v}\cdot \bnb)\mbf{A} + \dfrac{e}{c}\mbf{v}\times (\bnb \times \mbf{A}) - e\bnb \phi
 \end{equation*}
 因此，Lagrange方程\eqref{chapter3:电磁场中带电粒子的Lagrange方程}变为
 \begin{equation*}
-	\frac{\mathd}{\mathd t}\left(\mbf{p}+e\mbf{A}\right) = e(\mbf{v}\cdot \bnb)\mbf{A} + e\mbf{v}\times (\bnb \times \mbf{A}) - e\bnb \phi
+	\frac{\mathd}{\mathd t}\left(\mbf{p}+\dfrac{e}{c}\mbf{A}\right) = \dfrac{e}{c}(\mbf{v}\cdot \bnb)\mbf{A} + \dfrac{e}{c}\mbf{v}\times (\bnb \times \mbf{A}) - e\bnb \phi
 \end{equation*}
 为了计算上式左端，考虑到矢势$\mbf{A}$是空间坐标和时间的函数，因此其全微分为
 \begin{equation*}
@@ -134,7 +134,7 @@ Hamilton量的表达式为
 \end{equation*}
 由此可得带电粒子在给定电磁场中运动的方程为
 \begin{equation}
-	\frac{\mathd \mbf{p}}{\mathd t} = -e\frac{\pl \mbf{A}}{\pl t} - e\bnb \phi + e\mbf{v}\times (\bnb \times \mbf{A})
+	\frac{\mathd \mbf{p}}{\mathd t} = -\dfrac{e}{c}\frac{\pl \mbf{A}}{\pl t} - e\bnb \phi + \dfrac{e}{c}\mbf{v}\times (\bnb \times \mbf{A})
 	\label{chapter3:带电粒子在给定电磁场中的运动方程}
 \end{equation}
 
@@ -142,21 +142,21 @@ Hamilton量的表达式为
 
 我们将作用于单位电荷上的第一部分的力，称为{\bf 电场强度}，记作$\mbf{E}$，于是有
 \begin{equation}
-	\mbf{E} = -\bnb \phi- \frac{\pl \mbf{A}}{\pl t}
+	\mbf{E} = - \frac1c\frac{\pl \mbf{A}}{\pl t} - \bnb \phi
 	\label{chapter3:电场强度的定义}
 \end{equation}
-电场强度$\mbf{E}$是极矢量。作用于单位电荷上的第二部分的力中的速度因子，称为{\bf 磁场强度}\footnote{其他材料上一般按历史原因称为{\bf 磁感应强度}，符号为$\mbf{B}$。}，记作$\mbf{H}$，于是有
+电场强度$\mbf{E}$是极矢量。作用于单位电荷上的第二部分的力中的速度因子，称为{\bf 磁场强度}\footnote{如此定义的一个好处就是，电场强度与磁场强度将有相同的单位。}，记作$\mbf{H}$，于是有
 \begin{equation}
 	\mbf{H} = \bnb \times \mbf{A}
 	\label{chapter3:磁场强度的定义}
 \end{equation}
 磁场强度$\mbf{H}$是轴矢量。
 
-如果在一电磁场中$\mbf{E}\neq \mbf{0}$，但$\mbf{H}=\mbf{0}$，我们就称他为{\bf 电场}；如果$\mbf{E}= \mbf{0}$，但$\mbf{H}\neq \mbf{0}$，我们就称他为{\bf 磁场}。在一般情形下，电磁场是电场和磁场的叠加。
+如果在一电磁场中$\mbf{E}\neq \mbf{0}$，但$\mbf{H}=\mbf{0}$，我们就称它为{\bf 电场}；如果$\mbf{E}= \mbf{0}$，但$\mbf{H}\neq \mbf{0}$，我们就称它为{\bf 磁场}。在一般情形下，电磁场是电场和磁场的叠加。
 
 由此，一个带电粒子在电磁场中的运动方程可以写作
 \begin{equation}
-	\frac{\mathd \mbf{p}}{\mathd t} = e\mbf{E}+e\mbf{v}\times \mbf{H}
+	\frac{\mathd \mbf{p}}{\mathd t} = e\mbf{E}+\dfrac{e}{c}\mbf{v}\times \mbf{H}
 	\label{chapter3:带电粒子在给定电磁场中的运动方程-Lorentz力}
 \end{equation}
 等式右端的式子称为{\bf Lorentz力}。其第一部分（电场作用于电荷上的力）与电荷速度无关，并沿着$\mbf{E}$的方向。第二部分（磁场作用于电荷上的力）与电荷速度成正比，而其方向既垂直于速度又垂直于磁场$\mbf{H}$。
@@ -188,13 +188,13 @@ Hamilton量的表达式为
 \end{equation}
 其中$f$是四维坐标的任意函数。经过这样的改变，在作用量积分\eqref{chapter3:电磁场中带电粒子的作用量1}中将出现附加项
 \begin{equation}
-	e\frac{\pl f}{\pl x^i}\mathd x^i = \mathd (ef)
+	\dfrac{e}{c}\frac{\pl f}{\pl x^i}\mathd x^i = \mathd \left(\dfrac{e}{c}f\right)
 \end{equation}
 然而将一个全微分加在作用量积分的被积函数中，运动方程不会受到影响。
 
-这个变换反应在矢势和标势上可以写作
+这个变换反映在矢势和标势上可以写作
 \begin{equation}
-	\mbf{A}'=\mbf{A} + \bnb f,\quad \phi' = \phi-\frac{\pl f}{\pl t}
+	\mbf{A}'=\mbf{A} + \bnb f,\quad \phi' = \phi-\frac1c\frac{\pl f}{\pl t}
 \end{equation}
 很容易验证，在此变换下，由式\eqref{chapter3:电场强度的定义}和\eqref{chapter3:磁场强度的定义}定义的电场强度和磁场强度并不发生改变。因此，势的变换\eqref{chapter3:四维势的一个变换}并不改变场，所以势没有被唯一地确定，确定矢势仅仅精确到一个任意函数的梯度，而确定标势则仅仅精确到同一个任意函数的时间导数。
 
@@ -237,7 +237,7 @@ Hamilton量的表达式为
 \end{equation}
 很容易发现，势\eqref{chapter3:均匀磁场的矢势1}和\eqref{chapter3:均匀磁场的矢势2}彼此之间的差为函数$f = -\dfrac12 xyH$的梯度。
 
-\section{在恒定均匀电场中的运动}
+\section{在恒定均匀电场中的运动}\label{chapter3:section:在恒定均匀电场中的运动}
 
 现在研究电荷量为$e$的带电粒子在均匀的恒定电场$\mbf{E}$中的运动。取电场方向为$x$轴，运动显然在一个平面内进行，将其取为$xy$平面。这时，运动方程\eqref{chapter3:带电粒子在给定电磁场中的运动方程-Lorentz力}变为
 \begin{equation*}
@@ -292,14 +292,14 @@ Hamilton量的表达式为
 
 本节研究电荷量为$e$的带电粒子在均匀的恒定磁场$\mbf{H}$中的运动。取磁场的方向为$z$轴方向，则有
 \begin{equation*}
-	\frac{\mathd \mbf{p}}{\mathd t} = e\mbf{v} \times \mbf{H}
+	\frac{\mathd \mbf{p}}{\mathd t} = \dfrac{e}{c}\mbf{v} \times \mbf{H}
 \end{equation*}
 将速度和动量的关系$\mbf{v} = \dfrac{c^2\mbf{p}}{\E}$代入，由于磁场不改变粒子的能量，可得
 \begin{equation}
-	\frac{\mathd \mbf{v}}{\mathd t} = \frac{c^2e}{\E}\mbf{v}\times \mbf{H}
+	\frac{\mathd \mbf{v}}{\mathd t} = \frac{ce}{\E}\mbf{v}\times \mbf{H}
 	\label{chapter3:带电粒子在恒定均匀磁场中的运动方程}
 \end{equation}
-记$\omega = \dfrac{c^2eH}{\E}$，将方程\eqref{chapter3:带电粒子在恒定均匀磁场中的运动方程}写成分量形式，则有
+记$\omega = \dfrac{ceH}{\E}$，将方程\eqref{chapter3:带电粒子在恒定均匀磁场中的运动方程}写成分量形式，则有
 \begin{subnumcases}{}
 	\ds \dot{v}_x = \omega v_y \label{chapter3:带电粒子在恒定均匀磁场中的分量方程1} \\
 	\ds \dot{v}_y = -\omega v_x \label{chapter3:带电粒子在恒定均匀磁场中的分量方程2} \\
@@ -341,7 +341,7 @@ Hamilton量的表达式为
 \end{equation}
 其中
 \begin{equation}
-	r = \dfrac{v_{0t}}{\omega} = \dfrac{v_{0t}\E}{c^2eH}
+	r = \dfrac{v_{0t}}{\omega} = \dfrac{v_{0t}\E}{ceH} = \frac{cp_t}{eH}
 	\label{chapter3:带电粒子在恒定均匀磁场中运动的轨道半径}
 \end{equation}
 式\eqref{chapter3:带电粒子在恒定均匀磁场中运动的轨迹方程}表明，带电粒子在恒定均匀磁场中沿螺旋线运动，螺旋线的轴沿磁场方向，螺旋线的半径由式\eqref{chapter3:带电粒子在恒定均匀磁场中运动的轨道半径}决定，在运动过程中，粒子的速度保持不变，其旋转的角速度为$\omega$。
@@ -354,33 +354,292 @@ Hamilton量的表达式为
 \begin{solution}
 设磁场方向为$z$方向，因此振子的受迫振动方程为\footnote{此处应用的是经典结论。}
 \begin{subnumcases}{}
-	\ds \ddot{x} + \omega_0^2 x = \frac{eH}{m}\dot{y} \label{chapter3:恒定均匀磁场中的带电谐振子方程1} \\
-	\ds \ddot{y} + \omega_0^2 y = -\frac{eH}{m}\dot{x} \label{chapter3:恒定均匀磁场中的带电谐振子方程2} \\
+	\ds \ddot{x} + \omega_0^2 x = \frac{eH}{mc}\dot{y} \label{chapter3:恒定均匀磁场中的带电谐振子方程1} \\
+	\ds \ddot{y} + \omega_0^2 y = -\frac{eH}{mc}\dot{x} \label{chapter3:恒定均匀磁场中的带电谐振子方程2} \\
 	\ds \ddot{z} + \omega_0^2 z = 0 \label{chapter3:恒定均匀磁场中的带电谐振子方程3}
 \end{subnumcases}
 将式\eqref{chapter3:恒定均匀磁场中的带电谐振子方程2}乘以虚数单位$\mathi$并与式\eqref{chapter3:恒定均匀磁场中的带电谐振子方程1}相加，令$\xi = x+\i y$，则可得
 \begin{equation*}
-	\ddot{\xi} + \mathi \frac{eH}{m} \dot{\xi} + \omega_0^2\xi = 0
+	\ddot{\xi} + \mathi \frac{eH}{mc} \dot{\xi} + \omega_0^2\xi = 0
 \end{equation*}
 这个微分方程的通解为
 \begin{equation*}
-	\xi = A\mathe^{\mathi \left(-\frac{eH}{2m}+\sqrt{\omega_0^2+\frac14\left(\frac{eH}{m}\right)^2}\right) t} + B\mathe^{\mathi \left(-\frac{eH}{2m}-\sqrt{\omega_0^2+\frac14\left(\frac{eH}{m}\right)^2}\right) t}
+	\xi = A\mathe^{\mathi \left(-\frac{eH}{2mc}+\sqrt{\omega_0^2+\frac14\left(\frac{eH}{mc}\right)^2}\right) t} + B\mathe^{\mathi \left(-\frac{eH}{2mc}-\sqrt{\omega_0^2+\frac14\left(\frac{eH}{mc}\right)^2}\right) t}
 \end{equation*}
 其中$A, B$是任意的复常数。于是有\small
 \begin{align*}
 	\ds x & = \Re \xi \\
-	& = A_0\cos\left[\left(\sqrt{\omega_0^2 + \frac14\left(\frac{eH}{m}\right)^2} - \frac{eH}{2m}\right) t + \phi_1\right] + B_0\cos\left[\left(\sqrt{\omega_0^2 + \frac14\left(\frac{eH}{m}\right)^2} + \frac{eH}{2m}\right) t + \phi_2\right] \\
+	& = A_0\cos\left[\left(\sqrt{\omega_0^2 + \frac14\left(\frac{eH}{mc}\right)^2} - \frac{eH}{2mc}\right) t + \phi_1\right] + B_0\cos\left[\left(\sqrt{\omega_0^2 + \frac14\left(\frac{eH}{mc}\right)^2} + \frac{eH}{2mc}\right) t + \phi_2\right] \\
 	\ds y & = \Im \xi \\
-	& = A_0\sin\left[\left(\sqrt{\omega_0^2 + \frac14\left(\frac{eH}{m}\right)^2} - \frac{eH}{2m}\right) t + \phi_1\right] + B_0\sin\left[\left(\sqrt{\omega_0^2 + \frac14\left(\frac{eH}{m}\right)^2} + \frac{eH}{2m}\right) t + \phi_2\right]
+	& = A_0\sin\left[\left(\sqrt{\omega_0^2 + \frac14\left(\frac{eH}{mc}\right)^2} - \frac{eH}{2mc}\right) t + \phi_1\right] + B_0\sin\left[\left(\sqrt{\omega_0^2 + \frac14\left(\frac{eH}{mc}\right)^2} + \frac{eH}{2mc}\right) t + \phi_2\right]
 \end{align*}
 \normalsize 由此可得振子在与磁场垂直的平面内的振动频率即为
 \begin{equation*}
-	\omega = \sqrt{\omega_0^2 + \frac14\left(\frac{eH}{m}\right)^2} \pm \frac{eH}{2m}
+	\omega = \sqrt{\omega_0^2 + \frac14\left(\frac{eH}{mc}\right)^2} \pm \frac{eH}{2m}
 \end{equation*}
 磁场很弱的时候，这个结果变为
 \begin{equation*}
-	\omega \approx \omega_0 \pm \frac{eH}{2m}
+	\omega \approx \omega_0 \pm \frac{eH}{2mc}
 \end{equation*}
 \end{solution}
 
 \section{带电粒子在均匀恒定的电场和磁场中的运动}
+
+本节研究在电场和磁场都存在并且是均匀恒定的情况下，一个带电粒子如何运动。这些讨论仅局限于粒子的速度远小于光速，即$v\ll c$的情形，因此质点的动量为$\mbf{p}=m\mbf{v}$。
+
+选择磁场$\mbf{H}$的方向为$z$轴方向，矢量$\mbf{H}$和$\mbf{E}$决定的平面为$yz$平面。这时，带电粒子的运动方程为
+\begin{equation}
+	m\dot{\mbf{v}} = e\mbf{E} + \frac{e}{c}\mbf{v}\times \mbf{H}
+	\label{chapter3:均匀恒定电场和磁场中带电粒子的运动方程}
+\end{equation}
+其分量形式可以写作
+\begin{subnumcases}{}
+	m\ddot{x} = \dfrac{e}{c}H\dot{y} \label{chapter3:均匀恒定电场和磁场中带电粒子的运动方程分量形式1} \\
+	m\ddot{y} = eE_y - \dfrac{e}{c}H\dot{x} \label{chapter3:均匀恒定电场和磁场中带电粒子的运动方程分量形式2} \\
+	m\ddot{z} = eE_z \label{chapter3:均匀恒定电场和磁场中带电粒子的运动方程分量形式3}
+\end{subnumcases}
+由式\eqref{chapter3:均匀恒定电场和磁场中带电粒子的运动方程分量形式3}可得，带电粒子以恒定加速度沿着$z$轴方向运动，即
+\begin{equation}
+	z = \frac{eE_z}{2m}t^2+v_{0z}t
+\end{equation}
+此处已经令积分常数为零。由此，后面可以不考虑这个方向的运动，即考虑带电粒子在正交的电场和磁场中的运动。
+
+用$\mathi$乘以式\eqref{chapter3:均匀恒定电场和磁场中带电粒子的运动方程分量形式2}然后与式\eqref{chapter3:均匀恒定电场和磁场中带电粒子的运动方程分量形式1}相加，并令$\xi = x+\mathi y$可得
+\begin{equation}
+	\ddot{\xi} + \mathi \omega\dot{\xi} = \mathi \frac{eE_y}{m}
+\end{equation}
+式中$\omega = \dfrac{eH}{mc}$，其通解为
+\begin{equation}
+	\dot{\xi} = a\mathe^{-\mathi\omega t}+\frac{cE_y}{H}
+\end{equation}
+其中$a$是任意复常数。将$a$写成$a=b\mathe^{\mathi \alpha}$的形式，其中$b$和$\alpha$为实数，这说明，适当选择时间原点可以使得复常数$a$的虚部为零。我们这样选取时间原点，使得$a$为实数，由此即有
+\begin{equation}
+\begin{cases}
+	\dot{x} = a\cos\omega t+\dfrac{cE_y}{H} \\
+	\dot{y} = -a\sin\omega t
+\end{cases}
+\label{chapter3:均匀恒定电场和磁场中带电粒子的速度}
+\end{equation}
+当$t=0$时，速度沿着$x$轴方向。
+
+由此可以看出，粒子的速度是时间的周期函数，它们的平均值为
+\begin{equation*}
+	\bar{\dot{x}} = \frac{cE_y}{H},\quad \bar{\dot{y}} = 0
+\end{equation*}
+带电粒子在正交的电场和磁场中运动的这个平均速度称为{\bf 电漂移速度}，它的方向与两个场都垂直且与电荷的正负无关，它可以改写为矢量形式：
+\begin{equation}
+	\bar{\mbf{v}} = \frac{c\mbf{E}\times \mbf{H}}{H^2}
+	\label{chapter3:电漂移速度}
+\end{equation}
+
+这一节的所有公式都假设了粒子的速度远小于光速，即电场和磁场必须满足
+\begin{equation}
+	\frac{E_y}{H} \ll 1
+\end{equation}
+即电场强度远小于磁场强度，而$E_y$和$H$的绝对大小是任意的。
+
+将方程\eqref{chapter3:均匀恒定电场和磁场中带电粒子的速度}再积分一次，并使得当$t=0$时，$x=y=0$，则有
+\begin{equation}
+\begin{cases}
+	\ds x = \frac{a}{\omega}\sin\omega t+\frac{cE_y}{H}t \\
+	\ds y = \frac{a}{\omega}(\cos \omega t - 1)
+\end{cases}
+\label{chapter3:均匀恒定电场和磁场中带电粒子的运动轨迹}
+\end{equation}
+
+将式\eqref{chapter3:均匀恒定电场和磁场中带电粒子的运动轨迹}看作一条曲线的参数方程，则它们定义了一条次摆线，如图\ref{chapter3:外摆线的情形}、\ref{chapter3:内摆线的情形}和\ref{chapter3:摆线的情形}所示，其具体的形状取决于$|a|$和$\dfrac{cE_y}{H}$之间的大小关系。
+
+\begin{figure}[htb]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\begin{asy}
+	texpreamble("\usepackage{xeCJK}");
+	texpreamble("\setCJKmainfont{SimSun}");
+	usepackage("amsmath");
+	import graph;
+	size(180);
+	//
+	real x1,x2,y;
+	real a,b,omega;
+	pair f(real t){
+		return (a/omega*sin(omega*t)+b*t,a/omega*(cos(omega*t)-1));
+	}
+	x1 = -1;
+	x2 = 6.5;
+	y = 2.5;
+	draw(Label("$x$",EndPoint),(x1,0)--(x2,0),Arrow);
+	draw(Label("$y$",EndPoint),(0,0)--(0,y),Arrow);
+	a = -1;
+	b = 0.7;
+	omega = 1;
+	path p;
+	p = graph(f,-2.5,2*pi+2.5);
+	draw(p,linewidth(0.8bp));
+	add(arrow(p,invisible,FillDraw(black),Relative(0.1)));
+	add(arrow(p,invisible,FillDraw(black),Relative(0.93)));
+	add(arrow(p,invisible,FillDraw(black),Relative(0.53)));
+\end{asy}
+\caption{$|a|>\dfrac{cE_y}{H}$的情形}
+\label{chapter3:外摆线的情形}
+\end{minipage}
+\hspace{0.1cm}
+\begin{minipage}[t]{0.48\textwidth}
+\begin{asy}
+	texpreamble("\usepackage{xeCJK}");
+	texpreamble("\setCJKmainfont{SimSun}");
+	usepackage("amsmath");
+	import graph;
+	size(180);
+	//
+	real x1,x2,y;
+	real a,b,omega;
+	pair f(real t){
+		return (a/omega*sin(omega*t)+b*t,a/omega*(cos(omega*t)-1));
+	}
+	x1 = -1;
+	x2 = 6.5;
+	y = 2.5;
+	draw(Label("$x$",EndPoint),(x1,0)--(x2,0),Arrow);
+	draw(Label("$y$",EndPoint),(0,0)--(0,y),Arrow);
+	a = -0.5;
+	b = 0.8;
+	omega = 1;
+	path p;
+	p = graph(f,-2,2*pi+2);
+	draw(p,linewidth(0.8bp));
+	add(arrow(p,invisible,FillDraw(black),Relative(0.1)));
+	add(arrow(p,invisible,FillDraw(black),Relative(0.93)));
+	add(arrow(p,invisible,FillDraw(black),Relative(0.53)));
+\end{asy}
+\caption{$|a|<\dfrac{cE_y}{H}$的情形}
+\label{chapter3:内摆线的情形}
+\end{minipage}\\
+
+\begin{minipage}[t]{0.48\textwidth}
+\begin{asy}
+	texpreamble("\usepackage{xeCJK}");
+	texpreamble("\setCJKmainfont{SimSun}");
+	usepackage("amsmath");
+	import graph;
+	size(180);
+	//
+	real x1,x2,y;
+	real a,b,omega;
+	pair f(real t){
+		return (a/omega*sin(omega*t)+b*t,a/omega*(cos(omega*t)-1));
+	}
+	x1 = -1;
+	x2 = 6.5;
+	y = 2.5;
+	draw(Label("$x$",EndPoint),(x1,0)--(x2,0),Arrow);
+	draw(Label("$y$",EndPoint),(0,0)--(0,y),Arrow);
+	a = -0.8;
+	b = 0.8;
+	omega = 1;
+	path p;
+	p = graph(f,-2,2*pi+2);
+	draw(p,linewidth(0.8bp));
+	add(arrow(p,invisible,FillDraw(black),Relative(0.1)));
+	add(arrow(p,invisible,FillDraw(black),Relative(0.93)));
+	add(arrow(p,invisible,FillDraw(black),Relative(0.53)));
+\end{asy}
+\caption{$|a|=\dfrac{cE_y}{H}$的情形}
+\label{chapter3:摆线的情形}
+\end{minipage}
+\end{figure}
+
+如果$a=-\dfrac{cE_y}{H}$，那么式\eqref{chapter3:均匀恒定电场和磁场中带电粒子的运动轨迹}变为
+\begin{equation}
+\begin{cases}
+	x = \dfrac{cE_y}{\omega H}(\omega t-\sin \omega t) \\[1.5ex]
+	y = \dfrac{cE_y}{\omega H}(1-\cos\omega t)
+\end{cases}
+\end{equation}
+此时，轨道在$xy$平面上的投影是一条摆线，如图\ref{chapter3:摆线的情形}所示。
+
+\begin{example}
+求带电粒子在平行均匀电场和磁场中的相对论运动。
+\end{example}
+\begin{solution}
+取磁场$\mbf{H}$的方向为$z$轴方向，由于磁场对$z$轴方向上的运动没有影响，因而$z$方向上的运动只在电场的作用下发生，于是根据第\ref{chapter3:section:在恒定均匀电场中的运动}节的结果，可得
+\begin{equation}
+	z = \frac{\E_m}{eE} = \frac{1}{eE}\sqrt{\E_0^2+(ceEt)^2}
+	\label{chapter3:例3.2在z方向上的运动}
+\end{equation}
+
+对于在$xy$平面内的运动，运动方程为
+\begin{equation*}
+\begin{cases}
+	\dot{p}_x = \dfrac{e}{c}Hv_y \\[1.5ex]
+	\dot{p}_y = -\dfrac{e}{c}Hv_x
+\end{cases}
+\end{equation*}
+将其转化为复变数的方程可得
+\begin{equation}
+	\frac{\mathd}{\mathd t}(p_x+\mathi p_y) = -\mathi \dfrac{eH}{c}(v_x+\mathi v_y)
+	\label{chapter3:例3.2动量满足的方程}
+\end{equation}
+由式\eqref{chapter2:自由实物粒子能量、动量和速度之间的关系}可得
+\begin{equation*}
+	v_x = \frac{c^2p_x}{\E_m},\quad v_y = \frac{c^2p_y}{\E_m}
+\end{equation*}
+其中$\E_m = \sqrt{\E_0^2+(ceEt)^2}$。如果记$p=p_x+\mathi p_y$，则方程\eqref{chapter3:例3.2动量满足的方程}化为
+\begin{equation}
+	\frac{\mathd p}{\mathd t} = -\mathi \frac{ceH}{\E_m}p = -\mathi \frac{ceH}{\sqrt{\E_0^2+(ceEt)^2}}p
+	\label{chapter3:例3.2复动量满足的方程}
+\end{equation}
+将方程\eqref{chapter3:例3.2复动量满足的方程}分离变量并积分，即有
+\begin{equation*}
+	\int_{p_t}^p \frac{\mathd p}{p} = -\int_0^t \mathi \frac{ceH}{\sqrt{\E_0^2+(ceEt)^2}} \mathd t
+\end{equation*}
+其中$p_t$为动量在$xy$平面上投影的恒定值。由此则有
+\begin{equation*}
+	p = p_t\mathe^{-\mathi \frac{H}{E}\arsinh \frac{ceEt}{\E_0}}
+\end{equation*}
+方便起见，引入一个辅助量$\psi$，它满足
+\begin{equation*}
+	\psi = \frac{H}{E}\arsinh \frac{ceEt}{\E_0}
+\end{equation*}
+或者
+\begin{equation}
+	ct = \frac{\E_0}{eE}\sinh \frac{E}{H}\psi
+	\label{chapter3:例3.2辅助量psi与时间的关系}
+\end{equation}
+它的微分满足关系
+\begin{equation*}
+	\mathd \psi = \frac{ceH}{\sqrt{\E_0^2+(ceEt)^2}} \mathd t
+\end{equation*}
+由此即有
+\begin{equation*}
+	p = p_x+\mathi p_y = p_t\mathe^{-\mathi \psi}
+\end{equation*}
+再利用式\eqref{chapter2:自由实物粒子能量、动量和速度之间的关系}可得
+\begin{equation*}
+	p_x+\mathi p_y = \frac{\E_m\dot{x}}{c^2} + \mathi \frac{\E_m\dot{y}}{c^2} = \frac{\E_m}{c^2} \left(\frac{\mathd x}{\mathd \psi} \frac{\mathd \psi}{\mathd t} + \mathi \frac{\mathd y}{\mathd \psi} \frac{\mathd \psi}{\mathd t}\right) = \dfrac{eH}{c}\left(\frac{\mathd x}{\mathd \psi} + \mathi \frac{\mathd y}{\mathd \psi}\right)
+\end{equation*}
+即有
+\begin{equation*}
+	\dfrac{eH}{c}\left(\frac{\mathd x}{\mathd \psi} + \mathi \frac{\mathd y}{\mathd \psi}\right) = p_t\mathe^{-\mathi \psi}
+\end{equation*}
+从中可以解得
+\begin{equation}
+	x = \frac{cp_t}{eH}\sin \psi,\quad y = \frac{cp_t}{eH}\cos\psi
+	\label{chapter3:例3.2在xy平面内的运动}
+\end{equation}
+由式\eqref{chapter3:例3.2在z方向上的运动}和式\eqref{chapter3:例3.2辅助量psi与时间的关系}可得
+\begin{equation}
+	z = \frac{\E_0}{eE}\cosh\frac{E}{H}\psi
+	\label{chapter3:例3.2在z方向上的运动-辅助量表示}
+\end{equation}
+式\eqref{chapter3:例3.2在xy平面内的运动}和式\eqref{chapter3:例3.2在z方向上的运动-辅助量表示}一起以参数形式决定了粒子的运动，其轨道为螺旋线，半径为$\dfrac{cp_t}{eH}$，步长单调增加，粒子沿着螺旋线以减小的角速度$\omega = \dfrac{ceH}{\E_m}$运动，其沿$z$轴的速度趋向于$c$。
+\end{solution}
+
+\begin{example}
+求带电粒子在互相垂直且数值相等的电场和磁场中的相对论运动。\footnote{互相垂直而数值不等的$\mbf{E}$和$\mbf{H}$场中的运动问题，可以通过适当的参考系变换，化为纯电场或纯磁场中运动的问题，见第\ref{chapter3:section:场的不变量}节。}
+\end{example}
+
+\section{电磁场张量}
+
+\section{场的Lorentz变换}
+
+\section{场的不变量}\label{chapter3:section:场的不变量}
