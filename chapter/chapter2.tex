@@ -180,7 +180,7 @@ Lagrange函数中的常数项对运动方程没有影响，可以略去。略去
 
 将式\eqref{chapter2:四维动量矢量}代入式\eqref{chapter2:四维动量的平方}就得到相对论的Hamilton-Jacobi方程
 \begin{equation}
-	\frac{\pl S}{\pl x^i} \frac{\pl S}{\pl x_i} = \eta^{ij} \frac{\pl S}{\pl x^i}\frac{\pl S}{\pl x^j} = m^2c^2
+	\frac{\pl S}{\pl x^i} \frac{\pl S}{\pl x_i} = \eta^{ik} \frac{\pl S}{\pl x^i}\frac{\pl S}{\pl x^k} = m^2c^2
 	\label{chapter2:相对论力学的Hamilton-Jacobi方程}
 \end{equation}
 或者将其展开为
@@ -546,21 +546,21 @@ Lagrange函数中的常数项对运动方程没有影响，可以略去。略去
 
 下面推导角动量守恒的四维形式。设$x^i$是该系统中一个粒子的坐标，在该四维空间中作一个无限小转动\footnote{这样的变换一定是线性变换。}，设新旧坐标满足如下关系
 \begin{equation}
-	x'^i-x^i = x_j\delta \varOmega^{ij}
+	x'^i-x^i = x_k\delta \varOmega^{ik}
 	\label{chapter2:角动量1}
 \end{equation}
-其中$\delta \varOmega_{ij}$为该无穷小线性变换的系数，其所有分量构成一个四维张量。四维张量$\delta\varOmega_{ij}$的各个分量的取值需满足：矢径的长度在该转动下不变，即$x'^ix'_i = x^ix_i$，将式\eqref{chapter2:角动量1}的结果代入并略去二阶小量，可得
+其中$\delta \varOmega_{ik}$为该无穷小线性变换的系数，其所有分量构成一个四维张量。四维张量$\delta\varOmega_{ik}$的各个分量的取值需满足：矢径的长度在该转动下不变，即$x'^ix'_i = x^ix_i$，将式\eqref{chapter2:角动量1}的结果代入并略去二阶小量，可得
 \begin{equation*}
-	x_ix_j\delta \varOmega^{ij}+x^ix^k\delta \varOmega_{ik} = 0
+	x_ix_k\delta \varOmega^{ik}+x^ix^l\delta \varOmega_{il} = 0
 \end{equation*}
 或者
 \begin{equation}
-	x^ix^j \delta\varOmega_{ij} = 0
+	x^ix^k \delta\varOmega_{ik} = 0
 	\label{chapter2:角动量2}
 \end{equation}
-这个方程对于任意的$x^i$都要满足。注意到$x^ix^j$是一个对称张量，所以$\delta\varOmega_{ij}$必为反对称张量\footnote{也可将式\eqref{chapter2:角动量2}中的傀指标$i, j$交换，再与自身相加得到。}，即
+这个方程对于任意的$x^i$都要满足。注意到$x^ix^k$是一个对称张量，所以$\delta\varOmega_{ik}$必为反对称张量\footnote{也可将式\eqref{chapter2:角动量2}中的傀指标$i, k$交换，再与自身相加得到。}，即
 \begin{equation}
-	\delta \varOmega_{ij} = -\delta \varOmega_{ji}
+	\delta \varOmega_{ik} = -\delta \varOmega_{ki}
 	\label{chapter2:角动量3}
 \end{equation}
 
@@ -572,36 +572,36 @@ Lagrange函数中的常数项对运动方程没有影响，可以略去。略去
 \begin{equation*}
 	\delta S = -\sum p^i\delta x_i\Big|_a^b
 \end{equation*}
-式中的求和遍历系统中的所有粒子。在无穷小转动下，有$\delta x_i = x^j\delta \varOmega_{ij}$，于是有
+式中的求和遍历系统中的所有粒子。在无穷小转动下，有$\delta x_i = x^k\delta \varOmega_{ik}$，于是有
 \begin{equation*}
-	\delta S = -\delta \varOmega_{ij} \sum p^ix^j\Big|_a^b
+	\delta S = -\delta \varOmega_{ik} \sum p^ix^k\Big|_a^b
 \end{equation*}
-将张量$\ds\sum p^ix^j$分解为对称和反对称两部分之和，对称部分与反对称张量$\delta \varOmega_{ij}$的乘积恒为零，因此只余下张量$\ds\sum p^ix^j$的反对称部分，即
+将张量$\ds\sum p^ix^k$分解为对称和反对称两部分之和，对称部分与反对称张量$\delta \varOmega_{ik}$的乘积恒为零，因此只余下张量$\ds\sum p^ix^k$的反对称部分，即
 \begin{equation}
-	\delta S = -\delta \varOmega_{ij} \frac12 \sum (p^ix^j-p^jx^i)\Big|_a^b
+	\delta S = -\delta \varOmega_{ik} \frac12 \sum (p^ix^k-p^kx^i)\Big|_a^b
 	\label{chapter2:角动量4}
 \end{equation}
 
-对于封闭系统，Lagrange函数是一个不变量，它不因四维空间中的转动而改变，因此对任意的转动，即任意的四维反对称张量$\delta\varOmega_{ij}$都有$\delta S=0$，这说明式\eqref{chapter2:角动量4}中$\delta\varOmega_{ij}$的系数必须为零，即
+对于封闭系统，Lagrange函数是一个不变量，它不因四维空间中的转动而改变，因此对任意的转动，即任意的四维反对称张量$\delta\varOmega_{ik}$都有$\delta S=0$，这说明式\eqref{chapter2:角动量4}中$\delta\varOmega_{ik}$的系数必须为零，即
 \begin{equation}
-	\sum (p^ix^j-p^jx^i)_b = \sum (p^ix^j-p^jx^i)_a
+	\sum (p^ix^k-p^kx^i)_b = \sum (p^ix^k-p^kx^i)_a
 \end{equation}
 这说明在封闭系统中，四维张量
 \begin{equation}
-	L^{ij} = \sum (x^ip^j-x^jp^i)
+	L^{ik} = \sum (x^ip^k-x^kp^i)
 	\label{chapter2:四维角动量张量的定义}
 \end{equation}
 是守恒的。这个反对称张量称为{\bf 四维角动量张量}。这个张量的空间分量是三维角动量矢量$\ds \mbf{L} = \sum\mbf{r}\times \mbf{p}$的分量：
 \begin{equation*}
 	L^{23} = L_x,\quad L^{31} = L_y,\quad L^{12} = L_z
 \end{equation*}
-而分量$L^{01}, L^{02}, L^{03}$构成一个矢量$\ds c\sum \left(t\mbf{p}-\dfrac{\E\mbf{r}}{c^2}\right)$，于是，对比式\eqref{chapter1:四维反对称张量的表示}和式\eqref{chapter1:四维反对称张量的逆变分量}的形式，可以把张量$L^{ij}$的分量写成形式
+而分量$L^{01}, L^{02}, L^{03}$构成一个矢量$\ds c\sum \left(t\mbf{p}-\dfrac{\E\mbf{r}}{c^2}\right)$，于是，对比式\eqref{chapter1:四维反对称张量的表示}和式\eqref{chapter1:四维反对称张量的逆变分量}的形式，可以把张量$L^{ik}$的分量写成形式
 \begin{equation}
-	L^{ij} = \left(c\sum \left(t\mbf{p}-\dfrac{\E\mbf{r}}{c^2}\right), -\mbf{L}\right)
+	L^{ik} = \left(c\sum \left(t\mbf{p}-\dfrac{\E\mbf{r}}{c^2}\right), -\mbf{L}\right)
 	\label{chapter2:四维角动量张量的逆变分量表示}
 \end{equation}
 
-特别地，由于四维角动量张量$L^{ij}$对封闭系统守恒，所以有
+特别地，由于四维角动量张量$L^{ik}$对封闭系统守恒，所以有
 \begin{equation*}
 	\sum \left(t\mbf{p}-\frac{\E\mbf{r}}{c^2}\right) = \const
 \end{equation*}
@@ -642,7 +642,7 @@ Lagrange函数中的常数项对运动方程没有影响，可以略去。略去
 \end{equation*}
 根据四维张量的变换法则可得
 \begin{equation*}
-	L^{ij} = \frac{\pl x^i}{\pl x^k_{(0)}} \frac{\pl x^j}{\pl x^l_{(0)}} L^{kl}_{(0)}
+	L^{ik} = \frac{\pl x^i}{\pl x^l_{(0)}} \frac{\pl x^k}{\pl x^m_{(0)}} L^{lm}_{(0)}
 \end{equation*}
 由此可有
 \begin{align*}

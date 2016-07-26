@@ -425,7 +425,7 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 \begin{equation*}
 	\sum_{i=0}^3 x^ix_i = x^0x_0+x^1x_1+x^2x_2+x^3x_3
 \end{equation*}
-一般经常略去求和号，将这样的求和简单记作$x^ix_i$，也就是约定遍历所有重复指标求和，而把求和号省去\footnote{这个约定称为“Einstein求和约定”。}。每对指标中必须一个为上标，另一个为下标。这种遍历“傀”指标求和的约定非常方便，可大大简化公式的书写。我们将用拉丁字母$i,j,k,l,\cdots$表示四维指标，其取值为$0,1,2,3$。
+一般经常略去求和号，将这样的求和简单记作$x^ix_i$，也就是约定遍历所有重复指标求和，而把求和号省去\footnote{这个约定称为“Einstein求和约定”。}。每对指标中必须一个为上标，另一个为下标。这种遍历“傀”指标求和的约定非常方便，可大大简化公式的书写。我们将用拉丁字母$i,k,l,m,\cdots$表示四维指标，其取值为$0,1,2,3$。
 
 四维坐标系的任意坐标变换可以用
 \begin{equation}
@@ -433,23 +433,23 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 \end{equation}
 来表示。在这个坐标变换下，协变坐标的微分为
 \begin{equation}
-	\mathd x^i = \frac{\pl x^i}{\pl x'^j} \mathd x'^j
+	\mathd x^i = \frac{\pl x^i}{\pl x'^k} \mathd x'^k
 	\label{chapter1:协变坐标微分的变换式}
 \end{equation}
 而一个标量函数$\phi(x^0,x^1,x^2,x^3)$的梯度则满足关系
 \begin{equation}
-	\frac{\pl \phi}{\pl x^i} = \frac{\pl x'^j}{\pl x^i} \frac{\pl \phi}{\pl x'^j}
+	\frac{\pl \phi}{\pl x^i} = \frac{\pl x'^k}{\pl x^i} \frac{\pl \phi}{\pl x'^k}
 	\label{chapter1:标量函数梯度的变换式}
 \end{equation}
 
 更一般地，如果4个量$A^0,A^1,A^2,A^3$，在四维坐标系的变换下像四维协变坐标的微分$\mathd x^i$那样变换（即式\eqref{chapter1:协变坐标微分的变换式}），即
 \begin{equation}
-	A^i = \frac{\pl x^i}{\pl x'^j} A'^j
+	A^i = \frac{\pl x^i}{\pl x'^k} A'^k
 	\label{chapter1:四维矢量协变分量的变换关系式}
 \end{equation}
 我们就将这4个量的集合称为{\bf 四维矢量}$A^i$，而每个$A^i$则称为该四维矢量的{\bf 协变分量}。而如果4个量$A_0,A_1,A_2,A_3$，在四维坐标系的变换下像标量函数的梯度$\dfrac{\pl \phi}{\pl x^i}$那样变换（即式\eqref{chapter1:标量函数梯度的变换式}），即
 \begin{equation}
-	A_i = \frac{\pl x'^j}{\pl x^i} A'_j
+	A_i = \frac{\pl x'^k}{\pl x^i} A'_k
 	\label{chapter1:四维矢量逆变分量的变换关系式}
 \end{equation}
 则这4个量的集合称为四维矢量$A_i$，而每个$A_i$则称为该四维矢量的{\bf 逆变分量}。同一个四维矢量可以用协变分量来表示，也可以用逆变分量来表示。
@@ -483,9 +483,9 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 
 积$A^iB_i$是一个{\bf 四维标量}——它在四维坐标系的变换下是不变的。这点根据四维矢量协变分量的变换关系\eqref{chapter1:四维矢量协变分量的变换关系式}和逆变分量的变换关系\eqref{chapter1:四维矢量逆变分量的变换关系式}可得
 \begin{equation*}
-	A^iB_i = \frac{\pl x^i}{\pl x'^j} A'^j \frac{\pl x'^k}{\pl x^i} B'_k = \frac{\pl x'^k}{\pl x^i} \frac{\pl x^i}{\pl x'^j} A'^j B'_k = \frac{\pl x'^k}{\pl x'^j} A'^jB'_k
+	A^iB_i = \frac{\pl x^i}{\pl x'^k} A'^k \frac{\pl x'^l}{\pl x^i} B'_l = \frac{\pl x'^l}{\pl x^i} \frac{\pl x^i}{\pl x'^k} A'^k B'_l = \frac{\pl x'^l}{\pl x'^k} A'^kB'_l
 \end{equation*}
-其中显然有$\dfrac{\pl x'^k}{\pl x'^j} = \begin{cases} 1, & k=j \\ 0, & k\neq j \end{cases}$，因此有$A^iB_i = A'^jB'_j$，由此便说明了四维矢量的平方与四维坐标系的变换无关。
+其中显然有$\dfrac{\pl x'^l}{\pl x'^k} = \begin{cases} 1, & k=l \\ 0, & k\neq l \end{cases}$，因此有$A^iB_i = A'^kB'_k$，由此便说明了四维矢量的平方与四维坐标系的变换无关。
 
 分量$A^0$称为四维矢量的{\bf 时间分量}，$A^1,A^2,A^3$称为四维矢量的{\bf 空间分量}（与四维径向矢量类比）。四维矢量的平方可以为正、负或零，相应的四维矢量分别称为{\bf 类时矢量}、{\bf 类空矢量}和{\bf 类光矢量}\footnote{类光矢量也称为{\bf 各向同性矢量}。}。
 
@@ -509,9 +509,10 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 
 \subsection{四维张量}
 
-二阶{\bf 四维张量}是16个量$A^{ij}$的集合，它在坐标变换下像两个四维矢量分量的积那样变换，即
+二阶{\bf 四维张量}是16个量$A^{ik}$的集合，它在坐标变换下像两个四维矢量分量的积那样变换，即
 \begin{equation}
-	A^{ij} = \frac{\pl x^i}{\pl x'^k} \frac{\pl x^j}{\pl x'^l} A'^{kl}
+	A^{ik} = \frac{\pl x^i}{\pl x'^l} \frac{\pl x^k}{\pl x'^m} A'^{lm}
+	\label{chapter1:四维张量的变换规则}
 \end{equation}
 类似地，可以定义更高阶的四维张量。一个二阶张量的分量可以写为三种形式：协变分量$A_{ik}$、逆变分量$A^{ik}$和混合分量$A^i{}_k$及$A_i{}^k$。不同类型分量之间的联系由一下通则决定：升或降一个空间指标（$1,2,3$）改变分量的正负号，而升或降时间指标（$0$）则不变号。因此有
 \begin{align*}
@@ -557,7 +558,7 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 \end{equation}
 于是，所有其他的非零分量$e^{iklm}$等于$1$或$-1$，依$i,k,l,m$这几个数能经偶数还是奇数次换位排成$0,1,2,3$而定。由于
 \begin{equation*}
-	e_{0123} = \eta_{0i}\eta_{1j}\eta_{2k}\eta_{3l} e^{ijkl} = (-1)^3e^{0123} = -1
+	e_{0123} = \eta_{0i}\eta_{1k}\eta_{2l}\eta_{3m} e^{iklm} = (-1)^3e^{0123} = -1
 \end{equation*}
 以及$e^{iklm}$的非零分量数为$4!=24$，可得
 \begin{equation}
@@ -668,21 +669,21 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 \begin{enumerate}
 \item 沿四维空间中的一条曲线的积分。积分元就是线元，即四维矢量$\mathrm{d}x^i$。
 
-\item 沿四维空间中的一个（二维）曲面的积分。在三维空间中，无穷小有向面积元素在坐标平面$x_\alpha x_\beta$上的投影为微分$2-$形式$\mathd x_\alpha \wedge \mathd x_\beta$。类似地，在四维空间中，无限小面元由二阶反对称张量$\mathrm{d}f^{ij}=\mathrm{d} x^i \wedge \mathrm{d}x^j$给定，其分量为该面元在坐标平面上的投影。在三维空间中，我们不用张量$\mathrm{d}f_{\alpha\beta}$而用与之对偶的矢量$\mathrm{d}f_\gamma$来表示该面元$\mathrm{d}f_\gamma = \dfrac12 e_{\alpha\beta\gamma} \mathrm{d}f_{\alpha\beta}$。在几何上，这是一个与面元垂直的矢量，其绝对值等于面元的面积。在四维空间中无法构造这样的矢量，但可以构造与张量$\mathrm{d}f^{ij}$对偶的张量$\mathrm{d}f^{*ij}$，满足
+\item 沿四维空间中的一个（二维）曲面的积分。在三维空间中，无穷小有向面积元素在坐标平面$x_\alpha x_\beta$上的投影为微分$2-$形式$\mathd x_\alpha \wedge \mathd x_\beta$。类似地，在四维空间中，无限小面元由二阶反对称张量$\mathrm{d}f^{ik}=\mathrm{d} x^i \wedge \mathrm{d}x^k$给定，其分量为该面元在坐标平面上的投影。在三维空间中，我们不用张量$\mathrm{d}f_{\alpha\beta}$而用与之对偶的矢量$\mathrm{d}f_\gamma$来表示该面元$\mathrm{d}f_\gamma = \dfrac12 e_{\alpha\beta\gamma} \mathrm{d}f_{\alpha\beta}$。在几何上，这是一个与面元垂直的矢量，其绝对值等于面元的面积。在四维空间中无法构造这样的矢量，但可以构造与张量$\mathrm{d}f^{ik}$对偶的张量$\mathrm{d}f^{*ik}$，满足
 \begin{equation}
-	\mathrm{d}f^{*ij} = \frac12 e^{ijkl}\mathrm{d}f_{kl}
+	\mathrm{d}f^{*ik} = \frac12 e^{iklm}\mathrm{d}f_{lm}
 \end{equation}
-它们之间满足关系$\mathrm{d}f^{*ij}\mathrm{d}f_{ij} = 0$，这是由于%\footnote{这里并没有搞懂}已搞懂！
+它们之间满足关系$\mathrm{d}f^{*ik}\mathrm{d}f_{ik} = 0$，这是由于%\footnote{这里并没有搞懂}已搞懂！
 \begin{align*}
-	\mathrm{d}f^{*ij}\mathrm{d}f_{ij} & = \frac12 e^{ijkl}\mathrm{d}f_{kl} \mathd f_{ij} = -\frac12 e^{ljki} \mathd f_{ij}\mathrm{d}f_{kl} = -\frac12 e^{jkil} \mathd f_{ij}\mathrm{d}f_{kl} = \frac12 e^{jikl} \mathd f_{ij}\mathrm{d}f_{kl} \\
-	& = -\frac12 e^{ijkl} \mathd f_{ij}\mathrm{d} f_{kl} = -\mathrm{d}f^{*ij}\mathrm{d}f_{ij}
+	\mathrm{d}f^{*ik}\mathrm{d}f_{ik} & = \frac12 e^{iklm}\mathrm{d}f_{lm} \mathd f_{ik} = -\frac12 e^{mkli} \mathd f_{ik}\mathrm{d}f_{lm} = -\frac12 e^{klim} \mathd f_{ik}\mathrm{d}f_{lm} = \frac12 e^{kilm} \mathd f_{ik}\mathrm{d}f_{lm} \\
+	& = -\frac12 e^{iklm} \mathd f_{ik}\mathrm{d} f_{lm} = -\mathrm{d}f^{*ik}\mathrm{d}f_{ik}
 \end{align*}
-由此即有$\mathrm{d}f^{*ij}\mathrm{d}f_{ij} = 0$。在几何上，它描述了一个正交于面元$\mathrm{d}f_{ij}$而且与之大小相等的面元。
+由此即有$\mathrm{d}f^{*ik}\mathrm{d}f_{ik} = 0$。在几何上，它描述了一个正交于面元$\mathrm{d}f_{ik}$而且与之大小相等的面元。
 
-\item 沿一个超曲面，即沿一个三维流形的积分。在三维空间中，无穷小有向体积元素可以表示为微分$3-$形式$\mathd x\wedge \mathd y\wedge \mathd z$。类似地，在四维空间中，一个无穷小三维超曲面的有向面积元素可以表示为$\mathd S^{ijk} = \mathd x^i\wedge \mathd x^j \wedge \mathd x^k$。
-这构成一个三阶张量，对所有3个指标都是反对称的，在此情形下，使用与张量$\mathrm{d}S^{ijk}$对偶的四维矢量$\mathrm{d}S^{*i}$更方便：
+\item 沿一个超曲面，即沿一个三维流形的积分。在三维空间中，无穷小有向体积元素可以表示为微分$3-$形式$\mathd x\wedge \mathd y\wedge \mathd z$。类似地，在四维空间中，一个无穷小三维超曲面的有向面积元素可以表示为$\mathd S^{ikl} = \mathd x^i\wedge \mathd x^k \wedge \mathd x^l$。
+这构成一个三阶张量，对所有3个指标都是反对称的，在此情形下，使用与张量$\mathrm{d}S^{ikl}$对偶的四维矢量$\mathrm{d}S^{*i}$更方便：
 \begin{equation}
-	\mathrm{d}S^{*i} = -\frac16 e^{ijkl} \mathrm{d}S_{jkl},\quad \mathrm{d}S_{jkl} = e_{njkl}\mathrm{d}S^{*n}
+	\mathrm{d}S^{*i} = -\frac16 e^{iklm} \mathrm{d}S_{klm},\quad \mathrm{d}S_{klm} = e_{nklm}\mathrm{d}S^{*n}
 \end{equation}
 这里
 \begin{equation*}
@@ -707,21 +708,21 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 \end{equation*}
 其运算规则为
 \begin{equation*}
-	\mathd \omega = \pl_j f \mathd x^j \wedge \mathd x^{i_1} \wedge \mathd x^{i_2} \wedge \cdots \wedge \mathd x^{i_p}
+	\mathd \omega = \pl_k f \mathd x^k \wedge \mathd x^{i_1} \wedge \mathd x^{i_2} \wedge \cdots \wedge \mathd x^{i_p}
 \end{equation*}
 
 沿一闭合超曲面的积分可以变换到沿其包含的四维体积的积分，即
 \begin{align*}
-	\oint A^i \mathd S^*_i & = \oint A^i\left(-\frac16 e_{ijkl} \mathd S^{jkl}\right) = -\frac16 \oint A^ie_{ijkl} \mathd x^j \wedge \mathd x^k \wedge \mathd x^l \\
-	& = -\frac16 \int \mathd (A^ie_{ijkl} \mathd x^j \wedge \mathd x^k \wedge \mathd x^l) = -\frac16 \int \pl_n A^ie_{ijkl} \mathd x^n \wedge \mathd x^j \wedge \mathd x^k \wedge \mathd x^l
+	\oint A^i \mathd S^*_i & = \oint A^i\left(-\frac16 e_{iklm} \mathd S^{klm}\right) = -\frac16 \oint A^ie_{iklm} \mathd x^k \wedge \mathd x^l \wedge \mathd x^m \\
+	& = -\frac16 \int \mathd (A^ie_{iklm} \mathd x^k \wedge \mathd x^l \wedge \mathd x^m) = -\frac16 \int \pl_n A^ie_{iklm} \mathd x^n \wedge \mathd x^k \wedge \mathd x^l \wedge \mathd x^m
 \end{align*}
-根据微分形式的反对称性和四阶全反对称张量$e^{njkl}$的定义可有
+根据微分形式的反对称性和四阶全反对称张量$e^{nklm}$的定义可有
 \begin{equation*}
-	\mathd x^n \wedge \mathd x^j \wedge \mathd x^k \wedge \mathd x^l = e^{njkl} \mathd x^0\wedge \mathd x^1\wedge \mathd x^2\wedge \mathd x^3 = e^{njkl} \mathd \varOmega
+	\mathd x^n \wedge \mathd x^k \wedge \mathd x^l \wedge \mathd x^m = e^{nklm} \mathd x^0\wedge \mathd x^1\wedge \mathd x^2\wedge \mathd x^3 = e^{nklm} \mathd \varOmega
 \end{equation*}
 所以有
 \begin{align*}
-	\oint A^i \mathd S^*_i & = -\frac16 \int \pl_n A^ie_{ijkl}e^{njkl} \mathd \varOmega = -\frac16 \int\pl_n A^i (-6\delta^n_i) \mathd \varOmega = \int \pl_iA^i \mathd \varOmega
+	\oint A^i \mathd S^*_i & = -\frac16 \int \pl_n A^ie_{iklm}e^{nklm} \mathd \varOmega = -\frac16 \int\pl_n A^i (-6\delta^n_i) \mathd \varOmega = \int \pl_iA^i \mathd \varOmega
 \end{align*}
 更一般地，任意阶张量沿一闭合超曲面的积分都可以变换到沿其包含的四维体积的积分，只需在积分式中用算符
 \begin{equation}
@@ -766,7 +767,7 @@ Lorentz变换与Galileo变换另外一个不同点在于Galileo变换具有可�
 \begin{equation}
 	u^i = \Bigg(\frac{c}{\sqrt{1-\dfrac{v^2}{c^2}}},\frac{\mbf{v}}{\sqrt{1-\dfrac{v^2}{c^2}}}\Bigg)
 \end{equation}
-注意到，四维速度是一个具有速度的量纲。
+注意到，四维速度是一个具有速度量纲的物理量。
 
 四维速度的分量之间并不彼此独立，由于$\mathrm{d}x^i\mathrm{d}x_i = \mathrm{d}s^2=c^2 \mathd \tau^2$，因此有
 \begin{equation}

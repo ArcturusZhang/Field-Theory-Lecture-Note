@@ -720,11 +720,125 @@ Hamilton原理给出：
 分部积分可得
 \begin{align}
 	\delta S & = -\int_a^b \left(mu_i\mathd \delta x^i + \frac{e}{c}A_i\mathd \delta x^i + \frac{e}{c}\delta A_i\mathd x^i\right) \nonumber \\
-	& = \int_a^b \left(m\mathd u_i \delta x^i + \frac{e}{c}\frac{\pl A_i}{\pl x^j}\mathd x^j\delta x^i - \frac{e}{c} \frac{\pl A_i}{\pl x^j}\mathd x^i \delta x^j\right) - \left(mu_i+\frac{e}{c}A_i\right)\delta x^i\bigg|_a^b \nonumber \\
-	& = \frac1c \int_a^b \left[m\frac{\mathd u_i}{\mathd \tau} - \frac{e}{c}\left(\frac{\pl A_j}{\pl x^i} - \frac{\pl A_i}{\pl x^j}\right) u^j\right] \delta x^i\mathd s - \left(mu_i+\frac{e}{c}A_i\right)\delta x^i\bigg|_a^b
+	& = \int_a^b \left(m\mathd u_i \delta x^i + \frac{e}{c}\frac{\pl A_i}{\pl x^k}\mathd x^k\delta x^i - \frac{e}{c} \frac{\pl A_i}{\pl x^k}\mathd x^i \delta x^k\right) - \left(mu_i+\frac{e}{c}A_i\right)\delta x^i\bigg|_a^b \nonumber \\
+	& = \frac1c \int_a^b \left[m\frac{\mathd u_i}{\mathd \tau} - \frac{e}{c}\left(\frac{\pl A_k}{\pl x^i} - \frac{\pl A_i}{\pl x^k}\right) u^k\right] \delta x^i\mathd s - \left(mu_i+\frac{e}{c}A_i\right)\delta x^i\bigg|_a^b
 	\label{chapter3:电磁场张量-电磁场的Hamilton原理2}
 \end{align}
 
+在固定边界条件下，式\eqref{chapter3:电磁场张量-电磁场的Hamilton原理2}的第二项为零，由于$\delta x^i$的任意性，可得式\eqref{chapter3:电磁场张量-电磁场的Hamilton原理2}的第一项中被积函数必须为零，即
+\begin{equation*}
+	m\frac{\mathd u_i}{\mathd \tau} - \frac{e}{c}\left(\frac{\pl A_k}{\pl x^i} - \frac{\pl A_i}{\pl x^k}\right) u^k = 0
+\end{equation*}
+
+现在我们引入下面的符号：
+\begin{equation}
+	F_{ik} = \frac{\pl A_k}{\pl x^i} - \frac{\pl A_i}{\pl x^k}
+	\label{chapter3:电磁场张量的定义}
+\end{equation}
+其中反对称张量$F_{ik}$称为{\bf 电磁场张量}，由此，运动方程具有下面的形式
+\begin{equation}
+	m\frac{\mathd u_i}{\mathd \tau} = \frac{e}{c}F_{ik}u^k
+	\label{chapter3:带电粒子在电磁场中运动方程的四维形式}
+\end{equation}
+
+将$A_i=(\phi,-\mbf{A})$代入式\eqref{chapter3:电磁场张量的定义}，可以得出张量$F_{ik}$各分量与场量之间的联系。其结果可以写成一个矩阵，其中指标$i=0,1,2,3$表示行，$k=0,1,2,3$表示列，即
+\begin{equation}
+	F_{ik} = \begin{pmatrix} 0 & E_x & E_y & E_z \\
+							-E_x & 0 & -H_z & H_y \\
+							-E_y & H_z & 0 & -H_x \\
+							-E_z & -H_y & H_x & 0 \end{pmatrix},\quad
+	F^{ik} = \begin{pmatrix} 0 & -E_x & -E_y & -E_z \\
+							E_x & 0 & -H_z & H_y \\
+							E_y & H_z & 0 & -H_x \\
+							E_z & -H_y & H_x & 0 \end{pmatrix}
+	\label{chapter3:电磁场张量的分量形式}
+\end{equation}
+这个结果也可以简单地写作
+\begin{equation}
+	F_{ik} = (\mbf{E},\mbf{H}),\quad F^{ik} = (-\mbf{E},\mbf{H})
+\end{equation}
+由此可见，电场强度与磁场强度的分量是同一四维电磁场张量的分量。
+
+容易验证，运动方程\eqref{chapter3:带电粒子在电磁场中运动方程的四维形式}的三个空间分量（$i=1,2,3$）与矢量运动方程\eqref{chapter3:带电粒子在给定电磁场中的运动方程-Lorentz力}相同，而时间分量（$i=0$）则给出功方程\eqref{chapter3:电磁场中带电粒子能量的变化}。后者是运动方程的推论。
+
+假如在变分$\delta S$中，只考虑真实的轨道，那么式\eqref{chapter3:电磁场张量-电磁场的Hamilton原理2}的第一项就恒等于零。此时积分上限是变化的，由此可得作用量作为坐标函数的微分为
+\begin{equation}
+	\delta S = -\left(mu_i+\frac{e}{c}A_i\right)\delta x^i
+	\label{chapter3:作用量对坐标的微分}
+\end{equation}
+由此可得
+\begin{equation}
+	-\frac{\pl S}{\pl x^i} = mu_i + \frac{e}{c}A_i = p_i+\frac{e}{c}A_i
+	\label{chapter3:电磁场中带电粒子的四维动量}
+\end{equation}
+四维矢量$-\dfrac{\pl S}{\pl x^i}$即为粒子的四维动量矢量$P_i$。将四维机械动量$p_i$和四维势$A_i$代入，可得
+\begin{equation}
+	P^i = \left(\frac{\E_m+e\phi}{c},\mbf{p} +\frac{e}{c}\mbf{A}\right)
+	\label{chapter3:电磁场中带电粒子的四维动量矢量}
+\end{equation}
+这个四维矢量$P^i$的三个空间分量构成三维广义动量矢量\eqref{chapter3:电磁场中带电粒子的广义动量}，其时间分量则为$\dfrac{\E}{c}$，其中$\E$是带电粒子在场中的总能量。
+
 \section{场的Lorentz变换}
 
+四维势的变换公式可以根据式\eqref{chapter1:四维矢量协变分量的变换关系式}得出，结合$A^i = (\phi,\mbf{A})$可得
+\begin{equation}
+	\phi = \frac{\phi'+\dfrac{V}{c}A'_x}{\sqrt{1-\dfrac{V^2}{c^2}}},\quad
+	A_x = \frac{A'_x+\dfrac{V}{c}\phi'}{\sqrt{1-\dfrac{V^2}{c^2}}},\quad
+	A_y = A'_y,\quad A_z = A'_z
+\label{chapter3:四维势的变换}
+\end{equation}
+
+电磁场张量的变换公式可以根据式\eqref{chapter1:四维张量的变换规则}得出，由此可以得出电场的变换公式：
+\begin{equation}
+	E_x = E'_x,\quad E_y = \frac{E'_y+\dfrac{V}{c}H'_z}{\sqrt{1-\dfrac{V^2}{c^2}}},\quad E_z = \frac{E'_z-\dfrac{V}{c}H'_y}{\sqrt{1-\dfrac{V^2}{c^2}}}
+	\label{chapter3:电场的变换}
+\end{equation}
+以及磁场的变换公式
+\begin{equation}
+	H_x = H'_x,\quad H_y = \frac{H'_y-\dfrac{V}{c}E'_z}{\sqrt{1-\dfrac{V^2}{c^2}}},\quad H_z = \frac{H'_z+\dfrac{V}{c}E'_y}{\sqrt{1-\dfrac{V^2}{c^2}}}
+	\label{chapter3:磁场的变换}
+\end{equation}
+
+因此，电场和磁场与很多其他物理量一样，是相对的。它们在不同的参考系中有不同的特性。特别地讲，电场或磁场可以在某一个参考系中为零，而在另外的参考系中又存在。
+
+变换式\eqref{chapter3:电场的变换}和\eqref{chapter3:磁场的变换}在$V\ll c$的情形下将大大简化，精确至$\dfrac{V}{c}$数量级，可得
+\begin{align*}
+	& E_x = E'_x,\quad E_y = E'_y+\frac{V}{c}H'_z,\quad E_z = E'_z-\frac{V}{c}H'_y \\
+	& H_x = H'_x,\quad H_y = H'_y-\frac{V}{c}E'_z,\quad H_z = H'_z+\frac{V}{c}E'_y
+\end{align*}
+这些变换式可以用矢量形式表示为：
+\begin{equation}
+	\mbf{E} = \mbf{E}'+\frac1c \mbf{H}'\times \mbf{V},\quad \mbf{H} = \mbf{H}'-\frac1c \mbf{E}'\times \mbf{V}
+	\label{chapter3:低速近似下的电磁场变换公式}
+\end{equation}
+
+以上公式相应的逆变换公式可以通过直接改变$V$的符号来获得。
+
+如果在$K'$系中磁场$\mbf{H}'=\mbf{0}$，那么，根据式\eqref{chapter3:电场的变换}和\eqref{chapter3:磁场的变换}可以验证，在$K$系中，电场和磁场之间存在如下关系：
+\begin{equation}
+	\mbf{H} = \frac1c\mbf{V}\times \mbf{E}
+\end{equation}
+假如在$K'$系中，$\mbf{E}'=\mbf{0}$，那么在$K$系中，电场和磁场之间存在如下关系：
+\begin{equation}
+	\mbf{E} = -\frac1c\mbf{V}\times \mbf{H}
+\end{equation}
+在上面的两种情况下，电场与磁场在$K$系中都是互相垂直的。
+
+这个结论是很有意义的，如果场$\mbf{E}$和$\mbf{H}$在某个参考系$K$中互相垂直（但数值不等），那么必然存在一个参考系$K'$，其中的场是纯电场或纯磁场。这个参考系相对于$K$的速度$\mbf{V}$垂直于$\mbf{E}$和$\mbf{H}$，当$H<E$时，其大小为$\dfrac{cH}{E}$；当$E<H$时，其大小为$\dfrac{cE}{H}$。
+
 \section{场的不变量}\label{chapter3:section:场的不变量}
+
+从电磁场张量可以构造出一些不变量，这些不变量在从一个惯性系变换到另一个惯性系时保持不变。
+
+从场的四维表示出发，用反对称四维张量$F^{ik}$可以得出这些不变量的形式。由这个张量的分量可以构造如下不变量：
+\begin{align}
+	F_{ik}F^{ik} & = \text{不变量} \label{chapter3:场的不变量1-四维形式} \\
+	e^{iklm}F_{ik}F_{lm} & = \text{不变量} \label{chapter3:场的不变量2-四维形式}
+\end{align}
+不变量\eqref{chapter3:场的不变量1-四维形式}是一个标量，而不变量\eqref{chapter3:场的不变量2-四维形式}则是赝标量（张量$F^{ik}$同其对偶张量的乘积）。
+
+利用式\eqref{chapter3:电磁场张量的分量形式}可以将不变量用场变量$\mbf{E}$和$\mbf{H}$表示出来，在三维形式下可有
+\begin{align}
+	H^2-E^2 & = \text{不变量} \label{chapter3:场的不变量1} \\
+	\mbf{E} \cdot \mbf{H} & = \text{不变量} \label{chapter3:场的不变量2}
+\end{align}
