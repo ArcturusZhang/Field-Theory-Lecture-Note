@@ -18,6 +18,7 @@
 \usepackage{textcomp}
 \usepackage[top=2.54cm, bottom=2.54cm, left=3.18cm, right=3.18cm]{geometry}
 \usepackage[toc,lof]{multitoc}
+%\usepackage[titletoc]{appendix}
 
 \usepackage{asymptote}
 
@@ -218,6 +219,14 @@
 \vspace{-0.5cm}
 }
 
+\newcommand{\myappendix}[1]{
+\begin{tabular}{p{0.01\textwidth}p{0.99\textwidth}}
+\cellcolor{black} &\cellcolor{titlecolor} \textcolor{white}
+{\newline\hwyk\LARGE 附录 \  \ #1}%\Alph{\thechapter}
+\end{tabular}
+\arrayrulewidth=0.4pt
+}
+
 \newcommand{\mybackmatter}[1]{
 \begin{tabular}{p{0.01\textwidth}p{0.99\textwidth}}
 \cellcolor{black} &\cellcolor{titlecolor} \textcolor{white}
@@ -280,6 +289,12 @@
 \input{chapter/chapter12.tex}
 \input{chapter/chapter13.tex}
 \input{chapter/chapter14.tex}
+
+\setcounter{chapter}{1}
+\titleformat{\chapter}[hang]{\hwyk\LARGE}
+{}{0mm}{\hspace{-0.4cm}\myappendix}
+
+\chapter{something}
 
 \backmatter
 

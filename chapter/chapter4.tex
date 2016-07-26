@@ -2,7 +2,73 @@
 
 \section{第一对Maxwell方程}
 
+从电场$\mbf{E}$和磁场$\mbf{H}$的定义式
+\begin{equation*}
+	\mbf{E} = -\frac1c\frac{\pl \mbf{A}}{\pl t}-\bnb \phi,\quad \mbf{H} = \bnb \times \mbf{A}
+\end{equation*}
+很容易得到仅含有场变量的方程。先求
+\begin{equation*}
+	\bnb \times \mbf{E} = -\frac1c \frac{\pl}{\pl t}(\bnb \times \mbf{A}) - \bnb \times \bnb \phi
+\end{equation*}
+由于$\bnb \times \bnb \phi=\mbf{0}$，所以有
+\begin{equation}
+	\bnb \times \mbf{E} = -\frac1c \frac{\pl \mbf{H}}{\pl t}
+	\label{chapter4:电磁场方程-第一个Maxwell方程}
+\end{equation}
+再求$\bnb \cdot\mbf{H}$可有
+\begin{equation}
+	\bnb \cdot \mbf{H} = \mbf{0}
+	\label{chapter4:电磁场方程-第二个Maxwell方程}
+\end{equation}
+方程\eqref{chapter4:电磁场方程-第一个Maxwell方程}和\eqref{chapter4:电磁场方程-第二个Maxwell方程}称为第一对Maxwell方程。
+
+方程\eqref{chapter4:电磁场方程-第一个Maxwell方程}和\eqref{chapter4:电磁场方程-第二个Maxwell方程}可以写成积分形式。根据Gauss定理，可有
+\begin{equation*}
+	\int \bnb \cdot \mbf{H}\mathd V = \oint \mbf{H} \cdot \mathd \mbf{f}
+\end{equation*}
+由方程\eqref{chapter4:电磁场方程-第二个Maxwell方程}可得
+\begin{equation}
+	\oint \mbf{H}\cdot \mathd \mbf{f} = 0
+	\label{chapter4:电磁场方程-第二个Maxwell方程的积分形式}
+\end{equation}
+即磁场通过每个封闭曲面的通量为零。
+
+根据Stokes定理，可有
+\begin{equation*}
+	\int \bnb \times \mbf{E}\cdot \mathd \mbf{f} = \oint \mbf{E}\cdot \mathd \mbf{l}
+\end{equation*}
+由方程\eqref{chapter4:电磁场方程-第一个Maxwell方程}可得
+\begin{equation}
+	\oint \mbf{E}\cdot \mathd \mbf{l} = -\frac1c \frac{\pl}{\pl t}\int \mbf{H}\cdot \mathd \mbf{f}
+	\label{chapter4:电磁场方程-第一个Maxwell方程的积分形式}
+\end{equation}
+电场强度的环流也称为该回路内的{\bf 电动势}。即任何回路内的电动势，等于穿过由该回路所包围曲面的磁场强度通量的时间导数的负值。
+
+Maxwell方程\eqref{chapter4:电磁场方程-第一个Maxwell方程}和\eqref{chapter4:电磁场方程-第二个Maxwell方程}可以写成四维形式，利用电磁场张量的定义式\eqref{chapter3:电磁场张量的定义}，很容易验证出
+\begin{equation}
+	\frac{\pl F_{ik}}{\pl x^l} + \frac{\pl F_{kl}}{\pl x^i} + \frac{\pl F_{li}}{\pl x^k} = 0
+	\label{chapter4:第一对Maxwell方程的四维形式1}
+\end{equation}
+方程\eqref{chapter4:第一对Maxwell方程的四维形式1}左边的表达式是一个三阶张量，它对所有三个指标都是反对称的。只有那些$i\neq k\neq l$的分量才是非零的。将式\eqref{chapter3:电磁场张量的分量形式}代入，可以验证这四个方程正好就是方程\eqref{chapter4:电磁场方程-第一个Maxwell方程}和\eqref{chapter4:电磁场方程-第二个Maxwell方程}。
+
+将这个三阶反对称四维张量乘以$e^{iklm}$并对四对指标缩并，我们可以构造出与其对偶的四维矢量，因此方程\eqref{chapter4:第一对Maxwell方程的四维形式1}可以写成形式
+\begin{equation}
+	e^{iklm}\frac{\pl F_{lm}}{\pl x^k} = 0
+	\label{chapter4:第一对Maxwell方程的四维形式2}
+\end{equation}
+这说明第一对Maxwell方程中，独立的方程只有四个。
+
 \section{电磁场的作用量}
+
+由电磁场和场内的粒子构成的整个体系的作用量$S$，应当包含三个部分：
+\begin{equation}
+	S = S_m+S_f+S_{mf}
+\end{equation}
+其中$S_m$是作用量中仅与粒子性质有关的部分，即自由粒子的作用量\eqref{chapter2:自由实物粒子的作用量}。如果有多个粒子，那么它们的总作用量就是单个粒子的作用量之和。因此有
+\begin{equation}
+	S_m = -\sum mc\int \mathd s
+	\label{chapter4:电磁场作用量中粒子的部分}
+\end{equation}
 
 \section{四维电流矢量}
 
