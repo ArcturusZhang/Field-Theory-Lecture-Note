@@ -835,10 +835,29 @@ Hamilton原理给出：
 	F_{ik}F^{ik} & = \text{不变量} \label{chapter3:场的不变量1-四维形式} \\
 	e^{iklm}F_{ik}F_{lm} & = \text{不变量} \label{chapter3:场的不变量2-四维形式}
 \end{align}
-不变量\eqref{chapter3:场的不变量1-四维形式}是一个标量，而不变量\eqref{chapter3:场的不变量2-四维形式}则是赝标量（张量$F^{ik}$同其对偶张量的乘积）。
+不变量\eqref{chapter3:场的不变量1-四维形式}是一个标量，而不变量\eqref{chapter3:场的不变量2-四维形式}则是赝标量（张量$F^{ik}$同其对偶张量的乘积\footnote{赝标量\eqref{chapter3:场的不变量2-四维形式}也可以表示为一个四维散度
+\begin{equation*}
+	e^{iklm}F_{ik}F_{lm} = 4\frac{\pl}{\pl x^i}\left(e^{iklm}A_k\frac{\pl A_m}{\pl x^l}\right)
+\end{equation*}
+}）。
 
 利用式\eqref{chapter3:电磁场张量的分量形式}可以将不变量用场变量$\mbf{E}$和$\mbf{H}$表示出来，在三维形式下可有
 \begin{align}
 	H^2-E^2 & = \text{不变量} \label{chapter3:场的不变量1} \\
 	\mbf{E} \cdot \mbf{H} & = \text{不变量} \label{chapter3:场的不变量2}
 \end{align}
+其中第二个不变量是极矢量$\mbf{E}$和轴矢量$\mbf{H}$的乘积，因而是一个赝标量。
+
+由不变量\eqref{chapter3:场的不变量2}可知，如果电场和磁场在某一惯性系中互相垂直，即$\mbf{E}\cdot\mbf{H}=0$，那么它们在其他所有惯性系中也垂直。由不变量\eqref{chapter3:场的不变量1}可知，如果电场和磁场在某一惯性系中相等，即$H=E$，那么它们在任何其他所有惯性系中也相等。
+
+如果在某一参考系中$E>H$（或$H>E$），那么在其它所有惯性系中也有$E>H$（或$H>E$）。如果在某个参考系中矢量$\mbf{E}$和$\mbf{H}$成锐角（或钝角），那么它们在每个其它参考系也成锐角（或钝角）。
+
+借助Lorentz变换，我们总可以给予$\mbf{E}$和$\mbf{H}$任何给定的值，唯一的附加条件是$E^2-H^2$和$\mbf{E}\cdot\mbf{H}$具有固定值。特别地，总可以找到一个惯性系，其中电场和磁场在给定点彼此平行。在这个参考系中$\mbf{E}\cdot\mbf{H}=EH$，并且由
+\begin{equation*}
+	E^2-H^2=E_0^2-H_0^2,\quad EH = \mbf{E}_0\cdot\mbf{H}_0
+\end{equation*}
+可以求出$\mbf{E}$和$\mbf{H}$在这个参考系中的值（$\mbf{E}_0$和$\mbf{H}_0$是在原来参考系中的电场和磁场）。
+
+在两个不变量都为零的情形下，$\mbf{E}$和$\mbf{H}$在所有的参考系中都相等并且互相垂直。
+
+如果$\mbf{E}\cdot\mbf{H}=0$，我们总可以找到一个参考系，其中$\mbf{E}=\mbf{0}$或者$\mbf{H}=\mbf{0}$（依$E^2-H^2$的正负而定），即为纯电场或纯磁场。反之，如果在某一坐标系中$\mbf{E}=\mbf{0}$或者$\mbf{H}=\mbf{0}$，则它们在每个其它参考系中都互相垂直。
