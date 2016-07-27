@@ -1,0 +1,26 @@
+\setcounter{chapter}{0}
+\renewcommand{\thechapter}{\Alph{chapter}}
+
+\titleformat{\chapter}[hang]{\hwyk\LARGE}
+{}{0mm}{\hspace{-0.4cm}\myappendix}
+ 
+\titleformat{\section}[hang]{\hwyk\LARGE}
+{}{0mm}{\hspace{-0.5cm}\appendixsection}
+
+\titleformat{\subsection}[hang]{\hwyk\large}
+{}{0mm}{\hspace{-0.5cm}\appendixsubsection}
+
+\titleformat{\subsubsection}[hang]{\hwyk\large}
+{}{0mm}{\hspace{-0.5cm}\appendixsubsubsection}
+
+\chapter{Gauss单位制与国际单位制}
+
+\section{有理化单位制和非理化单位制}
+
+Gauss单位制与国际单位制之间，一个差别是在一些方程里的因子$4\pi$。国际单位制被分类为“有理化单位制”，因为Maxwell方程组里没有因子$4\pi$，而Coulomb定律\footnote{描述点电荷之间力的作用规律的定律。}和Biot-Savart定律\footnote{描述电流元之间力的作用规律的定律。}的方程里都含有因子$4\pi$。采用Gauss单位制的状况则完全相反，Maxwell方程中含有因子$4\pi$，但是Coulomb定律和Biot-Savart定律的方程里都没有因子$4\pi$。因此Gauss单位制被分类为“非理化单位制”。
+
+对比Gauss单位制与国际单位制，电荷单位的定义有很大的区别。国际单位制特别为电现象设置一个基本单位——安培（Ampere），这动作的后果是，电荷是一种物理数量的一种独特量纲，（$\SI{1}{\coulomb}=\SI{1}{\ampere \cdot \second}$）不能用机械单位（\si{\kilo\gram}、\si{\m}、\si{\s}）来表达。Coulomb定律方程为
+\begin{equation*}
+	\mbf{F} = \frac{1}{4\pi\epsilon_0} \frac{e_1e_2}{r^3}\mbf{r}
+\end{equation*}
+其中，$\mbf{F}$是Coulomb力，$\epsilon_0$是真空介电常数，$e_1$和$e_2$是两个相互作用的电荷，$r$是这两个
