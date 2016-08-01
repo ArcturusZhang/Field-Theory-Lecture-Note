@@ -70,9 +70,168 @@ Maxwell方程\eqref{chapter4:电磁场方程-第一个Maxwell方程}和\eqref{ch
 	\label{chapter4:电磁场作用量中粒子的部分}
 \end{equation}
 
+$S_{mf}$是作用量中粒子和场相互作用相关的那一部分。根据式\eqref{chapter3:电磁场中电荷的作用量1}，对于粒子系统，我们有
+\begin{equation}
+	S_{mf} = -\sum \frac{e}{c}\int A_i\mathd x^i
+	\label{chapter4:电磁场作用量中粒子与场相互作用的部分}
+\end{equation}
+在这个和的每一项中，$A_k$是相应粒子所在的那个时空点处场的四维势。而作用量的和$S_m+S_{mf}$就是之前得到的电荷在电磁场中的作用量\eqref{chapter3:电磁场中电荷的作用量1}。
+
+最后，$S_f$是作用量中仅仅与场本身特性相关的那一部分，或者说，$S_f$是场中不存在电荷时电荷的作用量。
+
+为了建立场的作用量$S_f$的形式，我们需要从电磁场如下非常重要的性质出发。实验表明，电磁场满足{\bf 叠加原理}。这个原理表述为：一个电荷系统产生的场，是每一个电荷单独产生的场简单相加的结果。也就是说，任意一点的总场强等于在该点各个电荷分别产生场强的矢量和。
+
+场方程的每一个解都给出一个自然界中存在的场。叠加原理说明这些场的和也应当为自然界中可以存在的场，即场方程解的线性组合也满足场方程。由此我们可以推断出，场方程应该是线性的微分方程。根据这个结论，可以推断出，作用量$S_f$的被积函数中必然有一个场的二次式。仅在这种情况下，通过Hamilton原理得到的场方程才是线性的。
+
+由上面的讨论，$S_f$的被积函数中仅包含场量的二次式。而作用量是标量，电磁场张量$F_{ik}$能够构造出的标量仅有$F_{ik}F^{ik}$和$e^{iklm}F_{ik}F_{lm}$\footnote{事实上，不变量$e^{iklm}F_{ik}F_{lm}$是一个赝标量，因此它不可能出现在作用量$S_f$中。}，由于$\ds e^{iklm}F_{ik}F_{lm} = 4\frac{\pl}{\pl x^i}\left(e^{iklm}A_k\frac{\pl A_m}{\pl x^l}\right)$是一个四维梯度，因此它出现在$S_f$中不会影响最后的运动方程。
+
+因此，作用量$S_f$必须具有下面的形式：
+\begin{equation*}
+	S_f = a\int F_{ik}F^{ik}\mathd V\mathd t
+\end{equation*}
+其中积分应该遍及全部空间和已知的两个时刻之间的时间间隔，$a$是某一常数。积分号内的量是$F_{ik}F^{ik} = 2(H^2-E^2)$。可以发现，项$\left(\dfrac{\pl \mbf{A}}{\pl t}\right)^2$必须带着正号出现在作用量内，因为假如项$\left(\dfrac{\pl \mbf{A}}{\pl t}\right)^2$带着负号出现在作用量$S_f$内，那么势对时间的变化如果足够快，总能够使$S_f$变为绝对值任意大的负量，由此$S_f$不能得到Hamilton原理所需求的最小值。而由于电场$\mbf{E}$中包含了导数$\dfrac{\pl \mbf{A}}{\pl t}$，所以电场前的符号必须为负号，由此可得$a$必须是负数。
+
+$a$的数值与测量场的单位制选择有关，而我们前面各节的讨论都没有选择一个特定的单位制。从现在开始，我们将采用{\bf Gauss单位制}，在这个单位制中，$a$是一个无量纲的量，值为$-\dfrac{1}{16\pi}$\footnote{关于Gauss单位制和国际单位制的关系，请见附录。}。
+
+因此，场的作用量具有下面的形式：
+\begin{equation}
+	S_f = -\frac{1}{16\pi c}\int F_{ik}F^{ik}\mathd \varOmega
+	\label{chapter4:电磁场本身的作用量}
+\end{equation}
+在三维形式中，有
+\begin{equation}
+	S_f = \frac{1}{8\pi} \int (E^2-H^2)\mathd V\mathd t
+	\label{chapter4:电磁场本身的作用量-三维形式}
+\end{equation}
+这就是说，电磁场的Lagrange函数为
+\begin{equation}
+	L_f = \frac{1}{8\pi} \int (E^2-H^2)\mathd V
+	\label{chapter4:电磁场本身的Lagrange函数}
+\end{equation}
+
+由此可得，场连同其中的电荷的作用量具有下面的形式：
+\begin{equation}
+	S = -\sum\int mc\mathd s - \sum\int \frac{e}{c}A_i\mathd x^i - \frac{1}{16\pi c}\int F_{ik}F^{ik}\mathd \varOmega
+	\label{chapter4:电荷和场的作用量}
+\end{equation}
+
+需要注意的是，现在并没有假设场中的电荷很小。所以，式\eqref{chapter4:电荷和场的作用量}中的$A_k$和$F_{ik}$是指实际的场，即外场加上电荷本身产生的场，因此现在$A_k$和$F_{ik}$与电荷的位置和速度有关。
+
 \section{四维电流矢量}
 
+为了数学处理上的方便，我们时常不把电荷看作点，而是设想它们是在空间中连续分布的。这时可以引入{\bf 电荷密度}$\rho$，使$\rho \mathd V$等于体积$\mathd V$中所包含的电荷。电荷密度$\rho$一般是坐标和时间的函数，根据定义，体积分$\ds \int \rho \mathd V$即为该体积区域内的电荷。
+
+由于电荷实际上是点状的，因而除了点电荷所在的点以外，电荷密度$\rho$都应为零，而积分$\int \rho \mathd V$必须等于该体积区域内的所有电荷之和。所以，电荷密度$\rho$可以利用$\delta$-函数写成如下形式：
+\begin{equation}
+	\rho = \sum_a e_a\delta(\mbf{r}-\mbf{r}_a)
+	\label{chapter4:电荷系统的电荷密度}
+\end{equation}
+该式对所有电荷求和，$\mbf{r}_a$即为电荷$e_a$的径矢。
+
+由于粒子的电荷是一个不变量，即电荷与参考系无关。所以电荷密度$\rho$不是不变量，不变的仅仅是乘积$\rho\mathd V$。
+
+在等式$\mathd e = \rho \mathd V$两端乘以$\mathd x^i$可得
+\begin{equation}
+	\mathd e\mathd x^i = \rho \mathd V \mathd x^i = \rho\mathd V\mathd t \frac{\mathd x^i}{\mathd t}
+	\label{chapter4:四维电流矢量准备式}
+\end{equation}
+因为$\mathd e$是四维标量，而$\mathd x^i$是一个四维矢量，所以式\eqref{chapter4:四维电流矢量准备式}左端是一个四维矢量。这意味着式\eqref{chapter4:四维电流矢量准备式}右端也是一个四维矢量。但$\mathd V\mathd t$是一个四维标量，所以$\rho\dfrac{\mathd x^i}{\mathd t}$是一个四维矢量。这个矢量称为{\bf 四维电流矢量}，用$j^i$表示：
+\begin{equation}
+	j^i = \rho\frac{\mathd x^i}{\mathd t}
+	\label{chapter4:四维电流矢量}
+\end{equation}
+这个矢量的空间分量构成{\bf 电流密度矢量}：
+\begin{equation}
+	\mbf{j} = \rho\mbf{v}
+	\label{chapter4:电流密度矢量}
+\end{equation}
+其中$\mbf{v}$是处于给定点的电荷的速度。四维矢量\eqref{chapter4:四维电流矢量}的时间分量是$c\rho$。因此有
+\begin{equation}
+	j^i = (c\rho,\mbf{j})
+	\label{chapter4:四维电流矢量的分量形式}
+\end{equation}
+
+全部空间中的总电荷等于遍及全部空间的积分$\ds\int \rho \mathd V$。这个积分可以写成四维形式：
+\begin{equation*}
+	\int \rho \mathd V = \frac1c \int j^0\mathd V
+\end{equation*}
+其中积分遍及整个与$x^0$垂直的四维空间的超平面（这个积分就是遍及整个三维空间的积分）。在这个超平面上，可有$\mathd S_0=\mathd V, \mathd S_1=\mathd S_2=\mathd S_3=0$，所以又可以写成
+\begin{equation}
+	\int \rho \mathd V = \frac1c \int j^0\mathd V = \frac1c \int j^i\mathd S_i
+	\label{chapter4:全空间中的总电荷}
+\end{equation}
+一般说来，遍及一个任意超曲面取的积分$\ds\frac1c\int j^i\mathd S_i$就是世界线通过该曲面的那些电荷之和。
+
+现在来将四维电流矢量引入作用量的表达式\eqref{chapter4:电荷和场的作用量}，并对其中的第二项进行一些变换。用电荷密度$\rho$来代替点电荷$e$，则有
+\begin{align*}
+	-\sum\int \frac{e}{c}A_i\mathd x^i & = -\frac1c\int \rho A_i\mathd V\mathd x^i = -\frac1c \int \rho\frac{\mathd x^i}{\mathd t} A_i\mathd V \mathd t = -\frac{1}{c^2}\int A_ij^i\mathd \varOmega
+\end{align*}
+
+由此，作用量具有下面的形式：
+\begin{equation}
+	S = -\sum\int mc\mathd s - \frac{1}{c^2}\int A_ij^i\mathd \varOmega - \frac{1}{16\pi c}\int F_{ik}F^{ik}\mathd \varOmega
+	\label{chapter4:用四维电流表示的电磁场及其中粒子的作用量}
+\end{equation}
+
 \section{连续性方程}
+
+在某一个体积内电荷的变化取决于导数
+\begin{equation*}
+	\frac{\pl}{\pl t}\int \rho \mathd V
+\end{equation*}
+的值。另一方面，单位时间内电荷的增加取决于单位时间内由外面进入这个区域的电荷量。在单位时间内离开包围这个区域的曲面的面元$\mathd \mbf{f}$的电荷等于$\rho \mbf{v}\cdot \mathd \mbf{f}$，此处$\mbf{v}$是电荷在面元$\mathd \mbf{f}$处的速度。而面元矢量则沿着曲面在该点的外法线方向。所以当电荷离开这个区域时，$\rho \mbf{v}\cdot \mathd \mbf{f}$为正，而当电荷进入这个区域时，$\rho \mbf{v}\cdot \mathd \mbf{f}$应为负。所以，在单位时间内进入这个区域内的总电荷是$\ds -\oint \rho\mbf{v}\cdot \mathd\mbf{f}$，此处积分遍及包围这个区域的整个封闭曲面。
+
+由此便得到
+\begin{equation}
+	\frac{\pl}{\pl t}\int \rho \mathd V = -\oint \rho\mbf{v}\cdot \mathd\mbf{f}
+	\label{chapter4:连续性方程的积分形式初步}
+\end{equation}
+方程\eqref{chapter4:连续性方程的积分形式初步}称为{\bf 连续性方程}或者{\bf 电荷守恒方程}，它是用积分形式来表示电荷守恒的。注意到$\rho \mbf{v}$就是电流密度矢量$\mbf{j}$，所以可以将方程\eqref{chapter4:连续性方程的积分形式初步}改写为
+\begin{equation}
+	\frac{\pl}{\pl t}\int \rho \mathd V + \oint \mbf{j}\cdot \mathd\mbf{f} = 0
+	\label{chapter4:连续性方程的积分形式}
+\end{equation}
+
+利用Gauss定理，可以将方程\eqref{chapter4:连续性方程的积分形式}改写为微分形式，即
+\begin{equation*}
+	\int \left(\frac{\pl \rho}{\pl t}+\bnb \cdot \mbf{j}\right) \mathd V = 0
+\end{equation*}
+这个方程对任意体积区域都成立，所以有
+\begin{equation}
+	\frac{\pl \rho}{\pl t}+\bnb \cdot \mbf{j} = 0
+	\label{chapter4:连续性方程的微分形式}
+\end{equation}
+
+以$\delta$-函数形式表达的电荷密度，即式\eqref{chapter4:电荷系统的电荷密度}，自动满足连续性方程\eqref{chapter4:连续性方程的微分形式}。为简便起见，假设总共只有一个电荷，则有
+\begin{equation*}
+	\rho = e\delta(\mbf{r}-\mbf{r}_0)
+\end{equation*}
+这是电流密度为
+\begin{equation*}
+	\mbf{j} = \rho\mbf{v} = e\mbf{v}\delta(\mbf{r}-\mbf{r}_0)
+\end{equation*}
+其中$\mbf{v}$是电荷的速度，$\mbf{r}_0$是电荷当前时刻的矢径。首先来计算$\dfrac{\pl \rho}{\pl t}$可得
+\begin{equation*}
+	\frac{\pl \rho}{\pl t} = \frac{\pl \rho}{\pl \mbf{r}_0} \frac{\pl \mbf{r}_0}{\pl t} = \frac{\pl \rho}{\pl \mbf{r}_0} \cdot \mbf{v}
+\end{equation*}
+因为$\rho$是$\mbf{r}-\mbf{r}_0$的函数，所以
+\begin{equation*}
+	\frac{\pl \rho}{\pl \mbf{r}_0} = -\frac{\pl \rho}{\pl \mbf{r}} = -\bnb \rho
+\end{equation*}
+因此有
+\begin{equation*}
+	\frac{\pl \rho}{\pl t} = -\bnb \rho\cdot \mbf{v} = -\bnb \cdot (\rho \mbf{v}) = -\bnb \cdot \mbf{j}
+\end{equation*}
+据此便得到了方程\eqref{chapter4:连续性方程的微分形式}。
+
+很容易验证，连续性方程\eqref{chapter4:连续性方程的微分形式}可以用四维形式表述为：
+\begin{equation}
+	\frac{\pl j^i}{\pl x^i} = 0
+	\label{chapter4:连续性方程的四维形式}
+\end{equation}
+即四维电流矢量的四维散度等于零。
+
+上节已经得到，全部空间中的总电荷可以写成$\ds \frac1c \int j^i\mathd S_i$，这个积分应该遍及超平面$x^0=\const$。每一个时刻，总电荷都由这样一个遍及与$x^0$轴垂直的不同超平面的积分给出。
 
 \section{第二对Maxwell方程}
 

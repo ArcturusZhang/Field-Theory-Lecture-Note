@@ -13,14 +13,72 @@
 \titleformat{\subsubsection}[hang]{\hwyk\large}
 {}{0mm}{\hspace{-0.5cm}\appendixsubsubsection}
 
-\chapter{Gauss单位制与国际单位制}
+\chapter{Gauss单位制与国际单位制}\label{Gauss单位制与国际单位制}
 
 \section{有理化单位制和非理化单位制}
 
 Gauss单位制与国际单位制之间，一个差别是在一些方程里的因子$4\pi$。国际单位制被分类为“有理化单位制”，因为Maxwell方程组里没有因子$4\pi$，而Coulomb定律\footnote{描述点电荷之间力的作用规律的定律。}和Biot-Savart定律\footnote{描述电流元之间力的作用规律的定律。}的方程里都含有因子$4\pi$。采用Gauss单位制的状况则完全相反，Maxwell方程中含有因子$4\pi$，但是Coulomb定律和Biot-Savart定律的方程里都没有因子$4\pi$。因此Gauss单位制被分类为“非理化单位制”。
 
-对比Gauss单位制与国际单位制，电荷单位的定义有很大的区别。国际单位制特别为电现象设置一个基本单位——安培（Ampere），这动作的后果是，电荷是一种物理数量的一种独特量纲，（$\SI{1}{\coulomb}=\SI{1}{\ampere \cdot \second}$）不能用机械单位（\si{\kilo\gram}、\si{\m}、\si{\s}）来表达。Coulomb定律方程为
+对比Gauss单位制与国际单位制，电荷单位的定义有很大的区别。国际单位制特别为电现象设置一个基本单位——安培（Ampere），这造成电荷的量纲称为物理量的一种独特量纲，而不能用机械单位（\si{\kilo\gram}、\si{\m}、\si{\s}）来表达。Coulomb定律方程为
 \begin{equation*}
 	\mbf{F} = \frac{1}{4\pi\epsilon_0} \frac{e_1e_2}{r^3}\mbf{r}
 \end{equation*}
-其中，$\mbf{F}$是Coulomb力，$\epsilon_0$是真空介电常数，$e_1$和$e_2$是两个相互作用的电荷，$r$是这两个
+其中，$\mbf{F}$是Coulomb力，$\epsilon_0$是真空介电常数，$e_1$和$e_2$是两个相互作用的电荷，$r$是这两个电荷之间的距离，$\mbf{r}$为它们之间的相对位矢。
+
+其中真空介电常数$\epsilon_0$的量纲为\si{\ampere^2\cdot \second^4\cdot \kilo\gram^{-1}\cdot\meter^{-3}}。而在Gauss单位制内，$\epsilon_0$并不存在，Coulomb定律方程为
+\begin{equation*}
+	\mbf{F} = \frac{e_1e_2}{r^3}\mbf{r}
+\end{equation*}
+因而在Gauss单位制中，电荷的单位\si{\statC}可以完全以机械单位写为
+\begin{equation*}
+	\SI{1}{\statC} = \SI{1}{\kilo\gram^{\frac12}\cdot\meter^{\frac32}\cdot\second^{-1}}
+\end{equation*}
+
+\section{Gauss单位制与国际单位制之间的方程对比}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Gauss单位制与国际单位制之间的方程对比}
+	\label{Gauss单位制与国际单位制之间的方程对比}
+    \begin{tabular}{|r|r|r|}
+    \hline
+         & \multicolumn{1}{c|}{Gauss单位制} & \multicolumn{1}{c|}{国际单位制} \bigstrut\\
+    \hline
+    \multirow{4}[2]{*}{Maxwell方程} & \multicolumn{1}{l|}{$\bnb \cdot \mbf{E} = 4\pi\rho$} & \multicolumn{1}{l|}{$\bnb \cdot \mbf{E} = \dfrac{\rho}{\epsilon_0}$} \bigstrut[t]\\
+         & \multicolumn{1}{l|}{$\bnb \cdot \mbf{H} = 0$} & \multicolumn{1}{l|}{$\bnb \cdot \mbf{H} = 0$} \\
+         & \multicolumn{1}{l|}{$\bnb \times \mbf{E} = -\dfrac1c \dfrac{\pl \mbf{H}}{\pl t}$} & \multicolumn{1}{l|}{$\bnb \times \mbf{E} = -\dfrac{\pl \mbf{H}}{\pl t}$} \\
+         & \multicolumn{1}{l|}{$\bnb \times \mbf{H} = \dfrac{4\pi}{c}\mbf{j}+\dfrac1c \dfrac{\pl \mbf{E}}{\pl t}$} & \multicolumn{1}{l|}{$\bnb \times \mbf{H} = \mu_0\mbf{j}+\dfrac{1}{c^2} \dfrac{\pl \mbf{E}}{\pl t}$} \bigstrut[b]\\
+    \hline
+    Lorentz力 & \multicolumn{1}{l|}{$\mbf{F}=e\left(\mbf{E}+\dfrac1c\mbf{v}\times \mbf{H}\right)$} & \multicolumn{1}{l|}{$\mbf{F}=e\left(\mbf{E}+\mbf{v}\times \mbf{H}\right)$} \bigstrut\\
+    \hline
+    Coulomb力 & \multicolumn{1}{l|}{$\mbf{F} = \dfrac{e_1e_2}{r^2}$} & \multicolumn{1}{l|}{$\mbf{F} = \dfrac{1}{4\pi\epsilon_0} \dfrac{e_1e_2}{r^3}\mbf{r}$} \bigstrut\\
+    \hline
+    电场强度 & \multicolumn{1}{l|}{$\mbf{E} = -\bnb\phi-\dfrac1c\dfrac{\pl \mbf{A}}{\pl t}$} & \multicolumn{1}{l|}{$\mbf{E} = -\bnb\phi-\dfrac{\pl \mbf{A}}{\pl t}$} \bigstrut\\
+    \hline
+    磁场强度 & \multicolumn{1}{l|}{$\mbf{H} = \bnb\times \mbf{A}$} & \multicolumn{1}{l|}{$\mbf{H} = \bnb\times \mbf{A}$} \bigstrut\\
+    \hline
+    \end{tabular}%
+\end{table}%
+
+在Gauss单位制和国际单位制下，各种公式的对照如表\ref{Gauss单位制与国际单位制之间的方程对比}所示。
+
+\section{转换单位的一般定则}
+
+若要将任何方程从Gauss单位制转换至国际单位制，只要将其中以Gauss单位制表达的物理量直接替换为相应的国际单位表达式即可。反之亦然。为了简化其中涉及的关系，可能需要应用关系式$\epsilon_0\mu_0=\dfrac{1}{c^2}$。其中两种表达式可在表\ref{转换单位的一般定则}中找到。
+
+\begin{table}[htbp]
+  \centering
+  \caption{转换单位的一般定则}
+  \label{转换单位的一般定则}
+    \begin{tabular}{|c|r|r|}
+    \hline
+    物理量  & \multicolumn{1}{c|}{Gauss单位制} & \multicolumn{1}{c|}{国际单位制} \bigstrut\\
+    \hline
+    电场、标势 & \multicolumn{1}{l|}{$\mbf{E}, \phi$} & \multicolumn{1}{l|}{$\sqrt{4\pi\epsilon_0}(\mbf{E}, \phi)$} \bigstrut\\
+    \hline
+    电荷、电荷密度 & \multicolumn{1}{l|}{$q, \rho$} & \multicolumn{1}{l|}{$\dfrac{1}{\sqrt{4\pi\epsilon_0}}(q, \rho)$} \bigstrut\\
+    \hline
+    磁场强度、矢势 & \multicolumn{1}{l|}{$\mbf{B}, \mbf{A}$} & \multicolumn{1}{l|}{$\sqrt{\dfrac{4\pi}{\mu_0}}(\mbf{B}, \mbf{A})$} \bigstrut\\
+    \hline
+    \end{tabular}%
+\end{table}%

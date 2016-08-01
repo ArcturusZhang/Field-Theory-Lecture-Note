@@ -165,16 +165,16 @@ Lagrange函数中的常数项对运动方程没有影响，可以略去。略去
 
 而类比于力的通常定义，四维力矢量可以定义为
 \begin{equation}
-	f^i = \frac{\mathd p^i}{\mathd \tau} = m\frac{\mathd u^i}{\mathd \tau}
+	g^i = \frac{\mathd p^i}{\mathd \tau} = m\frac{\mathd u^i}{\mathd \tau}
 	\label{chapter2:四维力矢量}
 \end{equation}
 其满足恒等式
 \begin{equation}
-	f^i u_i = 0
+	g^i u_i = 0
 \end{equation}
 这个四维矢量可以用通常的三维力矢量$\mbf{F} = \dfrac{\mathd \mbf{p}}{\mathd t}$表示为
 \begin{equation}
-	f^i = \Bigg(\frac{\mbf{f}\cdot\mbf{v}}{c\sqrt{1-\dfrac{v^2}{c^2}}}, \frac{\mbf{f}}{\sqrt{1-\dfrac{v^2}{c^2}}}\Bigg)
+	g^i = \Bigg(\frac{\mbf{f}\cdot\mbf{v}}{c\sqrt{1-\dfrac{v^2}{c^2}}}, \frac{\mbf{f}}{\sqrt{1-\dfrac{v^2}{c^2}}}\Bigg)
 \end{equation}
 其时间分量与外力对该粒子的功率相关。
 
@@ -542,14 +542,14 @@ Lagrange函数中的常数项对运动方程没有影响，可以略去。略去
 \begin{equation*}
 	\mbf{L} = \sum \mbf{r}\times \mbf{p}
 \end{equation*}
-守恒。其中的$\mbf{r}$和$\mbf{p}$是粒子的矢径和动量，求和遍历系统内的所有粒子。由于空间的各向同性，因而有封闭系统的Lagrange函数在系统整体转动下不变，因而导出了角动量守恒。
+守恒。其中的$\mbf{r}$和$\mbf{p}$是粒子的径矢和动量，求和遍历系统内的所有粒子。由于空间的各向同性，因而有封闭系统的Lagrange函数在系统整体转动下不变，因而导出了角动量守恒。
 
 下面推导角动量守恒的四维形式。设$x^i$是该系统中一个粒子的坐标，在该四维空间中作一个无限小转动\footnote{这样的变换一定是线性变换。}，设新旧坐标满足如下关系
 \begin{equation}
 	x'^i-x^i = x_k\delta \varOmega^{ik}
 	\label{chapter2:角动量1}
 \end{equation}
-其中$\delta \varOmega_{ik}$为该无穷小线性变换的系数，其所有分量构成一个四维张量。四维张量$\delta\varOmega_{ik}$的各个分量的取值需满足：矢径的长度在该转动下不变，即$x'^ix'_i = x^ix_i$，将式\eqref{chapter2:角动量1}的结果代入并略去二阶小量，可得
+其中$\delta \varOmega_{ik}$为该无穷小线性变换的系数，其所有分量构成一个四维张量。四维张量$\delta\varOmega_{ik}$的各个分量的取值需满足：径矢的长度在该转动下不变，即$x'^ix'_i = x^ix_i$，将式\eqref{chapter2:角动量1}的结果代入并略去二阶小量，可得
 \begin{equation*}
 	x_ix_k\delta \varOmega^{ik}+x^ix^l\delta \varOmega_{il} = 0
 \end{equation*}
@@ -610,7 +610,7 @@ Lagrange函数中的常数项对运动方程没有影响，可以略去。略去
 	\frac{\ds \sum\E\mbf{r}}{\ds \sum \E} - t\,\frac{\ds c^2\sum\mbf{p}}{\ds \sum\E} = \const
 	\label{chapter2:角动量5}
 \end{equation}
-从式\eqref{chapter2:角动量5}中可以看出，矢径
+从式\eqref{chapter2:角动量5}中可以看出，径矢
 \begin{equation}
 	\mbf{R} = \frac{\ds\sum \E\mbf{r}}{\ds\sum\E}
 	\label{chapter2:角动量-惯性中心的坐标}
